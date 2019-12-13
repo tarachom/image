@@ -23,7 +23,7 @@ namespace ImageLibrary
         /// </summary>
         public Kernel()
         {
-            m_Data = new MySqlDataBase();
+            m_Data = new _MySqlDataBase();
             Data.ConnectString = "Database=image;Data Source=localhost;User Id=root;Password=1;";
 
             if (!Data.Connect())

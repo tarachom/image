@@ -1,4 +1,4 @@
-п»їusing System;
+using System;
 using System.Collections.Generic;
 using MySql.Data.MySqlClient;
 using System.Text;
@@ -8,7 +8,7 @@ using System.Xml.XPath;
 namespace ImageLibrary
 {
     /// <summary>
-    /// Р‘Р°Р·Р° РґР°РЅРёС… MySql
+    /// База даних MySql
     /// </summary>
     public class _MySqlDataBase : IDataBase
     {
@@ -16,46 +16,46 @@ namespace ImageLibrary
         private MySqlConnection m_Connect;
 
         /// <summary>
-        /// РўРёРї РІС–РґР±РѕСЂСѓ
+        /// Тип відбору
         /// </summary>
         private enum GetByVariant
         {
             /// <summary>
-            /// Р’С–РґР±С–СЂ РїРѕ Р†Р”
+            /// Відбір по ІД
             /// </summary>
             ID,
 
             /// <summary>
-            /// Р’С–РґР±С–СЂ РїРѕ РЅР°Р·РІС–
+            /// Відбір по назві
             /// </summary>
             Name,
 
             /// <summary>
-            /// РџРѕС€СѓРє РїРѕ РЅР°Р·РІС–
+            /// Пошук по назві
             /// </summary>
             SearchName,
 
             /// <summary>
-            /// Р’С–РґР±С–СЂ РїРѕ РєРѕРЅС‚РµРєСЃС‚С–
+            /// Відбір по контексті
             /// </summary>
             Context
         }
 
         #region EVENTS
 
-        //РЎРѕР±РёС‚РёРµ РїСЂРё РѕС€РёР±РєРµ
+        //Собитие при ошибке
         public event DataBaseStateHandler DataBaseExceptionEvent;
 
-        //РЎРѕР±РёС‚РёРµ РїСЂРё РґРѕР±Р°РІР»РµРЅРЅС– РЅРѕРІРѕРіРѕ РѕР±СЂР°Р·Сѓ
+        //Собитие при добавленні нового образу
         public event DataBaseStateHandler AddedNewImageEvent;
 
-        //РЎРѕР±РёС‚РёРµ РїСЂРё РІРёРґР°Р»РµРЅРЅС– РѕР±СЂР°Р·Сѓ
+        //Собитие при видаленні образу
         public event DataBaseStateHandler DeleteImageEvent;
 
-        //РЎРѕР±РёС‚РёРµ РїСЂРё РѕР±РЅРѕРІР»РµРЅРЅС– РѕР±СЂР°Р·Сѓ
+        //Собитие при обновленні образу
         public event DataBaseStateHandler UpdateImageEvent;
 
-        //РЎРѕР±РёС‚РёРµ РїСЂРё РїРѕС€СѓРєСѓ РѕР±СЂР°Р·Сѓ РїРѕ РЅР°Р·РІС– Р°Р±Рѕ РїРѕ Р†Р”
+        //Собитие при пошуку образу по назві або по ІД
         public event DataBaseStateHandler GetByNameOrIDImageEvent;
 
         #endregion
@@ -63,7 +63,7 @@ namespace ImageLibrary
         #region CONNECT CLOSE
 
         /// <summary>
-        /// РЎС‚СЂРѕРєР° РїС–РґРєР»СЋС‡РµРЅРЅСЏ
+        /// Строка підключення
         /// </summary>
         public string ConnectString
         {
@@ -78,9 +78,9 @@ namespace ImageLibrary
         }
 
         /// <summary>
-        /// РџС–РґРєР»СЋС‡РµРЅРЅСЏ РґРѕ Р±Р°Р·Рё РґР°РЅРёС…
+        /// Підключення до бази даних
         /// </summary>
-        /// <returns>true СЏРєС‰Рѕ РѕРє</returns>
+        /// <returns>true якщо ок</returns>
         public bool Connect()
         {
             this.m_Connect = new MySqlConnection(this.ConnectString);
@@ -93,16 +93,16 @@ namespace ImageLibrary
             catch (MySqlException e)
             {
                 if (DataBaseExceptionEvent != null)
-                    DataBaseExceptionEvent(this, new DataBaseEventArgs("РџСЂРѕР±Р»РµРјР° РїСЂРё РїС–РґРєР»СЋС‡РµРЅРЅС–", e.Message));
+                    DataBaseExceptionEvent(this, new DataBaseEventArgs("Проблема при підключенні", e.Message));
 
                 return false;
             }
         }
 
         /// <summary>
-        /// Р—Р°РєСЂРёС‚С‚СЏ РїС–РґРєР»СЋС‡РµРЅРЅСЏ
+        /// Закриття підключення
         /// </summary>
-        /// <returns>true СЏРєС‰Рѕ РѕРє</returns>
+        /// <returns>true якщо ок</returns>
         public bool Close()
         {
             try
@@ -113,7 +113,7 @@ namespace ImageLibrary
             catch (MySqlException e)
             {
                 if (DataBaseExceptionEvent != null)
-                    DataBaseExceptionEvent(this, new DataBaseEventArgs("РџСЂРѕР±Р»РµРјР° РїСЂРё Р·Р°РєСЂРёС‚С‚С– РїС–РґРєР»СЋС‡РµРЅРЅСЏ", e.Message));
+                    DataBaseExceptionEvent(this, new DataBaseEventArgs("Проблема при закритті підключення", e.Message));
 
                 return false;
             }
@@ -124,9 +124,9 @@ namespace ImageLibrary
         #region EVENT_JOURNAL
 
         /// <summary>
-        /// Р¤СѓРЅРєС†С–СЏ Р·Р°РіСЂСѓР¶Р°С” РїРѕРІС–РґРѕРјР»РµРЅРЅСЏ Р· Р¶СѓСЂРЅР°Р»Сѓ
+        /// Функція загружає повідомлення з журналу
         /// </summary>
-        /// <param name="messList">РЎРїРёСЃРѕРє РґР»СЏ РїРѕРІС–РґРѕРјР»РµРЅСЊ</param>
+        /// <param name="messList">Список для повідомлень</param>
         public void LoadAllEventJournal(List<EventJournalMessage> messList)
         {
             MySqlCommand myCommand = new MySqlCommand();
@@ -167,16 +167,16 @@ namespace ImageLibrary
         #region INSERT UPDATE DELETE IMAGE
 
         /// <summary>
-        /// Р—Р°РїРёСЃСѓС” РЅРѕРІРёР№ РѕР±СЂР°Р· Сѓ Р±Р°Р·Сѓ
+        /// Записує новий образ у базу
         /// </summary>
-        /// <param name="image">РћР±СЂР°Р·</param>
-        /// <returns>true СЏРєС‰Рѕ РѕРє</returns>
+        /// <param name="image">Образ</param>
+        /// <returns>true якщо ок</returns>
         public bool InsertImage(Image image)
         {
             MySqlCommand myCommand = new MySqlCommand();
             myCommand.Connection = this.m_Connect;
 
-            // РўСЂР°РЅР·Р°РєС†С–СЏ
+            // Транзакція
             try
             {
                 myCommand.CommandText = "START TRANSACTION";
@@ -184,12 +184,12 @@ namespace ImageLibrary
             }
             catch (MySqlException e)
             {
-                ErrorReporting("РџСЂРѕР±Р»РµРјР° РїСЂРё СЃС‚Р°СЂС‚С– С‚СЂР°РЅР·Р°РєС†С–С—", e.Message);
+                ErrorReporting("Проблема при старті транзакції", e.Message);
 
                 return false;
             }
 
-            // Р”РѕР±Р°РІР»РµРЅРЅСЏ РѕР±СЂР°Р·Сѓ `image`
+            // Добавлення образу `image`
             myCommand.CommandText = "INSERT INTO `image` (`Name`, `Context`, `Description`, `Synonymy`, `LinkContext`, `Pointer`, `Plural`, `Intermediate`, `PointerImage`) " +
                                     "VALUE (@Name, @Context, @Description, @Synonymy, @LinkContext, @Pointer, @Plural, @Intermediate, @PointerImage)";
 
@@ -207,17 +207,17 @@ namespace ImageLibrary
             try
             {
                 myCommand.ExecuteNonQuery();
-                //Р†Рґ РЅРѕРІРѕСЃС‚РІРѕСЂРµРЅРѕРіРѕ РµР»РµРјРµРЅС‚Сѓ
+                //Ід новоствореного елементу
                 image.ID = myCommand.LastInsertedId;
             }
             catch (MySqlException e)
             {
-                ErrorReporting("РџСЂРѕР±Р»РµРјР° РїСЂРё Р·Р°РїРёСЃС– РЅРѕРІРѕРіРѕ РѕР±СЂР°Р·Сѓ", e.Message);
+                ErrorReporting("Проблема при записі нового образу", e.Message);
 
                 return false;
             }
 
-            // Р”РѕР±Р°РІР»РµРЅРЅСЏ Р°С‚СЂРёР±СѓС‚С–РІ `image_atributes`
+            // Добавлення атрибутів `image_atributes`
             foreach (ImageAtribute atribute in image.Atributes)
             {
 
@@ -233,13 +233,13 @@ namespace ImageLibrary
                 }
                 catch (MySqlException e)
                 {
-                    ErrorReporting("РџСЂРѕР±Р»РµРјР° РїСЂРё Р·Р°РїРёСЃС– Р°С‚СЂРёР±СѓС‚Р° РѕР±СЂР°Р·Сѓ (" + atribute.ToString() + ")", e.Message);
+                    ErrorReporting("Проблема при записі атрибута образу (" + atribute.ToString() + ")", e.Message);
 
                     return false;
                 }
             }
 
-            // Р”РѕР±Р°РІР»РµРЅРЅСЏ `image_characterystyka`
+            // Добавлення `image_characterystyka`
             foreach (CharacterystykaItem characterystyka in image.Characterystyka)
             {
                 myCommand.CommandText = "INSERT INTO `image_characterystyka` (`Image`, `Name`, `Value`, `Code`) VALUE (@Image, @Name, @Value, @Code)";
@@ -256,13 +256,13 @@ namespace ImageLibrary
                 }
                 catch (MySqlException e)
                 {
-                    ErrorReporting("РџСЂРѕР±Р»РµРјР° РїСЂРё Р·Р°РїРёСЃС– С…Р°СЂР°РєС‚РµСЂРёСЃС‚РёРєРё РѕР±СЂР°Р·Сѓ (" + characterystyka.ItemName + ")", e.Message);
+                    ErrorReporting("Проблема при записі характеристики образу (" + characterystyka.ItemName + ")", e.Message);
 
                     return false;
                 }
             }
 
-            // Р”РѕР±Р°РІР»РµРЅРЅСЏ `image_ingradienty`
+            // Добавлення `image_ingradienty`
             foreach (ImageBase ingradient in image.Ingradienty)
             {
 
@@ -278,13 +278,13 @@ namespace ImageLibrary
                 }
                 catch (MySqlException e)
                 {
-                    ErrorReporting("РџСЂРѕР±Р»РµРјР° РїСЂРё Р·Р°РїРёСЃС– С–РЅРіСЂР°РґС–С”РЅС‚Сѓ РѕР±СЂР°Р·Сѓ (" + ingradient.Name + ")", e.Message);
+                    ErrorReporting("Проблема при записі інградієнту образу (" + ingradient.Name + ")", e.Message);
 
                     return false;
                 }
             }
 
-            // Р—Р°РїРёСЃ С‚СЂР°РЅР·Р°РєС†С–С—
+            // Запис транзакції
             try
             {
                 myCommand.CommandText = "COMMIT";
@@ -292,30 +292,30 @@ namespace ImageLibrary
             }
             catch (MySqlException e)
             {
-                ErrorReporting("РџСЂРѕР±Р»РµРјР° РїСЂРё Р·Р°РїРёСЃС– С‚СЂР°Р·Р°РєС†С–С—", e.Message);
+                ErrorReporting("Проблема при записі тразакції", e.Message);
 
                 return false;
             }
 
             if (AddedNewImageEvent != null)
-                AddedNewImageEvent(this, new DataBaseEventArgs("Р”РѕР±Р°РІР»РµРЅРёР№ РЅРѕРІРёР№ РѕР±СЂР°Р· РІ Р±Р°Р·Сѓ РґР°РЅРЅРёС…", image.Name));
+                AddedNewImageEvent(this, new DataBaseEventArgs("Добавлений новий образ в базу данних", image.Name));
 
-            InfoReporting("Р”РѕР±Р°РІР»РµРЅРёР№ РЅРѕРІРёР№ РѕР±СЂР°Р· РІ Р±Р°Р·Сѓ РґР°РЅРЅРёС…: ID = " + image.ID.ToString() + ", Name = " + image.Name);
+            InfoReporting("Добавлений новий образ в базу данних: ID = " + image.ID.ToString() + ", Name = " + image.Name);
 
             return true;
         }
 
         /// <summary>
-        /// РћР±РЅРѕРІР»СЏС” РѕР±СЂР°Р· Сѓ Р±Р°Р·С–
+        /// Обновляє образ у базі
         /// </summary>
-        /// <param name="image">РћР±СЂР°Р·</param>
-        /// <returns>true СЏРєС‰Рѕ РѕРє</returns>
+        /// <param name="image">Образ</param>
+        /// <returns>true якщо ок</returns>
         public bool UpdateImage(Image image)
         {
             MySqlCommand myCommand = new MySqlCommand();
             myCommand.Connection = this.m_Connect;
 
-            // РўСЂР°РЅР·Р°РєС†С–СЏ
+            // Транзакція
             try
             {
                 myCommand.CommandText = "START TRANSACTION";
@@ -323,13 +323,13 @@ namespace ImageLibrary
             }
             catch (MySqlException e)
             {
-                ErrorReporting("РџСЂРѕР±Р»РµРјР° РїСЂРё СЃС‚Р°СЂС‚С– С‚СЂР°РЅР·Р°РєС†С–С—", e.Message);
+                ErrorReporting("Проблема при старті транзакції", e.Message);
 
                 return false;
             }
 
             //
-            // РћР±РЅРѕРІР»РµРЅРЅСЏ СЃР°РјРѕРіРѕ РѕР±СЂР°Р·Сѓ
+            // Обновлення самого образу
             //
 
             myCommand.CommandText = "UPDATE `Image` SET " +
@@ -358,16 +358,16 @@ namespace ImageLibrary
             }
             catch (MySqlException e)
             {
-                ErrorReporting("РџРѕРјРёР»РєР° РїСЂРё РѕР±РЅРѕРІР»РµРЅРЅС– СЃР°РјРѕРіРѕ РѕР±СЂР°Р·Сѓ " + image.Name, e.Message);
+                ErrorReporting("Помилка при обновленні самого образу " + image.Name, e.Message);
 
                 return false;
             }
 
             //
-            // РћР±РЅРѕРІР»РµРЅРЅСЏ РђС‚СЂРёР±СѓС‚С–РІ
+            // Обновлення Атрибутів
             //
 
-            //Р’РёРґР°Р»РµРЅРЅСЏ РІСЃС–С… Р°С‚СЂРёР±СѓС‚С–РІ РѕР±СЂР°Р·Сѓ
+            //Видалення всіх атрибутів образу
             myCommand.CommandText = "DELETE FROM `image_atributes` WHERE `Image` = @ImageID";
 
             myCommand.Parameters.Clear();
@@ -379,12 +379,12 @@ namespace ImageLibrary
             }
             catch (MySqlException e)
             {
-                ErrorReporting("РџРѕРјРёР»РєР° РїСЂРё РІРёРґР°Р»РµРЅРЅС– Р°С‚СЂРёР±СѓС‚С–РІ РґР»СЏ РѕР±СЂР°Р·Сѓ " + image.Name, e.Message);
+                ErrorReporting("Помилка при видаленні атрибутів для образу " + image.Name, e.Message);
 
                 return false;
             }
 
-            // Р—Р°РїРёСЃ РЅРѕРІРёС… Р°С‚СЂРёР±СѓС‚С–РІ `image_atributes`
+            // Запис нових атрибутів `image_atributes`
             foreach (ImageAtribute atribute in image.Atributes)
             {
                 myCommand.CommandText = "INSERT INTO `image_atributes` (`Atribute`, `Image`) VALUE (@Atribute, @ImageID) ";
@@ -399,17 +399,17 @@ namespace ImageLibrary
                 }
                 catch (MySqlException e)
                 {
-                    ErrorReporting("РџСЂРѕР±Р»РµРјР° РїСЂРё Р·Р°РїРёСЃС– Р°С‚СЂРёР±СѓС‚Р° РѕР±СЂР°Р·Сѓ (" + atribute.ToString() + ")", e.Message);
+                    ErrorReporting("Проблема при записі атрибута образу (" + atribute.ToString() + ")", e.Message);
 
                     return false;
                 }
             }
 
             //
-            // РћР±РЅРѕРІР»РµРЅРЅСЏ РҐР°СЂР°РєС‚РµСЂРёСЃС‚РёРє
+            // Обновлення Характеристик
             //
 
-            //Р’РёРґР°Р»РµРЅРЅСЏ РІСЃС–С… С…Р°СЂР°РєС‚РµСЂРёСЃС‚РёРє РѕР±СЂР°Р·Сѓ
+            //Видалення всіх характеристик образу
             myCommand.CommandText = "DELETE FROM `image_characterystyka` WHERE `Image` = @ImageID";
 
             myCommand.Parameters.Clear();
@@ -421,12 +421,12 @@ namespace ImageLibrary
             }
             catch (MySqlException e)
             {
-                ErrorReporting("РџРѕРјРёР»РєР° РїСЂРё РІРёРґР°Р»РµРЅРЅС– С…Р°СЂР°РєС‚РµСЂРёСЃС‚РёРє РґР»СЏ РѕР±СЂР°Р·Сѓ " + image.Name, e.Message);
+                ErrorReporting("Помилка при видаленні характеристик для образу " + image.Name, e.Message);
 
                 return false;
             }
 
-            // Р—Р°РїРёСЃ РЅРѕРІРёС… С…Р°СЂР°РєС‚РµСЂРёСЃС‚РёРє `image_characterystyka`
+            // Запис нових характеристик `image_characterystyka`
             foreach (CharacterystykaItem characterystyka in image.Characterystyka)
             {
                 myCommand.CommandText = "INSERT INTO `image_characterystyka` (`Image`, `Name`, `Value`, `Code`) " +
@@ -444,17 +444,17 @@ namespace ImageLibrary
                 }
                 catch (MySqlException e)
                 {
-                    ErrorReporting("РџСЂРѕР±Р»РµРјР° РїСЂРё Р·Р°РїРёСЃС– С…Р°СЂР°РєС‚РµСЂРёСЃС‚РёРєРё РѕР±СЂР°Р·Сѓ (" + characterystyka.ItemName + ")", e.Message);
+                    ErrorReporting("Проблема при записі характеристики образу (" + characterystyka.ItemName + ")", e.Message);
 
                     return false;
                 }
             }
 
             //
-            // РћР±РЅРѕРІР»РµРЅРЅСЏ Р†РЅРіСЂР°РґС–С”РЅС‚С–РІ
+            // Обновлення Інградієнтів
             //
 
-            //Р’РёРґР°Р»РµРЅРЅСЏ РІСЃС–С… Р†РЅРіСЂР°РґС–С”РЅС‚С–РІ РѕР±СЂР°Р·Сѓ
+            //Видалення всіх Інградієнтів образу
             myCommand.CommandText = "DELETE FROM `image_ingradienty` WHERE `Image` = @ImageID";
 
             myCommand.Parameters.Clear();
@@ -466,12 +466,12 @@ namespace ImageLibrary
             }
             catch (MySqlException e)
             {
-                ErrorReporting("РџРѕРјРёР»РєР° РїСЂРё РІРёРґР°Р»РµРЅРЅС– С–РЅРіСЂР°РґС–С”РЅС‚С–РІ РґР»СЏ РѕР±СЂР°Р·Сѓ " + image.Name, e.Message);
+                ErrorReporting("Помилка при видаленні інградієнтів для образу " + image.Name, e.Message);
 
                 return false;
             }
 
-            // Р—Р°РїРёСЃ РЅРѕРІРёС… С–РЅРіСЂР°РґС–С”РЅС‚С–РІ РѕР±СЂР°Р·Сѓ `image_ingradienty`
+            // Запис нових інградієнтів образу `image_ingradienty`
             foreach (ImageBase ingradient in image.Ingradienty)
             {
                 myCommand.CommandText = "INSERT INTO `image_ingradienty` (`Image`, `Ingradient`) VALUE (@ImageID, @Ingradient)";
@@ -486,13 +486,13 @@ namespace ImageLibrary
                 }
                 catch (MySqlException e)
                 {
-                    ErrorReporting("РџСЂРѕР±Р»РµРјР° РїСЂРё Р·Р°РїРёСЃС– С–РЅРіСЂР°РґС–С”РЅС‚Сѓ РѕР±СЂР°Р·Сѓ (" + ingradient.Name + ")", e.Message);
+                    ErrorReporting("Проблема при записі інградієнту образу (" + ingradient.Name + ")", e.Message);
 
                     return false;
                 }
             }
 
-            // Р—Р°РїРёСЃ С‚СЂР°РЅР·Р°РєС†С–С—
+            // Запис транзакції
             try
             {
                 myCommand.CommandText = "COMMIT";
@@ -500,57 +500,57 @@ namespace ImageLibrary
             }
             catch (MySqlException e)
             {
-                ErrorReporting("РџСЂРѕР±Р»РµРјР° РїСЂРё Р·Р°РїРёСЃС– С‚СЂР·Р°РєС†С–С—", e.Message);
+                ErrorReporting("Проблема при записі трзакції", e.Message);
 
                 return false;
             }
 
             if (UpdateImageEvent != null)
-                UpdateImageEvent(this, new DataBaseEventArgs("РћР±РЅРѕРІР»РµРЅРёР№ РѕР±СЂР°Р· ", image.Name));
+                UpdateImageEvent(this, new DataBaseEventArgs("Обновлений образ ", image.Name));
 
-            InfoReporting("РћР±РЅРѕРІР»РµРЅРёР№ РѕР±СЂР°Р·: ID = " + image.ID.ToString() + ", Name = " + image.Name);
+            InfoReporting("Обновлений образ: ID = " + image.ID.ToString() + ", Name = " + image.Name);
 
             return true;
         }
 
         /// <summary>
-        /// Р¤СѓРЅРєС†С–СЏ РІРёРґР°Р»СЏС” РѕР±СЂР°Р· С‚Р° РІСЃС– Р№РѕРіРѕ СЃРєР»Р°РґРѕРІС– С‚Р° Р·РІСЏР·РєРё
+        /// Функція видаляє образ та всі його складові та звязки
         /// </summary>
-        /// <param name="image">РћР±СЂР°Р·</param>
-        /// <returns>true СЏРєС‰Рѕ РІРґР°Р»РѕСЃСЊ РІРёРґР°Р»РёС‚Рё</returns>
+        /// <param name="image">Образ</param>
+        /// <returns>true якщо вдалось видалити</returns>
         public bool DeleteImage(Image image)
         {
             MySqlCommand myCommand = new MySqlCommand();
             myCommand.Connection = this.m_Connect;
 
-            //Р’С–РґР±С–СЂ РїРѕ Р†Р” РѕР±СЂР°Р·Сѓ
+            //Відбір по ІД образу
             myCommand.Parameters.AddWithValue("@Image", image.ID.ToString());
 
-            //РџРµСЂРµРІС–СЂРёС‚Рё С‡Рё С” СЃСЃРёР»РєРё РЅР° РѕР±СЂР°Р·, РІРёРґР°Р»СЏС‚Рё С‚С–Р»СЊРєРё СЏРєС‰Рѕ РЅР° РѕР±СЂР°Р· РЅС–С…С‚Рѕ РЅРµ СЃСЃРёР»Р°С”С‚СЊСЃСЏ
+            //Перевірити чи є ссилки на образ, видаляти тільки якщо на образ ніхто не ссилається
             try
             {
-                //РЁСѓРєР°С”РјРѕ С‡Рё РјС–СЃС‚СЏС‚СЊ С–РЅС€С– РѕР±СЂР°Р·Рё СЃСЃРёР»РєСѓ РЅР° РЅР°С€ РѕР±СЂР°Р· РІ С‚Р°Р±Р»РёС†С– Р†РЅРіСЂР°РґС–С”РЅС‚Рё
-                //РўРѕР±С‚Рѕ С‡Рё РІРёСЃС‚СѓРїР°С” РЅР°С€ РѕР±СЂР°Р· РІ СЂРѕР»С– С–РЅРіСЂР°РґС–С”РЅС‚Сѓ РґР»СЏ С–РЅС€РёС… РѕР±СЂР°Р·С–РІ
+                //Шукаємо чи містять інші образи ссилку на наш образ в таблиці Інградієнти
+                //Тобто чи виступає наш образ в ролі інградієнту для інших образів
                 myCommand.CommandText = "SELECT count(`Image`) FROM `image_ingradienty` WHERE `Ingradient` = @image";
 
                 if (int.Parse(myCommand.ExecuteScalar().ToString()) > 0)
                 {
-                    ErrorReporting("Р’РёРґР°Р»РёС‚Рё РЅРµРјРѕР¶Р»РёРІРѕ С‚Р°Рє СЏРє РѕР±СЂР°Р· РІРёСЃС‚СѓРїР°С” РІ СЂРѕР»С– С–РЅРіСЂР°РґС–С”РЅС‚Сѓ РґР»СЏ С–РЅС€РёС… РѕР±СЂР°Р·С–РІ", "");
+                    ErrorReporting("Видалити неможливо так як образ виступає в ролі інградієнту для інших образів", "");
 
                     return false;
                 }
 
-                //РўСѓС‚ РјРѕР¶РЅР° Р·СЂРѕР±РёС‚Рё С‰Рµ РїРµСЂРµРІС–СЂРєРё
+                //Тут можна зробити ще перевірки
                 //...
             }
             catch (MySqlException e)
             {
-                ErrorReporting("РџСЂРѕР±Р»РµРјР° РѕР±С‡РёСЃР»РµРЅРЅС– СЃСЃРёР»РѕРє", e.Message);
+                ErrorReporting("Проблема обчисленні ссилок", e.Message);
 
                 return false;
             }
 
-            // РўСЂР°РЅР·Р°РєС†С–СЏ
+            // Транзакція
             try
             {
                 myCommand.CommandText = "START TRANSACTION";
@@ -558,12 +558,12 @@ namespace ImageLibrary
             }
             catch (MySqlException e)
             {
-                ErrorReporting("РџСЂРѕР±Р»РµРјР° РїСЂРё СЃС‚Р°СЂС‚С– С‚СЂР°РЅР·Р°РєС†С–С—", e.Message);
+                ErrorReporting("Проблема при старті транзакції", e.Message);
 
                 return false;
             }
 
-            // Р’РёРґР°Р»РµРЅРЅСЏ РђС‚СЂРёР±СѓС‚С–РІ
+            // Видалення Атрибутів
             try
             {
                 myCommand.CommandText = "DELETE FROM `image_atributes` WHERE `Image` = @Image";
@@ -571,12 +571,12 @@ namespace ImageLibrary
             }
             catch (MySqlException e)
             {
-                ErrorReporting("РџРѕРјРёР»РєР° РїСЂРё РІРёРґР°Р»РµРЅРЅС– Р°С‚СЂРёР±СѓС‚С–РІ РґР»СЏ РѕР±СЂР°Р·Сѓ " + image.Name, e.Message);
+                ErrorReporting("Помилка при видаленні атрибутів для образу " + image.Name, e.Message);
 
                 return false;
             }
 
-            // Р’РёРґР°Р»РµРЅРЅСЏ РҐР°СЂР°РєС‚РµСЂРёСЃС‚РёРє
+            // Видалення Характеристик
             try
             {
                 myCommand.CommandText = "DELETE FROM `image_characterystyka` WHERE `Image` = @Image";
@@ -584,12 +584,12 @@ namespace ImageLibrary
             }
             catch (MySqlException e)
             {
-                ErrorReporting("РџРѕРјРёР»РєР° РїСЂРё РІРёРґР°Р»РµРЅРЅС– С…Р°СЂР°РєС‚РµСЂРёСЃС‚РёРє РґР»СЏ РѕР±СЂР°Р·Сѓ " + image.Name, e.Message);
+                ErrorReporting("Помилка при видаленні характеристик для образу " + image.Name, e.Message);
 
                 return false;
             }
 
-            // Р’РёРґР°Р»РµРЅРЅСЏ Р†РЅРіСЂР°РґС–С”РЅС‚С–РІ
+            // Видалення Інградієнтів
             try
             {
                 myCommand.CommandText = "DELETE FROM `image_ingradienty` WHERE `Image` = @Image";
@@ -597,12 +597,12 @@ namespace ImageLibrary
             }
             catch (MySqlException e)
             {
-                ErrorReporting("РџРѕРјРёР»РєР° РїСЂРё РІРёРґР°Р»РµРЅРЅС– С–РЅРіСЂР°РґС–С”РЅС‚С–РІ РґР»СЏ РѕР±СЂР°Р·Сѓ " + image.Name, e.Message);
+                ErrorReporting("Помилка при видаленні інградієнтів для образу " + image.Name, e.Message);
 
                 return false;
             }
 
-            // Р’РёРґР°Р»РµРЅРЅСЏ СЃР°РјРѕРіРѕ РѕР±СЂР°Р·Сѓ
+            // Видалення самого образу
             try
             {
                 myCommand.CommandText = "DELETE FROM `image` WHERE `ID` = @Image";
@@ -610,12 +610,12 @@ namespace ImageLibrary
             }
             catch (MySqlException e)
             {
-                ErrorReporting("РџРѕРјРёР»РєР° РїСЂРё РІРёРґР°Р»РµРЅРЅС– РѕР±СЂР°Р·Сѓ " + image.Name, e.Message);
+                ErrorReporting("Помилка при видаленні образу " + image.Name, e.Message);
 
                 return false;
             }
 
-            // Р—Р°РїРёСЃ С‚СЂР°РЅР·Р°РєС†С–С—
+            // Запис транзакції
             try
             {
                 myCommand.CommandText = "COMMIT";
@@ -623,15 +623,15 @@ namespace ImageLibrary
             }
             catch (MySqlException e)
             {
-                ErrorReporting("РџСЂРѕР±Р»РµРјР° РїСЂРё Р·Р°РїРёСЃС– С‚СЂР°Р·Р°РєС†С–С—", e.Message);
+                ErrorReporting("Проблема при записі тразакції", e.Message);
 
                 return false;
             }
 
             if (DeleteImageEvent != null)
-                DeleteImageEvent(this, new DataBaseEventArgs("Р’РёРґР°Р»РµРЅРёР№ РѕР±СЂР°Р· '" + image.Name + "' Р· Р±Р°Р·Рё РґР°РЅРЅРёС…", ""));
+                DeleteImageEvent(this, new DataBaseEventArgs("Видалений образ '" + image.Name + "' з бази данних", ""));
 
-            InfoReporting("Р’РёРґР°Р»РµРЅРёР№ РѕР±СЂР°Р· Р· Р±Р°Р·Рё РґР°РЅРёС… ID = " + image.ID.ToString() + ", Name = " + image.Name);
+            InfoReporting("Видалений образ з бази даних ID = " + image.ID.ToString() + ", Name = " + image.Name);
 
             return true;
         }
@@ -641,10 +641,10 @@ namespace ImageLibrary
         #region PRIVAT FUNCTION
 
         /// <summary>
-        /// Р¤СѓРЅРєС†С–СЏ Р·Р°РїРѕРІРЅСЋС” РІСЃС– РєРѕР»РµРєС†С–С— РґР»СЏ СЃРїРёСЃРєСѓ РѕР±СЂР°Р·С–РІ
+        /// Функція заповнює всі колекції для списку образів
         /// </summary>
-        /// <param name="imageItemList">РЎРїРёСЃРѕРє РѕР±СЂР°Р·С–РІ РґР»СЏ СЏРєРёС… С‚СЂРµР±Р° Р·Р°РїРѕРІРЅРёС‚Рё РєРѕР»РµРєС†С–С—</param>
-        /// <returns>true СЏРєС‰Рѕ РІСЃРµ РѕРє</returns>
+        /// <param name="imageItemList">Список образів для яких треба заповнити колекції</param>
+        /// <returns>true якщо все ок</returns>
         private bool FillImageCollections(List<Image> imageItemList)
         {
             if (imageItemList.Count == 0)
@@ -661,7 +661,7 @@ namespace ImageLibrary
                 myCommand.Parameters.AddWithValue("@Image", image.ID.ToString());
 
                 //
-                //РђС‚СЂРёР±СѓС‚Рё
+                //Атрибути
                 //
 
                 myCommand.CommandText = "SELECT `Atribute` FROM `image_atributes` WHERE `Image` = @Image";
@@ -678,13 +678,13 @@ namespace ImageLibrary
                 }
                 catch (MySqlException e)
                 {
-                    ErrorReporting("РџСЂРѕР±Р»РµРјР°: РќРµРІРґР°Р»РѕСЃСЊ Р·С‡РёС‚Р°С‚Рё Р°С‚СЂРёР±СѓС‚Рё РґР»СЏ РѕР±СЂР°Р·Сѓ", e.Message);
+                    ErrorReporting("Проблема: Невдалось зчитати атрибути для образу", e.Message);
 
                     return false;
                 }
 
                 //
-                //РҐР°СЂР°РєС‚РµСЂРёСЃС‚РёРєР°
+                //Характеристика
                 //
 
                 myCommand.CommandText = "SELECT `Name`, `Value`, `Code` FROM `image_characterystyka` WHERE `Image` = @Image";
@@ -700,13 +700,13 @@ namespace ImageLibrary
                 }
                 catch (MySqlException e)
                 {
-                    ErrorReporting("РџСЂРѕР±Р»РµРјР°: РќРµРІРґР°Р»РѕСЃСЊ Р·С‡РёС‚Р°С‚Рё С…Р°СЂР°РєС‚РµСЂРёСЃС‚РёРєРё РґР»СЏ РѕР±СЂР°Р·Сѓ", e.Message);
+                    ErrorReporting("Проблема: Невдалось зчитати характеристики для образу", e.Message);
 
                     return false;
                 }
 
                 //
-                //Р†РЅРіСЂР°РґС–С”РЅС‚Рё
+                //Інградієнти
                 //
 
                 string ingradienty_qwery_build = "";
@@ -726,7 +726,7 @@ namespace ImageLibrary
                 }
                 catch (MySqlException e)
                 {
-                    ErrorReporting("РџСЂРѕР±Р»РµРјР°: РќРµРІРґР°Р»РѕСЃСЊ Р·С‡РёС‚Р°С‚Рё С–РЅРіСЂР°РґС–С”РЅС‚Рё РґР»СЏ РѕР±СЂР°Р·Сѓ", e.Message);
+                    ErrorReporting("Проблема: Невдалось зчитати інградієнти для образу", e.Message);
 
                     return false;
                 }
@@ -769,7 +769,7 @@ namespace ImageLibrary
                     }
                     catch (MySqlException e)
                     {
-                        ErrorReporting("РџСЂРѕР±Р»РµРјР°: РќРµРІРґР°Р»РѕСЃСЊ Р·С‡РёС‚Р°С‚Рё С–РЅРіСЂР°РґС–С”РЅС‚Рё РґР»СЏ РѕР±СЂР°Р·Сѓ", e.Message);
+                        ErrorReporting("Проблема: Невдалось зчитати інградієнти для образу", e.Message);
 
                         return false;
                     }
@@ -780,12 +780,12 @@ namespace ImageLibrary
         }
 
         /// <summary>
-        /// Р¤СѓРЅРєС†С–СЏ РґР»СЏ РїРѕС€СѓРєСѓ РѕР±СЂР°Р·Сѓ РїРѕ Р†Рґ Р°Р±Рѕ РїРѕ РЅР°Р·РІС– РІ РјРµР¶Р°С… РєРѕРЅС‚РµРєСЃС‚Сѓ, Р°Р±Рѕ РїСЂРѕСЃС‚Рѕ РІ РјРµР¶Р°С… РєРѕРЅС‚РµРєСЃС‚Сѓ
+        /// Функція для пошуку образу по Ід або по назві в межах контексту, або просто в межах контексту
         /// </summary>
-        /// <param name="variant">РћРїСЂРёРґСЏР»С” С‚РёРї РїРѕС€СѓРєСѓ: ID, Name, Context</param>
-        /// <param name="whereValue">Р—РЅР°С‡РµРЅРЅСЏ РєСЂРёС‚РµСЂС–СЋ РІС–РґР±РѕСЂСѓ</param>
-        /// <param name="whereContextID">Р’С–РґР±С–СЂ РІ РјРµР¶Р°С… РєРѕРЅС‚РµРєСЃС‚Сѓ</param>
-        /// <returns>РџРѕРІРµСЂС‚Р°С” СЃРїРёСЃРѕРє Р·РЅР°Р№РґРµРЅРёС… РѕР±СЂР°Р·С–РІ</returns>
+        /// <param name="variant">Опридялє тип пошуку: ID, Name, Context</param>
+        /// <param name="whereValue">Значення критерію відбору</param>
+        /// <param name="whereContextID">Відбір в межах контексту</param>
+        /// <returns>Повертає список знайдених образів</returns>
         private List<Image> GetImageByVariant(GetByVariant variant, string whereValue, int whereContextID = 0)
         {
             MySqlCommand myCommand = new MySqlCommand();
@@ -833,7 +833,7 @@ namespace ImageLibrary
                 }
             }
             else
-                throw new Exception("РќРµРІС–СЂРЅРѕ Р·Р°РґР°РЅРёР№ РєСЂРёС‚РµСЂС–Р№ РїРѕС€СѓРєСѓ Images");
+                throw new Exception("Невірно заданий критерій пошуку Images");
 
             try
             {
@@ -847,12 +847,12 @@ namespace ImageLibrary
                     imageItem.Description = reader["Description"].ToString();
                     imageItem.Synonymy = reader["Synonymy"].ToString();
 
-                    //РљРѕРЅС‚РµРєСЃС‚
+                    //Контекст
                     imageItem.Context = new ImageContext(int.Parse(reader["Context"].ToString()));
                     imageItem.Context.Name = reader["ContextName"].ToString();
                     imageItem.Context.Description = reader["ContexDesc"].ToString();
 
-                    //РЎСЃРёР»РєР° РЅР° РєРѕРЅС‚РµРєСЃС‚
+                    //Ссилка на контекст
                     int LinkContextID = int.Parse(reader["LinkContext"].ToString());
 
                     if (LinkContextID > 0)
@@ -861,12 +861,12 @@ namespace ImageLibrary
                             reader["LinkContextName"].ToString(),
                             reader["LinkContextDesc"].ToString());
 
-                    //РњС–С‚РєРё
+                    //Мітки
                     imageItem.Pointer = bool.Parse(reader["Pointer"].ToString());
                     imageItem.Plural = bool.Parse(reader["Plural"].ToString());
                     imageItem.Intermediate = bool.Parse(reader["Intermediate"].ToString());
 
-                    //Р’РєР°Р·С–РІРЅРёРє
+                    //Вказівник
                     long PointerImage = long.Parse(reader["PointerImage"].ToString());
 
                     if (PointerImage > 0)
@@ -878,12 +878,12 @@ namespace ImageLibrary
             }
             catch (MySqlException e)
             {
-                ErrorReporting("РџСЂРѕР±Р»РµРјР°: РќРµРІРґР°Р»РѕСЃСЊ Р·С‡РёС‚Р°С‚Рё РѕР±СЂР°Р·(Рё)", e.Message);
+                ErrorReporting("Проблема: Невдалось зчитати образ(и)", e.Message);
 
                 return null;
             }
 
-            //Р—Р°РїРѕРІРЅРёС‚Рё РєРѕР»РµРєС†С–С—
+            //Заповнити колекції
             if (FillImageCollections(imageList))
                 return imageList;
             else
@@ -891,13 +891,13 @@ namespace ImageLibrary
         }
 
         /// <summary>
-        /// Р¤СѓРЅРєС†С–СЏ РґР»СЏ РїРѕС€СѓРєСѓ Р±Р°Р·РѕРІРѕРіРѕ РѕР±СЂР°Р·Сѓ РїРѕ Р†Рґ Р°Р±Рѕ РїРѕ РЅР°Р·РІС– РІ РјРµР¶Р°С… РєРѕРЅС‚РµРєСЃС‚Сѓ, Р°Р±Рѕ РїСЂРѕСЃС‚Рѕ РІ РјРµР¶Р°С… РєРѕРЅС‚РµРєСЃС‚Сѓ
+        /// Функція для пошуку базового образу по Ід або по назві в межах контексту, або просто в межах контексту
         /// </summary>
-        /// <param name="imageBaseList">РЎРїРёСЃРѕРє РєСѓРґРё Р±СѓРґСѓС‚СЊ РґРѕР±Р°РІР»РµРЅС– Р·РЅР°Р№РґРµРЅС– РѕР±СЂР°Р·Рё</param>
-        /// <param name="variant">РћРїСЂРёРґСЏР»С” С‚РёРї РїРѕС€СѓРєСѓ: ID, Name, Context</param>
-        /// <param name="whereValue">Р—РЅР°С‡РµРЅРЅСЏ РєСЂРёС‚РµСЂС–СЋ РІС–РґР±РѕСЂСѓ</param>
-        /// <param name="whereContextID">Р’С–РґР±С–СЂ РІ РјРµР¶Р°С… РєРѕРЅС‚РµРєСЃС‚Сѓ</param>
-        /// <returns>РџРѕРІРµСЂС‚Р°С” СЃРїРёСЃРѕРє Р·РЅР°Р№РґРµРЅРёС… РѕР±СЂР°Р·С–РІ</returns>
+        /// <param name="imageBaseList">Список куди будуть добавлені знайдені образи</param>
+        /// <param name="variant">Опридялє тип пошуку: ID, Name, Context</param>
+        /// <param name="whereValue">Значення критерію відбору</param>
+        /// <param name="whereContextID">Відбір в межах контексту</param>
+        /// <returns>Повертає список знайдених образів</returns>
         private bool GetImageBaseByVariant(List<ImageBase> imageBaseList, GetByVariant variant, string whereValue, int whereContextID = 0, int limit = 0)
         {
             MySqlCommand myCommand = new MySqlCommand();
@@ -946,7 +946,7 @@ namespace ImageLibrary
                 myCommand.Parameters.AddWithValue("@Context", whereContextID);
             }
             else
-                throw new Exception("РќРµРІС–СЂРЅРѕ Р·Р°РґР°РЅРёР№ РєСЂРёС‚РµСЂС–Р№ РїРѕС€СѓРєСѓ ImageBase");
+                throw new Exception("Невірно заданий критерій пошуку ImageBase");
 
             if (limit > 0)
                 myCommand.CommandText += " LIMIT " + limit.ToString();
@@ -963,14 +963,14 @@ namespace ImageLibrary
                     imageBase.Description = reader["Description"].ToString();
                     imageBase.Synonymy = reader["Synonymy"].ToString();
 
-                    //РљРѕРЅС‚РµРєСЃС‚
+                    //Контекст
                     imageBase.Context = new ImageContext(
                         int.Parse(reader["Context"].ToString()),
                         reader["ContextName"].ToString(),
                         reader["ContexDesc"].ToString()
                     );
 
-                    //РњС–С‚РєРё
+                    //Мітки
                     imageBase.Pointer = bool.Parse(reader["Pointer"].ToString());
                     imageBase.Plural = bool.Parse(reader["Plural"].ToString());
                     imageBase.Intermediate = bool.Parse(reader["Intermediate"].ToString());
@@ -981,7 +981,7 @@ namespace ImageLibrary
             }
             catch (MySqlException e)
             {
-                ErrorReporting("РџСЂРѕР±Р»РµРјР° РїСЂРё РїРѕС€СѓРєСѓ Р±Р°Р·Рё РґР»СЏ РѕР±СЂР°Р·Сѓ РїРѕ РќР°Р·РІС– Р°Р±Рѕ РїРѕ Р†Рґ", e.Message);
+                ErrorReporting("Проблема при пошуку бази для образу по Назві або по Ід", e.Message);
 
                 return false;
             }
@@ -990,11 +990,11 @@ namespace ImageLibrary
         }
 
         /// <summary>
-        /// Р¤СѓРЅРєС†С–СЏ С€СѓРєР°С” РєРѕРЅС‚РµРєСЃС‚
+        /// Функція шукає контекст
         /// </summary>
-        /// <param name="variant">Р’Р°СЂС–Р°РЅС‚ РїРѕС€СѓРєСѓ</param>
-        /// <param name="whereValue">Р—РЅР°С‡РµРЅРЅСЏ РґР»СЏ РІС–РґР±РѕСЂСѓ</param>
-        /// <returns>РљРѕРЅС‚РµРєСЃС‚ or null</returns>
+        /// <param name="variant">Варіант пошуку</param>
+        /// <param name="whereValue">Значення для відбору</param>
+        /// <returns>Контекст or null</returns>
         private ImageContext GetImageContextBy_ID_or_Name(GetByVariant variant, string whereValue)
         {
             MySqlCommand myCommand = new MySqlCommand();
@@ -1013,7 +1013,7 @@ namespace ImageLibrary
                 myCommand.Parameters.AddWithValue("@Name", whereValue);
             }
             else
-                throw new Exception("РќРµРІС–СЂРЅРѕ Р·Р°РґР°РЅРёР№ РєСЂРёС‚РµСЂС–Р№ РїРѕС€СѓРєСѓ Images");
+                throw new Exception("Невірно заданий критерій пошуку Images");
 
             ImageContext imageContext = null;
 
@@ -1032,7 +1032,7 @@ namespace ImageLibrary
             }
             catch (MySqlException e)
             {
-                ErrorReporting("РџСЂРѕР±Р»РµРјР° РїСЂРё РїРѕС€СѓРєСѓ РєРѕРЅС‚РµРєСЃС‚Сѓ РїРѕ Р†Р”", e.Message);
+                ErrorReporting("Проблема при пошуку контексту по ІД", e.Message);
                 return null;
             }
 
@@ -1040,9 +1040,9 @@ namespace ImageLibrary
         }
 
         /// <summary>
-        /// Р¤СѓРЅРєС†С–СЏ Р·Р°РїРёСЃСѓС” РІ Р¶СѓСЂРЅР°Р» РЅРѕРІРµ РїРѕРІС–РґРѕРјР»РµРЅРЅСЏ
+        /// Функція записує в журнал нове повідомлення
         /// </summary>
-        /// <param name="message">РџРѕРІС–РґРѕРјР»РµРЅРЅСЏ</param>
+        /// <param name="message">Повідомлення</param>
         private void Write_EventJournalMessage(EventJournalMessage message)
         {
             MySqlCommand myCommand = new MySqlCommand();
@@ -1068,10 +1068,10 @@ namespace ImageLibrary
         }
 
         /// <summary>
-        /// РћР±РіРѕСЂС‚РєР° РґР»СЏ РїРѕРІС–РґРѕРјР»РµРЅСЊ РїСЂРѕ РїРѕРјРёР»РєРё
+        /// Обгортка для повідомлень про помилки
         /// </summary>
-        /// <param name="messsage">РџРѕРІС–РґРѕРјР»РµРЅРЅСЏ</param>
-        /// <param name="description">РћРїРёСЃ</param>
+        /// <param name="messsage">Повідомлення</param>
+        /// <param name="description">Опис</param>
         private void ErrorReporting(string messsage, string description)
         {
             Write_EventJournalMessage(new EventJournalMessage(EventJournalMessageType.Error, messsage, description));
@@ -1081,7 +1081,7 @@ namespace ImageLibrary
         }
 
         /// <summary>
-        /// РћР±РіРѕСЂС‚РєР° РґР»СЏ С–РЅС„РѕСЂРјР°С†С–Р№РЅРёС… РїРѕРІС–РґРѕРјР»РµРЅСЊ
+        /// Обгортка для інформаційних повідомлень
         /// </summary>
         /// <param name="messsage"></param>
         private void InfoReporting(string messsage)
@@ -1094,21 +1094,21 @@ namespace ImageLibrary
         #region GET IMAGE, IMAGEBASE
 
         /// <summary>
-        /// РџРѕС€СѓРє РѕР±СЂР°Р·Сѓ РїРѕ РЅР°Р·РІС–
+        /// Пошук образу по назві
         /// </summary>
-        /// <param name="Name">РќР°Р·РІР° РѕР±СЂР°Р·Сѓ</param>
-        /// <param name="whereContextID">Р†Рґ РєРѕРЅС‚РµРєСЃС‚Сѓ</param>
-        /// <returns>РћР±СЂР°Р· Р°Р±Рѕ null</returns>
+        /// <param name="Name">Назва образу</param>
+        /// <param name="whereContextID">Ід контексту</param>
+        /// <returns>Образ або null</returns>
         public List<Image> GetImageByName(string Name, int whereContextID = 0)
         {
             return GetImageByVariant(GetByVariant.Name, Name, whereContextID);
         }
 
         /// <summary>
-        ///  РџРѕС€СѓРє РѕР±СЂР°Р·Сѓ РїРѕ ID
+        ///  Пошук образу по ID
         /// </summary>
-        /// <param name="ID">ID РѕР±СЂР°Р·Сѓ</param>
-        /// <returns>РћР±СЂР°Р· Р°Р±Рѕ null</returns>
+        /// <param name="ID">ID образу</param>
+        /// <returns>Образ або null</returns>
         public Image GetImageByID(long ID)
         {
             List<Image> result = GetImageByVariant(GetByVariant.ID, ID.ToString());
@@ -1121,29 +1121,29 @@ namespace ImageLibrary
         }
 
         /// <summary>
-        /// Р¤СѓРЅРєС†С–СЏ РѕС‚СЂРёРјСѓС” СЃРїРёСЃРѕРє РІСЃС–С… РѕР±СЂР°Р·С–РІ
+        /// Функція отримує список всіх образів
         /// </summary>
-        /// <returns>РЎРїРёСЃРѕРє РѕР±СЂР°Р·С–РІ Р°Р±Рѕ null</returns>
+        /// <returns>Список образів або null</returns>
         public List<Image> LoadAllImage()
         {
             return GetImageByVariant(GetByVariant.Context, "", 0);
         }
 
         /// <summary>
-        /// Р¤СѓРЅРєС†С–СЏ РѕС‚СЂРёРјСѓС” СЃРїРёСЃРѕРє РІСЃС–С… РѕР±СЂР°Р·С–РІ РІ СЂРѕР·СЂС–Р·С– РєРѕРЅС‚РµРєСЃС‚Сѓ
+        /// Функція отримує список всіх образів в розрізі контексту
         /// </summary>
-        /// <param name="whereContextID">Р†Рґ РєРѕРЅС‚РµРєСЃС‚Сѓ</param>
-        /// <returns>РЎРїРёСЃРѕРє С–Р· СЂРµР·СѓР»СЊС‚Р°С‚Р°РјРё Р°Р±Рѕ РЅСѓР»Р»</returns>
+        /// <param name="whereContextID">Ід контексту</param>
+        /// <returns>Список із результатами або нулл</returns>
         public List<Image> LoadAllImageByContext(int whereContextID)
         {
             return GetImageByVariant(GetByVariant.Context, "", whereContextID);
         }
 
         /// <summary>
-        /// РџРѕС€СѓРє Р±Р°Р·Рё РґР»СЏ РѕР±СЂР°Р·Сѓ РїРѕ ID
+        /// Пошук бази для образу по ID
         /// </summary>
-        /// <param name="ID">Р—РЅР°С‡РµРЅРЅСЏ РґР»СЏ РїРѕС€СѓРєСѓ</param>
-        /// <returns>РЎРїРёСЃРѕРє Р±Р°Р·РѕРІРёС… РѕР±СЂР°С–РІ Р°Р±Рѕ null</returns>
+        /// <param name="ID">Значення для пошуку</param>
+        /// <returns>Список базових обраів або null</returns>
         public List<ImageBase> GetListImageBaseByID(long ID)
         {
             List<ImageBase> imageBase = new List<ImageBase>();
@@ -1154,12 +1154,12 @@ namespace ImageLibrary
         }
 
         /// <summary>
-        /// РџРѕС€СѓРє Р±Р°Р·Рё РґР»СЏ РѕР±СЂР°Р·Сѓ РїРѕ РќР°Р·РІС–
+        /// Пошук бази для образу по Назві
         /// </summary>
-        /// <param name="Name">Р—РЅР°С‡РµРЅРЅСЏ РґР»СЏ РїРѕС€СѓРєСѓ</param>
-        /// <param name="whereContextID">Р†Рґ РєРѕРЅС‚РµРєСЃС‚Сѓ</param>
-        /// <param name="limit">Р›С–РјС–С‚</param>
-        /// <returns>РЎРїРёСЃРѕРє Р±Р°Р·РѕРІРёС… РѕР±СЂР°С–РІ Р°Р±Рѕ null</returns>
+        /// <param name="Name">Значення для пошуку</param>
+        /// <param name="whereContextID">Ід контексту</param>
+        /// <param name="limit">Ліміт</param>
+        /// <returns>Список базових обраів або null</returns>
         public List<ImageBase> GetListImageBaseByName(string Name, int whereContextID = 0, int limit = 0)
         {
             List<ImageBase> imageBaseList = new List<ImageBase>();
@@ -1170,12 +1170,12 @@ namespace ImageLibrary
         }
 
         /// <summary>
-        /// РџРѕС€СѓРє Р±Р°Р·РѕРІРёС… РѕР±СЂР°Р·С–РІ РїРѕ РЅР°Р·РІС–
+        /// Пошук базових образів по назві
         /// </summary>
-        /// <param name="Name">РќР°Р·РІР° РѕР±СЂР°Р·Сѓ</param>
-        /// <param name="whereContextID">Р†Р” РєРѕРЅС‚РµРєСЃС‚Сѓ</param>
-        /// <param name="limit">Р›С–РјС–С‚</param>
-        /// <returns>РЎРїРёСЃРѕРє Р·РЅР°Р№РґРµРЅРёС… РѕР±СЂР°Р·С–РІ</returns>
+        /// <param name="Name">Назва образу</param>
+        /// <param name="whereContextID">ІД контексту</param>
+        /// <param name="limit">Ліміт</param>
+        /// <returns>Список знайдених образів</returns>
         public List<ImageBase> SearchImageBaseByName(string Name, int whereContextID = 0, int limit = 0)
         {
             List<ImageBase> imageBaseList = new List<ImageBase>();
@@ -1186,11 +1186,11 @@ namespace ImageLibrary
         }
 
         /// <summary>
-        /// Р—Р°РіСЂСѓР¶Р°С” РІ СЃРїРёСЃРѕРє РІСЃС– РѕР±СЂР°Р·Рё С‚С–Р»СЊРєРё Р· Р±Р°Р·РѕРІРёРјРё РїРѕР»СЏРјРё
+        /// Загружає в список всі образи тільки з базовими полями
         /// </summary>
-        /// <param name="imageList">РЎРїРёСЃРѕРє РґР»СЏ СЂРµР·СѓР»СЊС‚Р°С‚С–РІ</param>
-        /// <param name="whereContextID">Р†Рґ РєРѕРЅС‚РµРєСЃС‚Сѓ</param>
-        /// <param name="limit">Р›С–РјС–С‚</param>
+        /// <param name="imageList">Список для результатів</param>
+        /// <param name="whereContextID">Ід контексту</param>
+        /// <param name="limit">Ліміт</param>
         public void LoadAllImageBase(List<ImageBase> imageList, int whereContextID = 0, int limit = 0)
         {
             GetImageBaseByVariant(imageList, GetByVariant.Context, "", whereContextID, limit);
@@ -1201,17 +1201,17 @@ namespace ImageLibrary
         #region CONTEXT
 
         /// <summary>
-        /// Р¤СѓРЅРєС†С–СЏ РґРѕР±Р°РІР»СЏС” РЅРѕРІРёР№ РєРѕРЅС‚РµРєСЃС‚
+        /// Функція добавляє новий контекст
         /// </summary>
         /// <param name="context"></param>
-        /// <returns>true СЏРєС‰Рѕ РІСЃРµ РѕРє</returns>
+        /// <returns>true якщо все ок</returns>
         public bool InsertContext(ImageContext context)
         {
             MySqlCommand myCommand = new MySqlCommand();
             myCommand.Connection = this.m_Connect;
 
             //
-            //РЇРєС‰Рѕ СЏРІРЅРѕ РІРєР°Р·Р°РЅРёР№ РїРµСЂРІРёРЅРЅРёР№ РєР»СЋС‡ РґР»СЏ РєРѕРЅС‚РµРєСЃС‚Сѓ С‚РѕРґС– РїСЂРѕР±СѓС”РјРѕ СЃС‚РІРѕСЂРёС‚Рё С‚Р°РєРёР№ РµР»РµРјРµРЅС‚ Р· РѕРїСЂРёРґС–Р»РµРЅРёРј РїРµСЂРІРёРЅРЅРёРј РєР»СЋС‡РµРј.
+            //Якщо явно вказаний первинний ключ для контексту тоді пробуємо створити такий елемент з оприділеним первинним ключем.
             //
 
             if (context.ID == 0)
@@ -1231,32 +1231,32 @@ namespace ImageLibrary
             {
                 myCommand.ExecuteNonQuery();
 
-                //Р†Рґ РЅРѕРІРѕСЃС‚РІРѕСЂРµРЅРѕРіРѕ РµР»РµРјРµРЅС‚Сѓ
+                //Ід новоствореного елементу
                 context.ID = (int)myCommand.LastInsertedId;
             }
             catch (MySqlException e)
             {
-                ErrorReporting("РџСЂРѕР±Р»РµРјР° РїСЂРё Р·Р°РїРёСЃС– РЅРѕРІРѕРіРѕ РєРѕРЅС‚РµРєСЃС‚Сѓ", e.Message);
+                ErrorReporting("Проблема при записі нового контексту", e.Message);
 
                 return false;
             }
 
-            InfoReporting("Р”РѕР±Р°РІР»РµРЅРёР№ РЅРѕРІРёР№ РєРѕРЅС‚РµРєСЃС‚: ID = " + context.ID.ToString() + ", Name = " + context.Name);
+            InfoReporting("Добавлений новий контекст: ID = " + context.ID.ToString() + ", Name = " + context.Name);
 
             return true;
         }
 
         /// <summary>
-        /// Р¤СѓРЅРєС†С–СЏ РѕР±РЅРѕРІР»СЏС” РєРѕРЅС‚РµРєСЃС‚
+        /// Функція обновляє контекст
         /// </summary>
-        /// <param name="context">РљРѕРЅС‚РµРєСЃС‚</param>
-        /// <returns>true СЏРєС‰Рѕ РІСЃРµ РѕРє</returns>
+        /// <param name="context">Контекст</param>
+        /// <returns>true якщо все ок</returns>
         public bool UpdateContext(ImageContext context)
         {
             MySqlCommand myCommand = new MySqlCommand();
             myCommand.Connection = this.m_Connect;
 
-            // РћР±РЅРѕРІР»РµРЅРЅСЏ РєРѕРЅС‚РµРєСЃС‚Сѓ
+            // Обновлення контексту
             myCommand.CommandText = "UPDATE `image_context` SET `Name` = @Name, `Description` = @Description WHERE `ID` = @ContextID";
 
             myCommand.Parameters.AddWithValue("@Name", context.Name);
@@ -1269,27 +1269,27 @@ namespace ImageLibrary
             }
             catch (MySqlException e)
             {
-                ErrorReporting("РџСЂРѕР±Р»РµРјР° РїСЂРё РѕР±РЅРѕРІР»РµРЅРЅС– РєРѕРЅС‚РµРєСЃС‚Сѓ", e.Message);
+                ErrorReporting("Проблема при обновленні контексту", e.Message);
 
                 return false;
             }
 
-            InfoReporting("РћР±РЅРѕРІР»РµРЅРёР№ РєРѕРЅС‚РµРєСЃС‚: ID = " + context.ID.ToString() + ", Name = " + context.Name);
+            InfoReporting("Обновлений контекст: ID = " + context.ID.ToString() + ", Name = " + context.Name);
 
             return true;
         }
 
         /// <summary>
-        /// Р¤СѓРЅРєС†С–СЏ РІРёРґР°Р»СЏС” РєРѕРЅС‚РµРєСЃС‚
+        /// Функція видаляє контекст
         /// </summary>
-        /// <param name="contextID">РљРѕРЅС‚РµРєСЃС‚</param>
-        /// <returns>true СЏРєС‰Рѕ РІСЃРµ РѕРє</returns>
+        /// <param name="contextID">Контекст</param>
+        /// <returns>true якщо все ок</returns>
         public bool DeleteContext(int contextID)
         {
             MySqlCommand myCommand = new MySqlCommand();
             myCommand.Connection = this.m_Connect;
 
-            // Р’РёРґР°Р»РµРЅРЅСЏ РєРѕРЅС‚РµРєСЃС‚Сѓ
+            // Видалення контексту
             myCommand.CommandText = "DELETE FROM `image_context` WHERE `ID` = @ContextID";
 
             myCommand.Parameters.AddWithValue("@ContextID", contextID);
@@ -1300,40 +1300,40 @@ namespace ImageLibrary
             }
             catch (MySqlException e)
             {
-                ErrorReporting("РџСЂРѕР±Р»РµРјР° РїСЂРё РІРёРґР°Р»РµРЅРЅС– РєРѕРЅС‚РµРєСЃС‚Сѓ", e.Message);
+                ErrorReporting("Проблема при видаленні контексту", e.Message);
 
                 return false;
             }
 
-            InfoReporting("Р’РёРґР°Р»РµРЅРёР№ РєРѕРЅС‚РµРєСЃС‚: ID = " + contextID.ToString());
+            InfoReporting("Видалений контекст: ID = " + contextID.ToString());
 
             return true;
         }
 
         /// <summary>
-        /// Р¤СѓРЅРєС†С–СЏ С€СѓРєР°С” РєРѕРЅС‚РµРєСЃС‚ РїРѕ Р†Р”
+        /// Функція шукає контекст по ІД
         /// </summary>
         /// <param name="ID"></param>
-        /// <returns>РљРѕРЅС‚РµРєСЃС‚ Р°Р±Рѕ РЅСѓР»Р»</returns>
+        /// <returns>Контекст або нулл</returns>
         public ImageContext GetImageContexByID(int ID)
         {
             return GetImageContextBy_ID_or_Name(GetByVariant.ID, ID.ToString());
         }
 
         /// <summary>
-        /// Р¤СѓРЅРєС†С–СЏ С€СѓРєР°С” РєРѕРЅС‚РµРєСЃС‚ РїРѕ РќР°Р·РІС–
+        /// Функція шукає контекст по Назві
         /// </summary>
         /// <param name="ContextName"></param>
-        /// <returns>РљРѕРЅС‚РµРєСЃС‚ Р°Р±Рѕ РЅСѓР»Р»</returns>
+        /// <returns>Контекст або нулл</returns>
         public ImageContext GetImageContextByName(string ContextName)
         {
             return GetImageContextBy_ID_or_Name(GetByVariant.Name, ContextName);
         }
 
         /// <summary>
-        /// Р¤СѓРЅРєС†С–СЏ Р·Р°РіСЂСѓР¶Р°С” РІ СЃРїРёСЃРѕРє РІСЃС– РєРѕРЅС‚РµРєСЃС‚Рё
+        /// Функція загружає в список всі контексти
         /// </summary>
-        /// <param name="listContext">РЎРїРёСЃРѕРє РґР»СЏ СЂРµР·СѓР»СЊС‚Р°С‚С–РІ</param>
+        /// <param name="listContext">Список для результатів</param>
         public void LoadAllContextList(List<ImageContext> listContext)
         {
             MySqlCommand myCommand = new MySqlCommand();
@@ -1359,7 +1359,7 @@ namespace ImageLibrary
             }
             catch (MySqlException e)
             {
-                ErrorReporting("РџСЂРѕР±Р»РµРјР° РїСЂРё РІРёР±С–СЂС†С– СЃРїРёСЃРєСѓ РєРѕРЅС‚РµРєСЃС‚С–РІ", e.Message);
+                ErrorReporting("Проблема при вибірці списку контекстів", e.Message);
             }
         }
 
@@ -1382,7 +1382,7 @@ namespace ImageLibrary
             }
             catch (MySqlException e)
             {
-                ErrorReporting("РџСЂРѕР±Р»РµРјР° Р·Р°РїРёСЃСѓ Р·Р°РіРѕС‚РѕРІРєРё РґР»СЏ Pictures", e.Message);
+                ErrorReporting("Проблема запису заготовки для Pictures", e.Message);
 
                 return false;
             }
@@ -1404,7 +1404,7 @@ namespace ImageLibrary
             }
             catch (MySqlException e)
             {
-                ErrorReporting("РџСЂРѕР±Р»РµРјР° РІРёРґР°Р»РµРЅРЅСЏ Р·Р°РіРѕС‚РѕРІРєРё РґР»СЏ Pictures", e.Message);
+                ErrorReporting("Проблема видалення заготовки для Pictures", e.Message);
 
                 return false;
             }
@@ -1434,7 +1434,7 @@ namespace ImageLibrary
             }
             catch (MySqlException e)
             {
-                ErrorReporting("РџСЂРѕР±Р»РµРјР° РІРёР±С–СЂРєРё Р·Р°РіРѕС‚РѕРІРѕРє РґР»СЏ Pictures", e.Message);
+                ErrorReporting("Проблема вибірки заготовок для Pictures", e.Message);
             }
         }
 
@@ -1460,7 +1460,7 @@ namespace ImageLibrary
             }
             catch (MySqlException e)
             {
-                ErrorReporting("РџСЂРѕР±Р»РµРјР° РІРёР±С–СЂРєРё PicturesBase", e.Message);
+                ErrorReporting("Проблема вибірки PicturesBase", e.Message);
             }
         }
 
@@ -1469,7 +1469,7 @@ namespace ImageLibrary
             MySqlCommand myCommand = new MySqlCommand();
             myCommand.Connection = this.m_Connect;
 
-            // РўСЂР°РЅР·Р°РєС†С–СЏ
+            // Транзакція
             try
             {
                 myCommand.CommandText = "START TRANSACTION";
@@ -1477,7 +1477,7 @@ namespace ImageLibrary
             }
             catch (MySqlException e)
             {
-                ErrorReporting("РџСЂРѕР±Р»РµРјР° РїСЂРё СЃС‚Р°СЂС‚С– С‚СЂР°РЅР·Р°РєС†С–С—", e.Message);
+                ErrorReporting("Проблема при старті транзакції", e.Message);
 
                 return false;
             }
@@ -1493,12 +1493,12 @@ namespace ImageLibrary
             }
             catch (MySqlException e)
             {
-                ErrorReporting("РџСЂРѕР±Р»РµРјР° Р·Р°РїРёСЃСѓ РЅРѕРІРѕРіРѕ Pictures", e.Message);
+                ErrorReporting("Проблема запису нового Pictures", e.Message);
 
                 return false;
             }
 
-            // РљРѕР»РµРєС†С–С— Pictures
+            // Колекції Pictures
             foreach (PicturesBase picturesCollectionElement in picture.PicturesPictureChild)
             {
 
@@ -1514,13 +1514,13 @@ namespace ImageLibrary
                 }
                 catch (MySqlException e)
                 {
-                    ErrorReporting("РџСЂРѕР±Р»РµРјР° РїСЂРё Р·Р°РїРёСЃС– РєРѕР»РµРєС†С–Р№ РјР°Р»СЋРЅРєС–РІ РјР°Р»СЋРЅРєР°", e.Message);
+                    ErrorReporting("Проблема при записі колекцій малюнків малюнка", e.Message);
 
                     return false;
                 }
             }
 
-            // РљРѕР»РµРєС†С–С— Images
+            // Колекції Images
             foreach (ImageBase imageCollectionElement in picture.PicturesImageChild)
             {
 
@@ -1536,13 +1536,13 @@ namespace ImageLibrary
                 }
                 catch (MySqlException e)
                 {
-                    ErrorReporting("РџСЂРѕР±Р»РµРјР° РїСЂРё Р·Р°РїРёСЃС– РєРѕР»РµРєС†С–Р№ РѕР±СЂР°Р·С–РІ РјР°Р»СЋРЅРєР°", e.Message);
+                    ErrorReporting("Проблема при записі колекцій образів малюнка", e.Message);
 
                     return false;
                 }
             }
 
-            // Р—Р°РїРёСЃ С‚СЂР°РЅР·Р°РєС†С–С—
+            // Запис транзакції
             try
             {
                 myCommand.CommandText = "COMMIT";
@@ -1550,12 +1550,12 @@ namespace ImageLibrary
             }
             catch (MySqlException e)
             {
-                ErrorReporting("РџСЂРѕР±Р»РµРјР° РїСЂРё Р·Р°РїРёСЃС– С‚СЂР°Р·Р°РєС†С–С—", e.Message);
+                ErrorReporting("Проблема при записі тразакції", e.Message);
 
                 return false;
             }
 
-            InfoReporting("Р”РѕР±Р°РІР»РµРЅРёР№ РЅРѕРІРёР№ РјР°Р»СЋРЅРѕРє: ID = " + picture.ID.ToString() + ", Name = " + picture.Name);
+            InfoReporting("Добавлений новий малюнок: ID = " + picture.ID.ToString() + ", Name = " + picture.Name);
 
             return true;
         }
@@ -1565,7 +1565,7 @@ namespace ImageLibrary
             MySqlCommand myCommand = new MySqlCommand();
             myCommand.Connection = this.m_Connect;
 
-            // РўСЂР°РЅР·Р°РєС†С–СЏ
+            // Транзакція
             try
             {
                 myCommand.CommandText = "START TRANSACTION";
@@ -1573,7 +1573,7 @@ namespace ImageLibrary
             }
             catch (MySqlException e)
             {
-                ErrorReporting("РџСЂРѕР±Р»РµРјР° РїСЂРё СЃС‚Р°СЂС‚С– С‚СЂР°РЅР·Р°РєС†С–С—", e.Message);
+                ErrorReporting("Проблема при старті транзакції", e.Message);
 
                 return false;
             }
@@ -1590,12 +1590,12 @@ namespace ImageLibrary
             }
             catch (MySqlException e)
             {
-                ErrorReporting("РџСЂРѕР±Р»РµРјР° РѕР±РЅРѕРІР»РµРЅРЅСЏ Р·Р°РїРёСЃСѓ Pictures", e.Message);
+                ErrorReporting("Проблема обновлення запису Pictures", e.Message);
 
                 return false;
             }
 
-            //РћС‡РёСЃС‚Рё СЃС‚Р°СЂС– РєРѕР»РµРєС†С–С— Pictures
+            //Очисти старі колекції Pictures
             myCommand.CommandText = "DELETE FROM `pictures_picturechild` WHERE `Picture` = @Picture";
 
             myCommand.Parameters.Clear();
@@ -1607,12 +1607,12 @@ namespace ImageLibrary
             }
             catch (MySqlException e)
             {
-                ErrorReporting("РџРѕРјРёР»РєР° РїСЂРё РІРёРґР°Р»РµРЅРЅС– РєРѕР»РµРєС†С–Р№ РґР»СЏ РјР°Р»СЋРЅРєР°", e.Message);
+                ErrorReporting("Помилка при видаленні колекцій для малюнка", e.Message);
 
                 return false;
             }
 
-            //РќРѕРІС– РљРѕР»РµРєС†С–С— Pictures
+            //Нові Колекції Pictures
             foreach (PicturesBase picturesCollectionElement in picture.PicturesPictureChild)
             {
 
@@ -1628,13 +1628,13 @@ namespace ImageLibrary
                 }
                 catch (MySqlException e)
                 {
-                    ErrorReporting("РџСЂРѕР±Р»РµРјР° РїСЂРё Р·Р°РїРёСЃС– РєРѕР»РµРєС†С–Р№ РјР°Р»СЋРЅРєС–РІ РјР°Р»СЋРЅРєР°", e.Message);
+                    ErrorReporting("Проблема при записі колекцій малюнків малюнка", e.Message);
 
                     return false;
                 }
             }
 
-            //РћС‡РёСЃС‚Рё СЃС‚Р°СЂС– РєРѕР»РµРєС†С–С— Images
+            //Очисти старі колекції Images
             myCommand.CommandText = "DELETE FROM `pictures_imagechild` WHERE `Picture` = @Picture";
 
             myCommand.Parameters.Clear();
@@ -1646,12 +1646,12 @@ namespace ImageLibrary
             }
             catch (MySqlException e)
             {
-                ErrorReporting("РџРѕРјРёР»РєР° РїСЂРё РІРёРґР°Р»РµРЅРЅС– РєРѕР»РµРєС†С–Р№ РґР»СЏ РјР°Р»СЋРЅРєР°", e.Message);
+                ErrorReporting("Помилка при видаленні колекцій для малюнка", e.Message);
 
                 return false;
             }
 
-            //РќРѕРІС– РљРѕР»РµРєС†С–С— Images
+            //Нові Колекції Images
             foreach (ImageBase imageCollectionElement in picture.PicturesImageChild)
             {
 
@@ -1667,13 +1667,13 @@ namespace ImageLibrary
                 }
                 catch (MySqlException e)
                 {
-                    ErrorReporting("РџСЂРѕР±Р»РµРјР° РїСЂРё Р·Р°РїРёСЃС– РєРѕР»РµРєС†С–Р№ РѕР±СЂР°Р·С–РІ РјР°Р»СЋРЅРєР°", e.Message);
+                    ErrorReporting("Проблема при записі колекцій образів малюнка", e.Message);
 
                     return false;
                 }
             }
 
-            // Р—Р°РїРёСЃ С‚СЂР°РЅР·Р°РєС†С–С—
+            // Запис транзакції
             try
             {
                 myCommand.CommandText = "COMMIT";
@@ -1681,12 +1681,12 @@ namespace ImageLibrary
             }
             catch (MySqlException e)
             {
-                ErrorReporting("РџСЂРѕР±Р»РµРјР° РїСЂРё Р·Р°РїРёСЃС– С‚СЂР°Р·Р°РєС†С–С—", e.Message);
+                ErrorReporting("Проблема при записі тразакції", e.Message);
 
                 return false;
             }
 
-            InfoReporting("РћР±РЅРѕРІР»РµРЅРёР№ РјР°Р»СЋРЅРѕРє: ID = " + picture.ID.ToString() + ", Name = " + picture.Name);
+            InfoReporting("Обновлений малюнок: ID = " + picture.ID.ToString() + ", Name = " + picture.Name);
 
             return true;
         }
@@ -1696,7 +1696,7 @@ namespace ImageLibrary
             MySqlCommand myCommand = new MySqlCommand();
             myCommand.Connection = this.m_Connect;
 
-            // РўСЂР°РЅР·Р°РєС†С–СЏ
+            // Транзакція
             try
             {
                 myCommand.CommandText = "START TRANSACTION";
@@ -1704,14 +1704,14 @@ namespace ImageLibrary
             }
             catch (MySqlException e)
             {
-                ErrorReporting("РџСЂРѕР±Р»РµРјР° РїСЂРё СЃС‚Р°СЂС‚С– С‚СЂР°РЅР·Р°РєС†С–С—", e.Message);
+                ErrorReporting("Проблема при старті транзакції", e.Message);
 
                 return false;
             }
 
             myCommand.Parameters.AddWithValue("@ID", PictureID);
 
-            //Р’РёРґР°Р»РµРЅРЅСЏ РєРѕР»РµРєС†С–Р№ Pictures
+            //Видалення колекцій Pictures
             myCommand.CommandText = "DELETE FROM `pictures_picturechild` WHERE `Picture` = @ID";
 
             try
@@ -1720,12 +1720,12 @@ namespace ImageLibrary
             }
             catch (MySqlException e)
             {
-                ErrorReporting("РџСЂРѕР±Р»РµРјР° РІРёРґР°Р»РµРЅРЅСЏ РєРѕР»РµРєС†С–Р№ Pictures", e.Message);
+                ErrorReporting("Проблема видалення колекцій Pictures", e.Message);
 
                 return false;
             }
 
-            //Р’РёРґР°Р»РµРЅРЅСЏ РєРѕР»РµРєС†С–Р№ Images
+            //Видалення колекцій Images
             myCommand.CommandText = "DELETE FROM `pictures_imagechild` WHERE `Picture` = @ID";
 
             try
@@ -1734,12 +1734,12 @@ namespace ImageLibrary
             }
             catch (MySqlException e)
             {
-                ErrorReporting("РџСЂРѕР±Р»РµРјР° РІРёРґР°Р»РµРЅРЅСЏ РєРѕР»РµРєС†С–Р№ Pictures", e.Message);
+                ErrorReporting("Проблема видалення колекцій Pictures", e.Message);
 
                 return false;
             }
 
-            //Р’РёРґР°Р»РµРЅРЅСЏ СЃР°РјРѕРіРѕ РјР°Р»СЋРЅРєР°
+            //Видалення самого малюнка
             myCommand.CommandText = "DELETE FROM `pictures` WHERE `ID` = @ID";
 
             try
@@ -1748,12 +1748,12 @@ namespace ImageLibrary
             }
             catch (MySqlException e)
             {
-                ErrorReporting("РџСЂРѕР±Р»РµРјР° РІРёРґР°Р»РµРЅРЅСЏ Picture", e.Message);
+                ErrorReporting("Проблема видалення Picture", e.Message);
 
                 return false;
             }
 
-            // Р—Р°РїРёСЃ С‚СЂР°РЅР·Р°РєС†С–С—
+            // Запис транзакції
             try
             {
                 myCommand.CommandText = "COMMIT";
@@ -1761,12 +1761,12 @@ namespace ImageLibrary
             }
             catch (MySqlException e)
             {
-                ErrorReporting("РџСЂРѕР±Р»РµРјР° РїСЂРё Р·Р°РїРёСЃС– С‚СЂР°Р·Р°РєС†С–С—", e.Message);
+                ErrorReporting("Проблема при записі тразакції", e.Message);
 
                 return false;
             }
 
-            InfoReporting("Р’РёРґР°Р»РµРЅРёР№ РјР°Р»СЋРЅРѕРє ID = " + PictureID.ToString());
+            InfoReporting("Видалений малюнок ID = " + PictureID.ToString());
 
             return true;
         }
@@ -1789,7 +1789,7 @@ namespace ImageLibrary
                 myCommand.Parameters.AddWithValue("@Name", Value);
             }
             else
-                throw new Exception("РќРµРІС–СЂРЅРѕ Р·Р°РґР°РЅРёР№ РєСЂРёС‚РµСЂС–Р№ РїРѕС€СѓРєСѓ PicturesBase");
+                throw new Exception("Невірно заданий критерій пошуку PicturesBase");
 
             PicturesBase pictureBase = new PicturesBase();
 
@@ -1806,7 +1806,7 @@ namespace ImageLibrary
             }
             catch (MySqlException e)
             {
-                ErrorReporting("РџСЂРѕР±Р»РµРјР° РїСЂРё РїРѕС€СѓРєСѓ pictureBase", e.Message);
+                ErrorReporting("Проблема при пошуку pictureBase", e.Message);
 
                 return null;
             }
@@ -1842,7 +1842,7 @@ namespace ImageLibrary
                 myCommand.Parameters.AddWithValue("@Name", Value);
             }
             else
-                throw new Exception("РќРµРІС–СЂРЅРѕ Р·Р°РґР°РЅРёР№ РєСЂРёС‚РµСЂС–Р№ РїРѕС€СѓРєСѓ Pictures");
+                throw new Exception("Невірно заданий критерій пошуку Pictures");
 
             Pictures picture = null;
 
@@ -1861,17 +1861,17 @@ namespace ImageLibrary
             }
             catch (MySqlException e)
             {
-                ErrorReporting("РџСЂРѕР±Р»РµРјР° РїСЂРё РїРѕС€СѓРєСѓ Pictures", e.Message);
+                ErrorReporting("Проблема при пошуку Pictures", e.Message);
 
                 return null;
             }
 
             //
-            //РЇРєС‰Рѕ РјР°Р»СЋРЅРѕРє РЅРµР·РЅР°Р№РґРµРЅРёР№ С‚Рѕ РІРѕР·РІСЂР°С‚
+            //Якщо малюнок незнайдений то возврат
             //
             if (picture == null) return null;
 
-            //РљРѕР»РµРєС†С–С— Pictures
+            //Колекції Pictures
             myCommand.Parameters.Clear();
             myCommand.Parameters.AddWithValue("@Picture", picture.ID);
 
@@ -1896,12 +1896,12 @@ namespace ImageLibrary
             }
             catch (MySqlException e)
             {
-                ErrorReporting("РџСЂРѕР±Р»РµРјР° РІРёР±С–СЂРєРё РєРѕР»РµРєС†С–Р№ Pictures", e.Message);
+                ErrorReporting("Проблема вибірки колекцій Pictures", e.Message);
 
                 return null;
             }
 
-            //РљРѕР»РµРєС†С–С— Images
+            //Колекції Images
             myCommand.CommandText = "SELECT `pictures_imagechild`.`ImageChild`, " +
                                     "       `image`.`Name`, `image`.`Description`, `image`.`Synonymy`, `image`.`Context`, " +
                                     "       `image_context`.`Name` AS `ContextName` " +
@@ -1928,7 +1928,7 @@ namespace ImageLibrary
             }
             catch (MySqlException e)
             {
-                ErrorReporting("РџСЂРѕР±Р»РµРјР° РІРёР±С–СЂРєРё РєРѕР»РµРєС†С–Р№ Pictures", e.Message);
+                ErrorReporting("Проблема вибірки колекцій Pictures", e.Message);
 
                 return null;
             }
@@ -1951,12 +1951,12 @@ namespace ImageLibrary
         #region CONTROL SEARCH
 
         /// <summary>
-        /// РџРѕС€СѓРє РґР»СЏ РєРѕРЅС‚РѕР»Р° ControlSearch
+        /// Пошук для контола ControlSearch
         /// </summary>
-        /// <param name="Table">РќР°Р·РІР° С‚Р°Р±Р»РёС†С– РїРѕ СЏРєС–Р№ Р±СѓРґРµ РїРѕС€СѓРє</param>
-        /// <param name="text">РўРµРєСЃС‚ РїРѕС€СѓРєСѓ</param>
-        /// <param name="limit">РћР±РјРµР¶РµРЅРЅСЏ СЂРµР·СѓР»СЊС‚Р°С‚Сѓ РїРѕС€СѓРєСѓ</param>
-        /// <param name="result">РЎР»РѕРІРЅРёРє Р· СЂРµР·СѓР»СЊС‚Р°С‚Р°РјРё (ID, Name)</param>
+        /// <param name="Table">Назва таблиці по якій буде пошук</param>
+        /// <param name="text">Текст пошуку</param>
+        /// <param name="limit">Обмеження результату пошуку</param>
+        /// <param name="result">Словник з результатами (ID, Name)</param>
         public void SearchPicturesOrImages(string Table, string text, int limit, List<SearchElement> result)
         {
             MySqlCommand myCommand = new MySqlCommand();
@@ -1974,7 +1974,7 @@ namespace ImageLibrary
                                         "WHERE `pictures`.`Name` LIKE @TEXT ";
             }
             else
-                throw new Exception("РќРµРІС–СЂРЅРѕ Р·Р°РґР°РЅР° С‚Р°Р±Р»РёС†СЏ РґР»СЏ РїРѕС€СѓРєСѓ");
+                throw new Exception("Невірно задана таблиця для пошуку");
 
             myCommand.CommandText += (limit > 0 ? " LIMIT " + limit.ToString() : "");
 
@@ -1994,7 +1994,7 @@ namespace ImageLibrary
             }
             catch (MySqlException e)
             {
-                ErrorReporting("РџСЂРѕР±Р»РµРјР° РїСЂРё РїРѕС€СѓРєСѓ", e.Message);
+                ErrorReporting("Проблема при пошуку", e.Message);
             }
         }
 
@@ -2003,11 +2003,11 @@ namespace ImageLibrary
         #region SUPPOR FUNCTION
 
         /// <summary>
-        /// Р¤СѓРЅРєС†С–СЏ С€СѓРєР°С” РЅР°Р·РІРё РѕР±СЂР°Р·С–РІ РґР»СЏ СЏРєРёС… РґР°РЅРёР№ РѕР±СЂР°Р· (РїРµСЂРµРґР°РЅРёР№ РїР°СЂР°РјРµС‚РµСЂ) РІРёСЃС‚СѓРїР°С” РІ СЂРѕР»С– С–РЅРіСЂР°РґС–С”РЅС‚Сѓ.
-        /// РўРѕР±С‚Рѕ С„СѓРЅРєС†С–СЏ С€СѓРєР°С” РІСЃС– СЃСЃРёР»РєРё РЅР° РґР°РЅРёР№ РѕР±СЂР°Р·.
+        /// Функція шукає назви образів для яких даний образ (переданий параметер) виступає в ролі інградієнту.
+        /// Тобто функція шукає всі ссилки на даний образ.
         /// </summary>
-        /// <param name="image">РћР±СЂР°Р· РґР»СЏ РїРѕС€СѓРєСѓ СЃСЃРёР»РѕРє</param>
-        /// <returns>РЎРїРёСЃРѕРє РЅР°Р·РІ РѕР±СЂР°Р·С–РІ СЏРєС– СЃСЃРёР»Р°СЋС‚СЊСЃСЏ РЅР° РґР°РЅРёР№ РѕР±СЂР°Р· (РїРµСЂРµРґР°РЅРёР№ РїР°СЂР°РјРµС‚РµСЂ)</returns>
+        /// <param name="image">Образ для пошуку ссилок</param>
+        /// <returns>Список назв образів які ссилаються на даний образ (переданий параметер)</returns>
         public List<string> GetImageIngradientyLink(Image image)
         {
             List<string> ImageIngradientyName = new List<string>();
@@ -2015,13 +2015,13 @@ namespace ImageLibrary
             MySqlCommand myCommand = new MySqlCommand();
             myCommand.Connection = this.m_Connect;
 
-            //Р—РЅР°Р№С‚Рё С– РІРёРІРµСЃС‚Рё СЃРїРёСЃРѕРє РѕР±СЂР°Р·С–РІ
+            //Знайти і вивести список образів
             myCommand.CommandText = "SELECT `Image`.`Name` as `Image_name` " +
                                     "FROM `image_ingradienty` " +
                                     "      LEFT JOIN `image` ON  `Image`.`ID` = `image_ingradienty`.`Image`" +
                                     "WHERE `image_ingradienty`.`Ingradient` = @image";
 
-            //Р’С–РґР±С–СЂ РїРѕ Р†Р” РѕР±СЂР°Р·Сѓ
+            //Відбір по ІД образу
             myCommand.Parameters.AddWithValue("@Image", image.ID.ToString());
 
             try
@@ -2034,7 +2034,7 @@ namespace ImageLibrary
             }
             catch (MySqlException e)
             {
-                ErrorReporting("РџСЂРѕР±Р»РµРјР° РїСЂРё РїРѕС€СѓРєСѓ СЃСЃРёР»РѕРє РѕР±СЂР°Р·С–РІ. Р¤СѓРЅРєС†С–СЏ GetImageIngradientyLink()", e.Message);
+                ErrorReporting("Проблема при пошуку ссилок образів. Функція GetImageIngradientyLink()", e.Message);
             }
 
             return ImageIngradientyName;
@@ -2045,7 +2045,7 @@ namespace ImageLibrary
         #region SYSTEM FUNCTION
 
         /// <summary>
-        /// Р¤СѓРЅРєС†С–СЏ РїРѕРІРµСЂС‚Р°С” СЃРїРёСЃРѕРє РґРёРЅР°РјС–С‡РЅРѕ СЃС‚РІРѕСЂРµРЅРёС… С‚Р°Р±Р»РёС†СЊ РѕР±СЂР°Р·С–РІ
+        /// Функція повертає список динамічно створених таблиць образів
         /// </summary>
         /// <returns></returns>
         public List<string> GetDinamicTableList()
@@ -2066,7 +2066,7 @@ namespace ImageLibrary
             }
             catch (MySqlException e)
             {
-                ErrorReporting("РџСЂРѕР±Р»РµРјР° РїСЂРё РІРёР±С–СЂС†С– СЃРїРёСЃРєСѓ РґРёРЅР°РјС–С‡РЅРёС… С‚Р°Р±Р»РёС†СЊ РѕР±СЂР°Р·С–РІ", e.Message);
+                ErrorReporting("Проблема при вибірці списку динамічних таблиць образів", e.Message);
                 return null;
             }
 
@@ -2074,9 +2074,9 @@ namespace ImageLibrary
         }
 
         /// <summary>
-        /// Р¤СѓРЅРєС†С–СЏ РїРѕРІРµСЂС‚Р°С” СЃРїРёСЃРѕРє РїРѕР»С–РІ С‚Р°Р±Р»РёС†С–
+        /// Функція повертає список полів таблиці
         /// </summary>
-        /// <param name="TableName">РќР°Р·РІР° С‚Р°Р±Р»РёС†С–</param>
+        /// <param name="TableName">Назва таблиці</param>
         /// <returns></returns>
         public List<TableColumnInfo> GetDinamicTableColumnList(string TableName)
         {
@@ -2108,7 +2108,7 @@ namespace ImageLibrary
             }
             catch (MySqlException e)
             {
-                ErrorReporting("РџСЂРѕР±Р»РµРјР° РїСЂРё РІРёР±С–СЂС†С– СЃРїРёСЃРєСѓ РїРѕР»С–РІ С‚Р°Р±Р»РёС†С– " + TableName, e.Message);
+                ErrorReporting("Проблема при вибірці списку полів таблиці " + TableName, e.Message);
                 return null;
             }
 
@@ -2116,9 +2116,9 @@ namespace ImageLibrary
         }
 
         /// <summary>
-        /// Р¤СѓРЅРєС†С–СЏ РїРѕРІРµСЂС‚Р°С” СЃРїРёСЃРѕРє РїРѕР»С–РІ С‚Р°Р±Р»РёС†С–
+        /// Функція повертає список полів таблиці
         /// </summary>
-        /// <param name="TableName">РќР°Р·РІР° С‚Р°Р±Р»РёС†С–</param>
+        /// <param name="TableName">Назва таблиці</param>
         /// <returns></returns>
         public List<TableIndexInfo> GetDinamicTableIndexList(string TableName)
         {
@@ -2150,7 +2150,7 @@ namespace ImageLibrary
             }
             catch (MySqlException e)
             {
-                ErrorReporting("РџСЂРѕР±Р»РµРјР° РїСЂРё РІРёР±С–СЂС†С– СЃРїРёСЃРєСѓ С–РЅРґРµРєСЃС–РІ С‚Р°Р±Р»РёС†С– " + TableName, e.Message);
+                ErrorReporting("Проблема при вибірці списку індексів таблиці " + TableName, e.Message);
                 return null;
             }
 
@@ -2158,10 +2158,10 @@ namespace ImageLibrary
         }
 
         /// <summary>
-        /// Р¤СѓРЅРєС†С–СЏ РІРёРєРѕРЅСѓС” Р·Р°РїРёС‚ РІ Р±Р°Р·С– РґР°РЅРёС…
+        /// Функція виконує запит в базі даних
         /// </summary>
-        /// <param name="query">Р—Р°РїРёС‚</param>
-        /// <param name="query_param">РџР°СЂР°РјРµС‚СЂРё Р·Р°РїРёС‚Сѓ</param>
+        /// <param name="query">Запит</param>
+        /// <param name="query_param">Параметри запиту</param>
         public int ExecuteNonSQLQuery(string query, Dictionary<string, string> query_param = null)
         {
             MySqlCommand myCommand = new MySqlCommand();
@@ -2181,14 +2181,14 @@ namespace ImageLibrary
             }
             catch (MySqlException e)
             {
-                ErrorReporting("РџСЂРѕР±Р»РµРјР° РїСЂРё РІРёРєРѕРЅР°РЅРЅС– Р·Р°РїРёС‚Сѓ", e.Message);
+                ErrorReporting("Проблема при виконанні запиту", e.Message);
             }
 
             return result;
         }
 
         /// <summary>
-        /// Р¤СѓРЅРєС†С–СЏ РІРёРґР°Р»СЏС” РґР°РЅС– Р· РѕСЃРЅРѕРІРЅРёС… С‚Р°Р±Р»РёС†СЊ
+        /// Функція видаляє дані з основних таблиць
         /// </summary>
         public void DelAll()
         {
@@ -2212,7 +2212,7 @@ namespace ImageLibrary
             foreach (string item in query)
             {
                 Console.WriteLine(item);
-                //!!!Console.WriteLine("Р РµР·СѓР»СЊС‚Р°С‚: " + ExecuteNonSQLQuery(item));
+                //!!!Console.WriteLine("Результат: " + ExecuteNonSQLQuery(item));
             }
         }
 
@@ -2221,7 +2221,7 @@ namespace ImageLibrary
         #region SEARCH
 
         /// <summary>
-        /// РџСЂСЏРјРёР№ РїРѕС€СѓРє РІ СЃС…РµРјС–
+        /// Прямий пошук в схемі
         /// </summary>
         public List<SearchRowData> SearchShema(string query)
         {
@@ -2246,7 +2246,7 @@ namespace ImageLibrary
             }
             catch (MySqlException e)
             {
-                ErrorReporting("РџСЂРѕР±Р»РµРјР° РїСЂРё РїРѕС€РєСѓ", e.Message);
+                ErrorReporting("Проблема при пошку", e.Message);
                 return null;
             }
 
@@ -2254,7 +2254,7 @@ namespace ImageLibrary
         }
 
         /// <summary>
-        /// РџСЂСЏРјРёР№ РїРѕС€СѓРє РІ РґР°РЅРёС…
+        /// Прямий пошук в даних
         /// </summary>
         public List<SearchRowData> SearchDirectData(string query)
         {
@@ -2279,7 +2279,7 @@ namespace ImageLibrary
             }
             catch (MySqlException e)
             {
-                ErrorReporting("РџСЂРѕР±Р»РµРјР° РїСЂРё РїРѕС€РєСѓ", e.Message);
+                ErrorReporting("Проблема при пошку", e.Message);
                 return null;
             }
 
@@ -2287,7 +2287,7 @@ namespace ImageLibrary
         }
 
         /// <summary>
-        /// РџРѕС€СѓРє РІС…РѕРґРµР¶РЅСЏ РІ РґР°РЅРёС…
+        /// Пошук входежня в даних
         /// </summary>
         public List<SearchRowData> SearchEntryData(string query)
         {
@@ -2312,7 +2312,7 @@ namespace ImageLibrary
             }
             catch (MySqlException e)
             {
-                ErrorReporting("РџСЂРѕР±Р»РµРјР° РїСЂРё РїРѕС€РєСѓ", e.Message);
+                ErrorReporting("Проблема при пошку", e.Message);
                 return null;
             }
 
@@ -2320,11 +2320,11 @@ namespace ImageLibrary
         }
 
         /// <summary>
-        /// Р¤СѓРЅРєС†С–СЏ С€СѓРєР°С” РїРµСЂРµС…РѕРґРё РјС–Р¶ СЃРїРёСЃРєРѕРј Рђ С‚Р° СЃРїРёСЃРєРѕРј Р‘
+        /// Функція шукає переходи між списком А та списком Б
         /// </summary>
-        /// <param name="Tracks">РЎРїРёСЃРѕРє СЂРµР·СѓР»СЊС‚Р°С‚С–РІ</param>
-        /// <param name="listShemaA">РЎРїРёСЃРѕРє Рђ</param>
-        /// <param name="listShemaB">РЎРїРёСЃРѕРє Р‘</param>
+        /// <param name="Tracks">Список результатів</param>
+        /// <param name="listShemaA">Список А</param>
+        /// <param name="listShemaB">Список Б</param>
         public void GetTracks(List<Track> Tracks, List<string> listShemaA, List<string> listShemaB)
         {
             if (listShemaA.Count == 0 || listShemaB.Count == 0)
@@ -2379,7 +2379,7 @@ namespace ImageLibrary
             }
             catch (MySqlException e)
             {
-                ErrorReporting("РџСЂРѕР±Р»РµРјР° РїСЂРё РІРёР±С–СЂС†С– С‚СЂРµРєС–РІ", e.Message);
+                ErrorReporting("Проблема при вибірці треків", e.Message);
             }
         }
 
