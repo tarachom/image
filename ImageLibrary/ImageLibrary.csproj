@@ -61,7 +61,6 @@
     <Compile Include="Kernel.cs" />
     <Compile Include="interface\IDataBase.cs" />
     <Compile Include="image\Image.cs" />
-    <Compile Include="_MySqlDataBase.cs" />
     <Compile Include="Корзина\PicturesTemplate.cs" />
     <Compile Include="Корзина\PicturesBase.cs" />
     <Compile Include="Корзина\Pictures.cs" />
