@@ -1,0 +1,1609 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--05.06.2017 23:35:27-->
+<root>
+  <track ida="1" namea="Ноутбук" idb="5" nameb="Процесор">
+    <bridge id="7" lvla="3" lvlb="3" pa="1,2,7" pb="5,4,7" fpa="/root/image[@id=1]/image[@id=2]/image[@id=7]/" fpb="/root/image[@id=5]/image[@id=4]/image[@id=7]/" />
+    <bridge id="5" lvla="3" lvlb="1" pa="1,118,5" pb="5" fpa="/root/image[@id=1]/image[@id=118]/image[@id=5]/" fpb="/root/image[@id=5]/" />
+  </track>
+  <track ida="1" namea="Ноутбук" idb="6" nameb="Адреса">
+    <bridge id="6" lvla="5" lvlb="1" pa="1,2,7,8,6" pb="6" fpa="/root/image[@id=1]/image[@id=2]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=6]/" />
+  </track>
+  <track ida="1" namea="Ноутбук" idb="7" nameb="Виробник">
+    <bridge id="7" lvla="3" lvlb="1" pa="1,2,7" pb="7" fpa="/root/image[@id=1]/image[@id=2]/image[@id=7]/" fpb="/root/image[@id=7]/" />
+  </track>
+  <track ida="1" namea="Ноутбук" idb="11" nameb="Вінчестер">
+    <bridge id="7" lvla="3" lvlb="3" pa="1,2,7" pb="11,10,7" fpa="/root/image[@id=1]/image[@id=2]/image[@id=7]/" fpb="/root/image[@id=11]/image[@id=10]/image[@id=7]/" />
+    <bridge id="11" lvla="3" lvlb="1" pa="1,118,11" pb="11" fpa="/root/image[@id=1]/image[@id=118]/image[@id=11]/" fpb="/root/image[@id=11]/" />
+  </track>
+  <track ida="1" namea="Ноутбук" idb="13" nameb="Монітор">
+    <bridge id="7" lvla="3" lvlb="3" pa="1,2,7" pb="13,12,7" fpa="/root/image[@id=1]/image[@id=2]/image[@id=7]/" fpb="/root/image[@id=13]/image[@id=12]/image[@id=7]/" />
+    <bridge id="13" lvla="2" lvlb="1" pa="1,13" pb="13" fpa="/root/image[@id=1]/image[@id=13]/" fpb="/root/image[@id=13]/" />
+  </track>
+  <track ida="1" namea="Ноутбук" idb="15" nameb="Клавіатура">
+    <bridge id="7" lvla="3" lvlb="3" pa="1,2,7" pb="15,14,7" fpa="/root/image[@id=1]/image[@id=2]/image[@id=7]/" fpb="/root/image[@id=15]/image[@id=14]/image[@id=7]/" />
+    <bridge id="15" lvla="2" lvlb="1" pa="1,15" pb="15" fpa="/root/image[@id=1]/image[@id=15]/" fpb="/root/image[@id=15]/" />
+  </track>
+  <track ida="1" namea="Ноутбук" idb="17" nameb="Материнська плата">
+    <bridge id="7" lvla="3" lvlb="3" pa="1,2,7" pb="17,18,7" fpa="/root/image[@id=1]/image[@id=2]/image[@id=7]/" fpb="/root/image[@id=17]/image[@id=18]/image[@id=7]/" />
+    <bridge id="17" lvla="3" lvlb="1" pa="1,118,17" pb="17" fpa="/root/image[@id=1]/image[@id=118]/image[@id=17]/" fpb="/root/image[@id=17]/" />
+  </track>
+  <track ida="1" namea="Ноутбук" idb="21" nameb="Країна">
+    <bridge id="21" lvla="7" lvlb="1" pa="1,2,7,8,6,19,21" pb="21" fpa="/root/image[@id=1]/image[@id=2]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=19]/image[@id=21]/" fpb="/root/image[@id=21]/" />
+  </track>
+  <track ida="1" namea="Ноутбук" idb="22" nameb="Місто">
+    <bridge id="22" lvla="7" lvlb="1" pa="1,2,7,8,6,20,22" pb="22" fpa="/root/image[@id=1]/image[@id=2]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=20]/image[@id=22]/" fpb="/root/image[@id=22]/" />
+  </track>
+  <track ida="1" namea="Ноутбук" idb="30" nameb="Магазин">
+    <bridge id="6" lvla="5" lvlb="3" pa="1,2,7,8,6" pb="30,29,6" fpa="/root/image[@id=1]/image[@id=2]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=30]/image[@id=29]/image[@id=6]/" />
+  </track>
+  <track ida="1" namea="Ноутбук" idb="32" nameb="Веб камера">
+    <bridge id="7" lvla="3" lvlb="3" pa="1,2,7" pb="32,31,7" fpa="/root/image[@id=1]/image[@id=2]/image[@id=7]/" fpb="/root/image[@id=32]/image[@id=31]/image[@id=7]/" />
+    <bridge id="32" lvla="2" lvlb="1" pa="1,32" pb="32" fpa="/root/image[@id=1]/image[@id=32]/" fpb="/root/image[@id=32]/" />
+  </track>
+  <track ida="1" namea="Ноутбук" idb="34" nameb="Телевізор">
+    <bridge id="7" lvla="3" lvlb="3" pa="1,2,7" pb="34,35,7" fpa="/root/image[@id=1]/image[@id=2]/image[@id=7]/" fpb="/root/image[@id=34]/image[@id=35]/image[@id=7]/" />
+  </track>
+  <track ida="1" namea="Ноутбук" idb="36" nameb="Телефон">
+    <bridge id="7" lvla="3" lvlb="3" pa="1,2,7" pb="36,37,7" fpa="/root/image[@id=1]/image[@id=2]/image[@id=7]/" fpb="/root/image[@id=36]/image[@id=37]/image[@id=7]/" />
+    <bridge id="13" lvla="2" lvlb="2" pa="1,13" pb="36,13" fpa="/root/image[@id=1]/image[@id=13]/" fpb="/root/image[@id=36]/image[@id=13]/" />
+    <bridge id="118" lvla="2" lvlb="2" pa="1,118" pb="36,118" fpa="/root/image[@id=1]/image[@id=118]/" fpb="/root/image[@id=36]/image[@id=118]/" />
+  </track>
+  <track ida="1" namea="Ноутбук" idb="38" nameb="GSM Модуль">
+    <bridge id="7" lvla="3" lvlb="3" pa="1,2,7" pb="38,39,7" fpa="/root/image[@id=1]/image[@id=2]/image[@id=7]/" fpb="/root/image[@id=38]/image[@id=39]/image[@id=7]/" />
+  </track>
+  <track ida="1" namea="Ноутбук" idb="41" nameb="Планшет">
+    <bridge id="7" lvla="3" lvlb="3" pa="1,2,7" pb="41,42,7" fpa="/root/image[@id=1]/image[@id=2]/image[@id=7]/" fpb="/root/image[@id=41]/image[@id=42]/image[@id=7]/" />
+    <bridge id="13" lvla="2" lvlb="2" pa="1,13" pb="41,13" fpa="/root/image[@id=1]/image[@id=13]/" fpb="/root/image[@id=41]/image[@id=13]/" />
+    <bridge id="5" lvla="3" lvlb="2" pa="1,118,5" pb="41,5" fpa="/root/image[@id=1]/image[@id=118]/image[@id=5]/" fpb="/root/image[@id=41]/image[@id=5]/" />
+  </track>
+  <track ida="1" namea="Ноутбук" idb="44" nameb="Ресторан">
+    <bridge id="6" lvla="5" lvlb="3" pa="1,2,7,8,6" pb="44,52,6" fpa="/root/image[@id=1]/image[@id=2]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=44]/image[@id=52]/image[@id=6]/" />
+    <bridge id="44" lvla="3" lvlb="1" pa="1,16,44" pb="44" fpa="/root/image[@id=1]/image[@id=16]/image[@id=44]/" fpb="/root/image[@id=44]/" />
+  </track>
+  <track ida="1" namea="Ноутбук" idb="45" nameb="Підрозділ">
+    <bridge id="6" lvla="5" lvlb="3" pa="1,2,7,8,6" pb="45,66,6" fpa="/root/image[@id=1]/image[@id=2]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=45]/image[@id=66]/image[@id=6]/" />
+  </track>
+  <track ida="1" namea="Ноутбук" idb="49" nameb="Парк">
+    <bridge id="6" lvla="5" lvlb="3" pa="1,2,7,8,6" pb="49,51,6" fpa="/root/image[@id=1]/image[@id=2]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=49]/image[@id=51]/image[@id=6]/" />
+  </track>
+  <track ida="1" namea="Ноутбук" idb="53" nameb="Мобільний телефон">
+    <bridge id="7" lvla="3" lvlb="3" pa="1,2,7" pb="53,37,7" fpa="/root/image[@id=1]/image[@id=2]/image[@id=7]/" fpb="/root/image[@id=53]/image[@id=37]/image[@id=7]/" />
+  </track>
+  <track ida="1" namea="Ноутбук" idb="60" nameb="Вулиця">
+    <bridge id="60" lvla="7" lvlb="1" pa="1,2,7,8,6,9,60" pb="60" fpa="/root/image[@id=1]/image[@id=2]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=9]/image[@id=60]/" fpb="/root/image[@id=60]/" />
+  </track>
+  <track ida="1" namea="Ноутбук" idb="62" nameb="Будинок">
+    <bridge id="6" lvla="5" lvlb="3" pa="1,2,7,8,6" pb="62,64,6" fpa="/root/image[@id=1]/image[@id=2]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=62]/image[@id=64]/image[@id=6]/" />
+  </track>
+  <track ida="1" namea="Ноутбук" idb="73" nameb="Особняк">
+    <bridge id="6" lvla="5" lvlb="3" pa="1,2,7,8,6" pb="73,76,6" fpa="/root/image[@id=1]/image[@id=2]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=73]/image[@id=76]/image[@id=6]/" />
+  </track>
+  <track ida="1" namea="Ноутбук" idb="81" nameb="Фірма">
+    <bridge id="6" lvla="5" lvlb="3" pa="1,2,7,8,6" pb="81,83,6" fpa="/root/image[@id=1]/image[@id=2]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=81]/image[@id=83]/image[@id=6]/" />
+  </track>
+  <track ida="1" namea="Ноутбук" idb="84" nameb="Завод">
+    <bridge id="6" lvla="5" lvlb="3" pa="1,2,7,8,6" pb="84,85,6" fpa="/root/image[@id=1]/image[@id=2]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=84]/image[@id=85]/image[@id=6]/" />
+  </track>
+  <track ida="1" namea="Ноутбук" idb="96" nameb="Школа">
+    <bridge id="1" lvla="1" lvlb="2" pa="1" pb="96,1" fpa="/root/image[@id=1]/" fpb="/root/image[@id=96]/image[@id=1]/" />
+  </track>
+  <track ida="1" namea="Ноутбук" idb="106" nameb="Смартфон">
+    <bridge id="7" lvla="3" lvlb="4" pa="1,2,7" pb="106,5,4,7" fpa="/root/image[@id=1]/image[@id=2]/image[@id=7]/" fpb="/root/image[@id=106]/image[@id=5]/image[@id=4]/image[@id=7]/" />
+    <bridge id="5" lvla="3" lvlb="2" pa="1,118,5" pb="106,5" fpa="/root/image[@id=1]/image[@id=118]/image[@id=5]/" fpb="/root/image[@id=106]/image[@id=5]/" />
+  </track>
+  <track ida="1" namea="Ноутбук" idb="118" nameb="Комп'ютер">
+    <bridge id="7" lvla="3" lvlb="4" pa="1,2,7" pb="118,5,4,7" fpa="/root/image[@id=1]/image[@id=2]/image[@id=7]/" fpb="/root/image[@id=118]/image[@id=5]/image[@id=4]/image[@id=7]/" />
+    <bridge id="118" lvla="2" lvlb="1" pa="1,118" pb="118" fpa="/root/image[@id=1]/image[@id=118]/" fpb="/root/image[@id=118]/" />
+  </track>
+  <track ida="1" namea="Ноутбук" idb="119" nameb="Сервер">
+    <bridge id="7" lvla="3" lvlb="3" pa="1,2,7" pb="119,124,7" fpa="/root/image[@id=1]/image[@id=2]/image[@id=7]/" fpb="/root/image[@id=119]/image[@id=124]/image[@id=7]/" />
+    <bridge id="118" lvla="2" lvlb="2" pa="1,118" pb="119,118" fpa="/root/image[@id=1]/image[@id=118]/" fpb="/root/image[@id=119]/image[@id=118]/" />
+  </track>
+  <track ida="1" namea="Ноутбук" idb="120" nameb="Чіпсет">
+    <bridge id="7" lvla="3" lvlb="3" pa="1,2,7" pb="120,123,7" fpa="/root/image[@id=1]/image[@id=2]/image[@id=7]/" fpb="/root/image[@id=120]/image[@id=123]/image[@id=7]/" />
+    <bridge id="120" lvla="4" lvlb="1" pa="1,118,17,120" pb="120" fpa="/root/image[@id=1]/image[@id=118]/image[@id=17]/image[@id=120]/" fpb="/root/image[@id=120]/" />
+  </track>
+  <track ida="1" namea="Ноутбук" idb="130" nameb="БлаБлаБла">
+    <bridge id="9" lvla="6" lvlb="2" pa="1,2,7,8,6,9" pb="130,9" fpa="/root/image[@id=1]/image[@id=2]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=9]/" fpb="/root/image[@id=130]/image[@id=9]/" />
+  </track>
+  <track ida="1" namea="Ноутбук" idb="132" nameb="Машина">
+    <bridge id="1" lvla="1" lvlb="2" pa="1" pb="132,1" fpa="/root/image[@id=1]/" fpb="/root/image[@id=132]/image[@id=1]/" />
+  </track>
+  <track ida="5" namea="Процесор" idb="6" nameb="Адреса">
+    <bridge id="6" lvla="5" lvlb="1" pa="5,4,7,8,6" pb="6" fpa="/root/image[@id=5]/image[@id=4]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=6]/" />
+  </track>
+  <track ida="5" namea="Процесор" idb="7" nameb="Виробник">
+    <bridge id="7" lvla="3" lvlb="1" pa="5,4,7" pb="7" fpa="/root/image[@id=5]/image[@id=4]/image[@id=7]/" fpb="/root/image[@id=7]/" />
+  </track>
+  <track ida="5" namea="Процесор" idb="11" nameb="Вінчестер">
+    <bridge id="7" lvla="3" lvlb="3" pa="5,4,7" pb="11,10,7" fpa="/root/image[@id=5]/image[@id=4]/image[@id=7]/" fpb="/root/image[@id=11]/image[@id=10]/image[@id=7]/" />
+  </track>
+  <track ida="5" namea="Процесор" idb="13" nameb="Монітор">
+    <bridge id="7" lvla="3" lvlb="3" pa="5,4,7" pb="13,12,7" fpa="/root/image[@id=5]/image[@id=4]/image[@id=7]/" fpb="/root/image[@id=13]/image[@id=12]/image[@id=7]/" />
+  </track>
+  <track ida="5" namea="Процесор" idb="15" nameb="Клавіатура">
+    <bridge id="7" lvla="3" lvlb="3" pa="5,4,7" pb="15,14,7" fpa="/root/image[@id=5]/image[@id=4]/image[@id=7]/" fpb="/root/image[@id=15]/image[@id=14]/image[@id=7]/" />
+  </track>
+  <track ida="5" namea="Процесор" idb="17" nameb="Материнська плата">
+    <bridge id="7" lvla="3" lvlb="3" pa="5,4,7" pb="17,18,7" fpa="/root/image[@id=5]/image[@id=4]/image[@id=7]/" fpb="/root/image[@id=17]/image[@id=18]/image[@id=7]/" />
+  </track>
+  <track ida="5" namea="Процесор" idb="21" nameb="Країна">
+    <bridge id="21" lvla="7" lvlb="1" pa="5,4,7,8,6,19,21" pb="21" fpa="/root/image[@id=5]/image[@id=4]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=19]/image[@id=21]/" fpb="/root/image[@id=21]/" />
+  </track>
+  <track ida="5" namea="Процесор" idb="22" nameb="Місто">
+    <bridge id="22" lvla="7" lvlb="1" pa="5,4,7,8,6,20,22" pb="22" fpa="/root/image[@id=5]/image[@id=4]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=20]/image[@id=22]/" fpb="/root/image[@id=22]/" />
+  </track>
+  <track ida="5" namea="Процесор" idb="30" nameb="Магазин">
+    <bridge id="6" lvla="5" lvlb="3" pa="5,4,7,8,6" pb="30,29,6" fpa="/root/image[@id=5]/image[@id=4]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=30]/image[@id=29]/image[@id=6]/" />
+  </track>
+  <track ida="5" namea="Процесор" idb="32" nameb="Веб камера">
+    <bridge id="7" lvla="3" lvlb="3" pa="5,4,7" pb="32,31,7" fpa="/root/image[@id=5]/image[@id=4]/image[@id=7]/" fpb="/root/image[@id=32]/image[@id=31]/image[@id=7]/" />
+  </track>
+  <track ida="5" namea="Процесор" idb="34" nameb="Телевізор">
+    <bridge id="7" lvla="3" lvlb="3" pa="5,4,7" pb="34,35,7" fpa="/root/image[@id=5]/image[@id=4]/image[@id=7]/" fpb="/root/image[@id=34]/image[@id=35]/image[@id=7]/" />
+  </track>
+  <track ida="5" namea="Процесор" idb="36" nameb="Телефон">
+    <bridge id="5" lvla="1" lvlb="3" pa="5" pb="36,118,5" fpa="/root/image[@id=5]/" fpb="/root/image[@id=36]/image[@id=118]/image[@id=5]/" />
+  </track>
+  <track ida="5" namea="Процесор" idb="38" nameb="GSM Модуль">
+    <bridge id="7" lvla="3" lvlb="3" pa="5,4,7" pb="38,39,7" fpa="/root/image[@id=5]/image[@id=4]/image[@id=7]/" fpb="/root/image[@id=38]/image[@id=39]/image[@id=7]/" />
+  </track>
+  <track ida="5" namea="Процесор" idb="41" nameb="Планшет">
+    <bridge id="5" lvla="1" lvlb="2" pa="5" pb="41,5" fpa="/root/image[@id=5]/" fpb="/root/image[@id=41]/image[@id=5]/" />
+  </track>
+  <track ida="5" namea="Процесор" idb="44" nameb="Ресторан">
+    <bridge id="6" lvla="5" lvlb="3" pa="5,4,7,8,6" pb="44,52,6" fpa="/root/image[@id=5]/image[@id=4]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=44]/image[@id=52]/image[@id=6]/" />
+  </track>
+  <track ida="5" namea="Процесор" idb="45" nameb="Підрозділ">
+    <bridge id="6" lvla="5" lvlb="3" pa="5,4,7,8,6" pb="45,66,6" fpa="/root/image[@id=5]/image[@id=4]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=45]/image[@id=66]/image[@id=6]/" />
+  </track>
+  <track ida="5" namea="Процесор" idb="49" nameb="Парк">
+    <bridge id="6" lvla="5" lvlb="3" pa="5,4,7,8,6" pb="49,51,6" fpa="/root/image[@id=5]/image[@id=4]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=49]/image[@id=51]/image[@id=6]/" />
+  </track>
+  <track ida="5" namea="Процесор" idb="53" nameb="Мобільний телефон">
+    <bridge id="7" lvla="3" lvlb="3" pa="5,4,7" pb="53,37,7" fpa="/root/image[@id=5]/image[@id=4]/image[@id=7]/" fpb="/root/image[@id=53]/image[@id=37]/image[@id=7]/" />
+  </track>
+  <track ida="5" namea="Процесор" idb="60" nameb="Вулиця">
+    <bridge id="60" lvla="7" lvlb="1" pa="5,4,7,8,6,9,60" pb="60" fpa="/root/image[@id=5]/image[@id=4]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=9]/image[@id=60]/" fpb="/root/image[@id=60]/" />
+  </track>
+  <track ida="5" namea="Процесор" idb="62" nameb="Будинок">
+    <bridge id="6" lvla="5" lvlb="3" pa="5,4,7,8,6" pb="62,64,6" fpa="/root/image[@id=5]/image[@id=4]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=62]/image[@id=64]/image[@id=6]/" />
+  </track>
+  <track ida="5" namea="Процесор" idb="73" nameb="Особняк">
+    <bridge id="6" lvla="5" lvlb="3" pa="5,4,7,8,6" pb="73,76,6" fpa="/root/image[@id=5]/image[@id=4]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=73]/image[@id=76]/image[@id=6]/" />
+  </track>
+  <track ida="5" namea="Процесор" idb="81" nameb="Фірма">
+    <bridge id="6" lvla="5" lvlb="3" pa="5,4,7,8,6" pb="81,83,6" fpa="/root/image[@id=5]/image[@id=4]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=81]/image[@id=83]/image[@id=6]/" />
+  </track>
+  <track ida="5" namea="Процесор" idb="84" nameb="Завод">
+    <bridge id="6" lvla="5" lvlb="3" pa="5,4,7,8,6" pb="84,85,6" fpa="/root/image[@id=5]/image[@id=4]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=84]/image[@id=85]/image[@id=6]/" />
+  </track>
+  <track ida="5" namea="Процесор" idb="96" nameb="Школа">
+    <bridge id="5" lvla="1" lvlb="4" pa="5" pb="96,1,118,5" fpa="/root/image[@id=5]/" fpb="/root/image[@id=96]/image[@id=1]/image[@id=118]/image[@id=5]/" />
+  </track>
+  <track ida="5" namea="Процесор" idb="106" nameb="Смартфон">
+    <bridge id="5" lvla="1" lvlb="2" pa="5" pb="106,5" fpa="/root/image[@id=5]/" fpb="/root/image[@id=106]/image[@id=5]/" />
+  </track>
+  <track ida="5" namea="Процесор" idb="118" nameb="Комп'ютер">
+    <bridge id="5" lvla="1" lvlb="2" pa="5" pb="118,5" fpa="/root/image[@id=5]/" fpb="/root/image[@id=118]/image[@id=5]/" />
+  </track>
+  <track ida="5" namea="Процесор" idb="119" nameb="Сервер">
+    <bridge id="5" lvla="1" lvlb="3" pa="5" pb="119,118,5" fpa="/root/image[@id=5]/" fpb="/root/image[@id=119]/image[@id=118]/image[@id=5]/" />
+  </track>
+  <track ida="5" namea="Процесор" idb="120" nameb="Чіпсет">
+    <bridge id="7" lvla="3" lvlb="3" pa="5,4,7" pb="120,123,7" fpa="/root/image[@id=5]/image[@id=4]/image[@id=7]/" fpb="/root/image[@id=120]/image[@id=123]/image[@id=7]/" />
+  </track>
+  <track ida="5" namea="Процесор" idb="130" nameb="БлаБлаБла">
+    <bridge id="9" lvla="6" lvlb="2" pa="5,4,7,8,6,9" pb="130,9" fpa="/root/image[@id=5]/image[@id=4]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=9]/" fpb="/root/image[@id=130]/image[@id=9]/" />
+  </track>
+  <track ida="5" namea="Процесор" idb="132" nameb="Машина">
+    <bridge id="5" lvla="1" lvlb="4" pa="5" pb="132,1,118,5" fpa="/root/image[@id=5]/" fpb="/root/image[@id=132]/image[@id=1]/image[@id=118]/image[@id=5]/" />
+  </track>
+  <track ida="6" namea="Адреса" idb="7" nameb="Виробник">
+    <bridge id="6" lvla="1" lvlb="3" pa="6" pb="7,8,6" fpa="/root/image[@id=6]/" fpb="/root/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="6" namea="Адреса" idb="11" nameb="Вінчестер">
+    <bridge id="6" lvla="1" lvlb="5" pa="6" pb="11,10,7,8,6" fpa="/root/image[@id=6]/" fpb="/root/image[@id=11]/image[@id=10]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="6" namea="Адреса" idb="13" nameb="Монітор">
+    <bridge id="6" lvla="1" lvlb="5" pa="6" pb="13,12,7,8,6" fpa="/root/image[@id=6]/" fpb="/root/image[@id=13]/image[@id=12]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="6" namea="Адреса" idb="15" nameb="Клавіатура">
+    <bridge id="6" lvla="1" lvlb="5" pa="6" pb="15,14,7,8,6" fpa="/root/image[@id=6]/" fpb="/root/image[@id=15]/image[@id=14]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="6" namea="Адреса" idb="17" nameb="Материнська плата">
+    <bridge id="6" lvla="1" lvlb="5" pa="6" pb="17,18,7,8,6" fpa="/root/image[@id=6]/" fpb="/root/image[@id=17]/image[@id=18]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="6" namea="Адреса" idb="21" nameb="Країна">
+    <bridge id="21" lvla="3" lvlb="1" pa="6,19,21" pb="21" fpa="/root/image[@id=6]/image[@id=19]/image[@id=21]/" fpb="/root/image[@id=21]/" />
+  </track>
+  <track ida="6" namea="Адреса" idb="22" nameb="Місто">
+    <bridge id="22" lvla="3" lvlb="1" pa="6,20,22" pb="22" fpa="/root/image[@id=6]/image[@id=20]/image[@id=22]/" fpb="/root/image[@id=22]/" />
+  </track>
+  <track ida="6" namea="Адреса" idb="30" nameb="Магазин">
+    <bridge id="6" lvla="1" lvlb="3" pa="6" pb="30,29,6" fpa="/root/image[@id=6]/" fpb="/root/image[@id=30]/image[@id=29]/image[@id=6]/" />
+  </track>
+  <track ida="6" namea="Адреса" idb="32" nameb="Веб камера">
+    <bridge id="6" lvla="1" lvlb="5" pa="6" pb="32,31,7,8,6" fpa="/root/image[@id=6]/" fpb="/root/image[@id=32]/image[@id=31]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="6" namea="Адреса" idb="34" nameb="Телевізор">
+    <bridge id="6" lvla="1" lvlb="5" pa="6" pb="34,35,7,8,6" fpa="/root/image[@id=6]/" fpb="/root/image[@id=34]/image[@id=35]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="6" namea="Адреса" idb="36" nameb="Телефон">
+    <bridge id="6" lvla="1" lvlb="5" pa="6" pb="36,37,7,8,6" fpa="/root/image[@id=6]/" fpb="/root/image[@id=36]/image[@id=37]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="6" namea="Адреса" idb="38" nameb="GSM Модуль">
+    <bridge id="6" lvla="1" lvlb="5" pa="6" pb="38,39,7,8,6" fpa="/root/image[@id=6]/" fpb="/root/image[@id=38]/image[@id=39]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="6" namea="Адреса" idb="41" nameb="Планшет">
+    <bridge id="6" lvla="1" lvlb="5" pa="6" pb="41,42,7,8,6" fpa="/root/image[@id=6]/" fpb="/root/image[@id=41]/image[@id=42]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="6" namea="Адреса" idb="44" nameb="Ресторан">
+    <bridge id="6" lvla="1" lvlb="3" pa="6" pb="44,52,6" fpa="/root/image[@id=6]/" fpb="/root/image[@id=44]/image[@id=52]/image[@id=6]/" />
+  </track>
+  <track ida="6" namea="Адреса" idb="45" nameb="Підрозділ">
+    <bridge id="6" lvla="1" lvlb="3" pa="6" pb="45,66,6" fpa="/root/image[@id=6]/" fpb="/root/image[@id=45]/image[@id=66]/image[@id=6]/" />
+  </track>
+  <track ida="6" namea="Адреса" idb="49" nameb="Парк">
+    <bridge id="6" lvla="1" lvlb="3" pa="6" pb="49,51,6" fpa="/root/image[@id=6]/" fpb="/root/image[@id=49]/image[@id=51]/image[@id=6]/" />
+  </track>
+  <track ida="6" namea="Адреса" idb="53" nameb="Мобільний телефон">
+    <bridge id="6" lvla="1" lvlb="5" pa="6" pb="53,37,7,8,6" fpa="/root/image[@id=6]/" fpb="/root/image[@id=53]/image[@id=37]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="6" namea="Адреса" idb="60" nameb="Вулиця">
+    <bridge id="60" lvla="3" lvlb="1" pa="6,9,60" pb="60" fpa="/root/image[@id=6]/image[@id=9]/image[@id=60]/" fpb="/root/image[@id=60]/" />
+  </track>
+  <track ida="6" namea="Адреса" idb="62" nameb="Будинок">
+    <bridge id="6" lvla="1" lvlb="3" pa="6" pb="62,64,6" fpa="/root/image[@id=6]/" fpb="/root/image[@id=62]/image[@id=64]/image[@id=6]/" />
+  </track>
+  <track ida="6" namea="Адреса" idb="73" nameb="Особняк">
+    <bridge id="6" lvla="1" lvlb="3" pa="6" pb="73,76,6" fpa="/root/image[@id=6]/" fpb="/root/image[@id=73]/image[@id=76]/image[@id=6]/" />
+  </track>
+  <track ida="6" namea="Адреса" idb="81" nameb="Фірма">
+    <bridge id="6" lvla="1" lvlb="3" pa="6" pb="81,83,6" fpa="/root/image[@id=6]/" fpb="/root/image[@id=81]/image[@id=83]/image[@id=6]/" />
+  </track>
+  <track ida="6" namea="Адреса" idb="84" nameb="Завод">
+    <bridge id="6" lvla="1" lvlb="3" pa="6" pb="84,85,6" fpa="/root/image[@id=6]/" fpb="/root/image[@id=84]/image[@id=85]/image[@id=6]/" />
+  </track>
+  <track ida="6" namea="Адреса" idb="96" nameb="Школа">
+    <bridge id="6" lvla="1" lvlb="6" pa="6" pb="96,1,2,7,8,6" fpa="/root/image[@id=6]/" fpb="/root/image[@id=96]/image[@id=1]/image[@id=2]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="6" namea="Адреса" idb="106" nameb="Смартфон">
+    <bridge id="6" lvla="1" lvlb="6" pa="6" pb="106,5,4,7,8,6" fpa="/root/image[@id=6]/" fpb="/root/image[@id=106]/image[@id=5]/image[@id=4]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="6" namea="Адреса" idb="118" nameb="Комп'ютер">
+    <bridge id="6" lvla="1" lvlb="6" pa="6" pb="118,5,4,7,8,6" fpa="/root/image[@id=6]/" fpb="/root/image[@id=118]/image[@id=5]/image[@id=4]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="6" namea="Адреса" idb="119" nameb="Сервер">
+    <bridge id="6" lvla="1" lvlb="5" pa="6" pb="119,124,7,8,6" fpa="/root/image[@id=6]/" fpb="/root/image[@id=119]/image[@id=124]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="6" namea="Адреса" idb="120" nameb="Чіпсет">
+    <bridge id="6" lvla="1" lvlb="5" pa="6" pb="120,123,7,8,6" fpa="/root/image[@id=6]/" fpb="/root/image[@id=120]/image[@id=123]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="6" namea="Адреса" idb="130" nameb="БлаБлаБла">
+    <bridge id="9" lvla="2" lvlb="2" pa="6,9" pb="130,9" fpa="/root/image[@id=6]/image[@id=9]/" fpb="/root/image[@id=130]/image[@id=9]/" />
+  </track>
+  <track ida="6" namea="Адреса" idb="132" nameb="Машина">
+    <bridge id="6" lvla="1" lvlb="6" pa="6" pb="132,1,2,7,8,6" fpa="/root/image[@id=6]/" fpb="/root/image[@id=132]/image[@id=1]/image[@id=2]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="7" namea="Виробник" idb="11" nameb="Вінчестер">
+    <bridge id="7" lvla="1" lvlb="3" pa="7" pb="11,10,7" fpa="/root/image[@id=7]/" fpb="/root/image[@id=11]/image[@id=10]/image[@id=7]/" />
+  </track>
+  <track ida="7" namea="Виробник" idb="13" nameb="Монітор">
+    <bridge id="7" lvla="1" lvlb="3" pa="7" pb="13,12,7" fpa="/root/image[@id=7]/" fpb="/root/image[@id=13]/image[@id=12]/image[@id=7]/" />
+  </track>
+  <track ida="7" namea="Виробник" idb="15" nameb="Клавіатура">
+    <bridge id="7" lvla="1" lvlb="3" pa="7" pb="15,14,7" fpa="/root/image[@id=7]/" fpb="/root/image[@id=15]/image[@id=14]/image[@id=7]/" />
+  </track>
+  <track ida="7" namea="Виробник" idb="17" nameb="Материнська плата">
+    <bridge id="7" lvla="1" lvlb="3" pa="7" pb="17,18,7" fpa="/root/image[@id=7]/" fpb="/root/image[@id=17]/image[@id=18]/image[@id=7]/" />
+  </track>
+  <track ida="7" namea="Виробник" idb="21" nameb="Країна">
+    <bridge id="21" lvla="5" lvlb="1" pa="7,8,6,19,21" pb="21" fpa="/root/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=19]/image[@id=21]/" fpb="/root/image[@id=21]/" />
+  </track>
+  <track ida="7" namea="Виробник" idb="22" nameb="Місто">
+    <bridge id="22" lvla="5" lvlb="1" pa="7,8,6,20,22" pb="22" fpa="/root/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=20]/image[@id=22]/" fpb="/root/image[@id=22]/" />
+  </track>
+  <track ida="7" namea="Виробник" idb="30" nameb="Магазин">
+    <bridge id="6" lvla="3" lvlb="3" pa="7,8,6" pb="30,29,6" fpa="/root/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=30]/image[@id=29]/image[@id=6]/" />
+  </track>
+  <track ida="7" namea="Виробник" idb="32" nameb="Веб камера">
+    <bridge id="7" lvla="1" lvlb="3" pa="7" pb="32,31,7" fpa="/root/image[@id=7]/" fpb="/root/image[@id=32]/image[@id=31]/image[@id=7]/" />
+  </track>
+  <track ida="7" namea="Виробник" idb="34" nameb="Телевізор">
+    <bridge id="7" lvla="1" lvlb="3" pa="7" pb="34,35,7" fpa="/root/image[@id=7]/" fpb="/root/image[@id=34]/image[@id=35]/image[@id=7]/" />
+  </track>
+  <track ida="7" namea="Виробник" idb="36" nameb="Телефон">
+    <bridge id="7" lvla="1" lvlb="3" pa="7" pb="36,37,7" fpa="/root/image[@id=7]/" fpb="/root/image[@id=36]/image[@id=37]/image[@id=7]/" />
+  </track>
+  <track ida="7" namea="Виробник" idb="38" nameb="GSM Модуль">
+    <bridge id="7" lvla="1" lvlb="3" pa="7" pb="38,39,7" fpa="/root/image[@id=7]/" fpb="/root/image[@id=38]/image[@id=39]/image[@id=7]/" />
+  </track>
+  <track ida="7" namea="Виробник" idb="41" nameb="Планшет">
+    <bridge id="7" lvla="1" lvlb="3" pa="7" pb="41,42,7" fpa="/root/image[@id=7]/" fpb="/root/image[@id=41]/image[@id=42]/image[@id=7]/" />
+  </track>
+  <track ida="7" namea="Виробник" idb="44" nameb="Ресторан">
+    <bridge id="6" lvla="3" lvlb="3" pa="7,8,6" pb="44,52,6" fpa="/root/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=44]/image[@id=52]/image[@id=6]/" />
+  </track>
+  <track ida="7" namea="Виробник" idb="45" nameb="Підрозділ">
+    <bridge id="6" lvla="3" lvlb="3" pa="7,8,6" pb="45,66,6" fpa="/root/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=45]/image[@id=66]/image[@id=6]/" />
+  </track>
+  <track ida="7" namea="Виробник" idb="49" nameb="Парк">
+    <bridge id="6" lvla="3" lvlb="3" pa="7,8,6" pb="49,51,6" fpa="/root/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=49]/image[@id=51]/image[@id=6]/" />
+  </track>
+  <track ida="7" namea="Виробник" idb="53" nameb="Мобільний телефон">
+    <bridge id="7" lvla="1" lvlb="3" pa="7" pb="53,37,7" fpa="/root/image[@id=7]/" fpb="/root/image[@id=53]/image[@id=37]/image[@id=7]/" />
+  </track>
+  <track ida="7" namea="Виробник" idb="60" nameb="Вулиця">
+    <bridge id="60" lvla="5" lvlb="1" pa="7,8,6,9,60" pb="60" fpa="/root/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=9]/image[@id=60]/" fpb="/root/image[@id=60]/" />
+  </track>
+  <track ida="7" namea="Виробник" idb="62" nameb="Будинок">
+    <bridge id="6" lvla="3" lvlb="3" pa="7,8,6" pb="62,64,6" fpa="/root/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=62]/image[@id=64]/image[@id=6]/" />
+  </track>
+  <track ida="7" namea="Виробник" idb="73" nameb="Особняк">
+    <bridge id="6" lvla="3" lvlb="3" pa="7,8,6" pb="73,76,6" fpa="/root/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=73]/image[@id=76]/image[@id=6]/" />
+  </track>
+  <track ida="7" namea="Виробник" idb="81" nameb="Фірма">
+    <bridge id="6" lvla="3" lvlb="3" pa="7,8,6" pb="81,83,6" fpa="/root/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=81]/image[@id=83]/image[@id=6]/" />
+  </track>
+  <track ida="7" namea="Виробник" idb="84" nameb="Завод">
+    <bridge id="6" lvla="3" lvlb="3" pa="7,8,6" pb="84,85,6" fpa="/root/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=84]/image[@id=85]/image[@id=6]/" />
+  </track>
+  <track ida="7" namea="Виробник" idb="96" nameb="Школа">
+    <bridge id="7" lvla="1" lvlb="4" pa="7" pb="96,1,2,7" fpa="/root/image[@id=7]/" fpb="/root/image[@id=96]/image[@id=1]/image[@id=2]/image[@id=7]/" />
+  </track>
+  <track ida="7" namea="Виробник" idb="106" nameb="Смартфон">
+    <bridge id="7" lvla="1" lvlb="4" pa="7" pb="106,5,4,7" fpa="/root/image[@id=7]/" fpb="/root/image[@id=106]/image[@id=5]/image[@id=4]/image[@id=7]/" />
+  </track>
+  <track ida="7" namea="Виробник" idb="118" nameb="Комп'ютер">
+    <bridge id="7" lvla="1" lvlb="4" pa="7" pb="118,5,4,7" fpa="/root/image[@id=7]/" fpb="/root/image[@id=118]/image[@id=5]/image[@id=4]/image[@id=7]/" />
+  </track>
+  <track ida="7" namea="Виробник" idb="119" nameb="Сервер">
+    <bridge id="7" lvla="1" lvlb="3" pa="7" pb="119,124,7" fpa="/root/image[@id=7]/" fpb="/root/image[@id=119]/image[@id=124]/image[@id=7]/" />
+  </track>
+  <track ida="7" namea="Виробник" idb="120" nameb="Чіпсет">
+    <bridge id="7" lvla="1" lvlb="3" pa="7" pb="120,123,7" fpa="/root/image[@id=7]/" fpb="/root/image[@id=120]/image[@id=123]/image[@id=7]/" />
+  </track>
+  <track ida="7" namea="Виробник" idb="130" nameb="БлаБлаБла">
+    <bridge id="9" lvla="4" lvlb="2" pa="7,8,6,9" pb="130,9" fpa="/root/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=9]/" fpb="/root/image[@id=130]/image[@id=9]/" />
+  </track>
+  <track ida="7" namea="Виробник" idb="132" nameb="Машина">
+    <bridge id="7" lvla="1" lvlb="4" pa="7" pb="132,1,2,7" fpa="/root/image[@id=7]/" fpb="/root/image[@id=132]/image[@id=1]/image[@id=2]/image[@id=7]/" />
+  </track>
+  <track ida="11" namea="Вінчестер" idb="13" nameb="Монітор">
+    <bridge id="7" lvla="3" lvlb="3" pa="11,10,7" pb="13,12,7" fpa="/root/image[@id=11]/image[@id=10]/image[@id=7]/" fpb="/root/image[@id=13]/image[@id=12]/image[@id=7]/" />
+  </track>
+  <track ida="11" namea="Вінчестер" idb="15" nameb="Клавіатура">
+    <bridge id="7" lvla="3" lvlb="3" pa="11,10,7" pb="15,14,7" fpa="/root/image[@id=11]/image[@id=10]/image[@id=7]/" fpb="/root/image[@id=15]/image[@id=14]/image[@id=7]/" />
+  </track>
+  <track ida="11" namea="Вінчестер" idb="17" nameb="Материнська плата">
+    <bridge id="7" lvla="3" lvlb="3" pa="11,10,7" pb="17,18,7" fpa="/root/image[@id=11]/image[@id=10]/image[@id=7]/" fpb="/root/image[@id=17]/image[@id=18]/image[@id=7]/" />
+  </track>
+  <track ida="11" namea="Вінчестер" idb="21" nameb="Країна">
+    <bridge id="21" lvla="7" lvlb="1" pa="11,10,7,8,6,19,21" pb="21" fpa="/root/image[@id=11]/image[@id=10]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=19]/image[@id=21]/" fpb="/root/image[@id=21]/" />
+  </track>
+  <track ida="11" namea="Вінчестер" idb="22" nameb="Місто">
+    <bridge id="22" lvla="7" lvlb="1" pa="11,10,7,8,6,20,22" pb="22" fpa="/root/image[@id=11]/image[@id=10]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=20]/image[@id=22]/" fpb="/root/image[@id=22]/" />
+  </track>
+  <track ida="11" namea="Вінчестер" idb="30" nameb="Магазин">
+    <bridge id="6" lvla="5" lvlb="3" pa="11,10,7,8,6" pb="30,29,6" fpa="/root/image[@id=11]/image[@id=10]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=30]/image[@id=29]/image[@id=6]/" />
+  </track>
+  <track ida="11" namea="Вінчестер" idb="32" nameb="Веб камера">
+    <bridge id="7" lvla="3" lvlb="3" pa="11,10,7" pb="32,31,7" fpa="/root/image[@id=11]/image[@id=10]/image[@id=7]/" fpb="/root/image[@id=32]/image[@id=31]/image[@id=7]/" />
+  </track>
+  <track ida="11" namea="Вінчестер" idb="34" nameb="Телевізор">
+    <bridge id="7" lvla="3" lvlb="3" pa="11,10,7" pb="34,35,7" fpa="/root/image[@id=11]/image[@id=10]/image[@id=7]/" fpb="/root/image[@id=34]/image[@id=35]/image[@id=7]/" />
+  </track>
+  <track ida="11" namea="Вінчестер" idb="36" nameb="Телефон">
+    <bridge id="11" lvla="1" lvlb="3" pa="11" pb="36,118,11" fpa="/root/image[@id=11]/" fpb="/root/image[@id=36]/image[@id=118]/image[@id=11]/" />
+  </track>
+  <track ida="11" namea="Вінчестер" idb="38" nameb="GSM Модуль">
+    <bridge id="7" lvla="3" lvlb="3" pa="11,10,7" pb="38,39,7" fpa="/root/image[@id=11]/image[@id=10]/image[@id=7]/" fpb="/root/image[@id=38]/image[@id=39]/image[@id=7]/" />
+  </track>
+  <track ida="11" namea="Вінчестер" idb="41" nameb="Планшет">
+    <bridge id="7" lvla="3" lvlb="3" pa="11,10,7" pb="41,42,7" fpa="/root/image[@id=11]/image[@id=10]/image[@id=7]/" fpb="/root/image[@id=41]/image[@id=42]/image[@id=7]/" />
+  </track>
+  <track ida="11" namea="Вінчестер" idb="44" nameb="Ресторан">
+    <bridge id="6" lvla="5" lvlb="3" pa="11,10,7,8,6" pb="44,52,6" fpa="/root/image[@id=11]/image[@id=10]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=44]/image[@id=52]/image[@id=6]/" />
+  </track>
+  <track ida="11" namea="Вінчестер" idb="45" nameb="Підрозділ">
+    <bridge id="6" lvla="5" lvlb="3" pa="11,10,7,8,6" pb="45,66,6" fpa="/root/image[@id=11]/image[@id=10]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=45]/image[@id=66]/image[@id=6]/" />
+  </track>
+  <track ida="11" namea="Вінчестер" idb="49" nameb="Парк">
+    <bridge id="6" lvla="5" lvlb="3" pa="11,10,7,8,6" pb="49,51,6" fpa="/root/image[@id=11]/image[@id=10]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=49]/image[@id=51]/image[@id=6]/" />
+  </track>
+  <track ida="11" namea="Вінчестер" idb="53" nameb="Мобільний телефон">
+    <bridge id="7" lvla="3" lvlb="3" pa="11,10,7" pb="53,37,7" fpa="/root/image[@id=11]/image[@id=10]/image[@id=7]/" fpb="/root/image[@id=53]/image[@id=37]/image[@id=7]/" />
+  </track>
+  <track ida="11" namea="Вінчестер" idb="60" nameb="Вулиця">
+    <bridge id="60" lvla="7" lvlb="1" pa="11,10,7,8,6,9,60" pb="60" fpa="/root/image[@id=11]/image[@id=10]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=9]/image[@id=60]/" fpb="/root/image[@id=60]/" />
+  </track>
+  <track ida="11" namea="Вінчестер" idb="62" nameb="Будинок">
+    <bridge id="6" lvla="5" lvlb="3" pa="11,10,7,8,6" pb="62,64,6" fpa="/root/image[@id=11]/image[@id=10]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=62]/image[@id=64]/image[@id=6]/" />
+  </track>
+  <track ida="11" namea="Вінчестер" idb="73" nameb="Особняк">
+    <bridge id="6" lvla="5" lvlb="3" pa="11,10,7,8,6" pb="73,76,6" fpa="/root/image[@id=11]/image[@id=10]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=73]/image[@id=76]/image[@id=6]/" />
+  </track>
+  <track ida="11" namea="Вінчестер" idb="81" nameb="Фірма">
+    <bridge id="6" lvla="5" lvlb="3" pa="11,10,7,8,6" pb="81,83,6" fpa="/root/image[@id=11]/image[@id=10]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=81]/image[@id=83]/image[@id=6]/" />
+  </track>
+  <track ida="11" namea="Вінчестер" idb="84" nameb="Завод">
+    <bridge id="6" lvla="5" lvlb="3" pa="11,10,7,8,6" pb="84,85,6" fpa="/root/image[@id=11]/image[@id=10]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=84]/image[@id=85]/image[@id=6]/" />
+  </track>
+  <track ida="11" namea="Вінчестер" idb="96" nameb="Школа">
+    <bridge id="11" lvla="1" lvlb="4" pa="11" pb="96,1,118,11" fpa="/root/image[@id=11]/" fpb="/root/image[@id=96]/image[@id=1]/image[@id=118]/image[@id=11]/" />
+  </track>
+  <track ida="11" namea="Вінчестер" idb="106" nameb="Смартфон">
+    <bridge id="7" lvla="3" lvlb="4" pa="11,10,7" pb="106,5,4,7" fpa="/root/image[@id=11]/image[@id=10]/image[@id=7]/" fpb="/root/image[@id=106]/image[@id=5]/image[@id=4]/image[@id=7]/" />
+  </track>
+  <track ida="11" namea="Вінчестер" idb="118" nameb="Комп'ютер">
+    <bridge id="11" lvla="1" lvlb="2" pa="11" pb="118,11" fpa="/root/image[@id=11]/" fpb="/root/image[@id=118]/image[@id=11]/" />
+  </track>
+  <track ida="11" namea="Вінчестер" idb="119" nameb="Сервер">
+    <bridge id="11" lvla="1" lvlb="3" pa="11" pb="119,118,11" fpa="/root/image[@id=11]/" fpb="/root/image[@id=119]/image[@id=118]/image[@id=11]/" />
+  </track>
+  <track ida="11" namea="Вінчестер" idb="120" nameb="Чіпсет">
+    <bridge id="7" lvla="3" lvlb="3" pa="11,10,7" pb="120,123,7" fpa="/root/image[@id=11]/image[@id=10]/image[@id=7]/" fpb="/root/image[@id=120]/image[@id=123]/image[@id=7]/" />
+  </track>
+  <track ida="11" namea="Вінчестер" idb="130" nameb="БлаБлаБла">
+    <bridge id="9" lvla="6" lvlb="2" pa="11,10,7,8,6,9" pb="130,9" fpa="/root/image[@id=11]/image[@id=10]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=9]/" fpb="/root/image[@id=130]/image[@id=9]/" />
+  </track>
+  <track ida="11" namea="Вінчестер" idb="132" nameb="Машина">
+    <bridge id="11" lvla="1" lvlb="4" pa="11" pb="132,1,118,11" fpa="/root/image[@id=11]/" fpb="/root/image[@id=132]/image[@id=1]/image[@id=118]/image[@id=11]/" />
+  </track>
+  <track ida="13" namea="Монітор" idb="15" nameb="Клавіатура">
+    <bridge id="7" lvla="3" lvlb="3" pa="13,12,7" pb="15,14,7" fpa="/root/image[@id=13]/image[@id=12]/image[@id=7]/" fpb="/root/image[@id=15]/image[@id=14]/image[@id=7]/" />
+  </track>
+  <track ida="13" namea="Монітор" idb="17" nameb="Материнська плата">
+    <bridge id="7" lvla="3" lvlb="3" pa="13,12,7" pb="17,18,7" fpa="/root/image[@id=13]/image[@id=12]/image[@id=7]/" fpb="/root/image[@id=17]/image[@id=18]/image[@id=7]/" />
+  </track>
+  <track ida="13" namea="Монітор" idb="21" nameb="Країна">
+    <bridge id="21" lvla="7" lvlb="1" pa="13,12,7,8,6,19,21" pb="21" fpa="/root/image[@id=13]/image[@id=12]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=19]/image[@id=21]/" fpb="/root/image[@id=21]/" />
+  </track>
+  <track ida="13" namea="Монітор" idb="22" nameb="Місто">
+    <bridge id="22" lvla="7" lvlb="1" pa="13,12,7,8,6,20,22" pb="22" fpa="/root/image[@id=13]/image[@id=12]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=20]/image[@id=22]/" fpb="/root/image[@id=22]/" />
+  </track>
+  <track ida="13" namea="Монітор" idb="30" nameb="Магазин">
+    <bridge id="6" lvla="5" lvlb="3" pa="13,12,7,8,6" pb="30,29,6" fpa="/root/image[@id=13]/image[@id=12]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=30]/image[@id=29]/image[@id=6]/" />
+  </track>
+  <track ida="13" namea="Монітор" idb="32" nameb="Веб камера">
+    <bridge id="7" lvla="3" lvlb="3" pa="13,12,7" pb="32,31,7" fpa="/root/image[@id=13]/image[@id=12]/image[@id=7]/" fpb="/root/image[@id=32]/image[@id=31]/image[@id=7]/" />
+  </track>
+  <track ida="13" namea="Монітор" idb="34" nameb="Телевізор">
+    <bridge id="7" lvla="3" lvlb="3" pa="13,12,7" pb="34,35,7" fpa="/root/image[@id=13]/image[@id=12]/image[@id=7]/" fpb="/root/image[@id=34]/image[@id=35]/image[@id=7]/" />
+  </track>
+  <track ida="13" namea="Монітор" idb="36" nameb="Телефон">
+    <bridge id="13" lvla="1" lvlb="2" pa="13" pb="36,13" fpa="/root/image[@id=13]/" fpb="/root/image[@id=36]/image[@id=13]/" />
+  </track>
+  <track ida="13" namea="Монітор" idb="38" nameb="GSM Модуль">
+    <bridge id="7" lvla="3" lvlb="3" pa="13,12,7" pb="38,39,7" fpa="/root/image[@id=13]/image[@id=12]/image[@id=7]/" fpb="/root/image[@id=38]/image[@id=39]/image[@id=7]/" />
+  </track>
+  <track ida="13" namea="Монітор" idb="41" nameb="Планшет">
+    <bridge id="13" lvla="1" lvlb="2" pa="13" pb="41,13" fpa="/root/image[@id=13]/" fpb="/root/image[@id=41]/image[@id=13]/" />
+  </track>
+  <track ida="13" namea="Монітор" idb="44" nameb="Ресторан">
+    <bridge id="6" lvla="5" lvlb="3" pa="13,12,7,8,6" pb="44,52,6" fpa="/root/image[@id=13]/image[@id=12]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=44]/image[@id=52]/image[@id=6]/" />
+  </track>
+  <track ida="13" namea="Монітор" idb="45" nameb="Підрозділ">
+    <bridge id="6" lvla="5" lvlb="3" pa="13,12,7,8,6" pb="45,66,6" fpa="/root/image[@id=13]/image[@id=12]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=45]/image[@id=66]/image[@id=6]/" />
+  </track>
+  <track ida="13" namea="Монітор" idb="49" nameb="Парк">
+    <bridge id="6" lvla="5" lvlb="3" pa="13,12,7,8,6" pb="49,51,6" fpa="/root/image[@id=13]/image[@id=12]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=49]/image[@id=51]/image[@id=6]/" />
+  </track>
+  <track ida="13" namea="Монітор" idb="53" nameb="Мобільний телефон">
+    <bridge id="7" lvla="3" lvlb="3" pa="13,12,7" pb="53,37,7" fpa="/root/image[@id=13]/image[@id=12]/image[@id=7]/" fpb="/root/image[@id=53]/image[@id=37]/image[@id=7]/" />
+  </track>
+  <track ida="13" namea="Монітор" idb="60" nameb="Вулиця">
+    <bridge id="60" lvla="7" lvlb="1" pa="13,12,7,8,6,9,60" pb="60" fpa="/root/image[@id=13]/image[@id=12]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=9]/image[@id=60]/" fpb="/root/image[@id=60]/" />
+  </track>
+  <track ida="13" namea="Монітор" idb="62" nameb="Будинок">
+    <bridge id="6" lvla="5" lvlb="3" pa="13,12,7,8,6" pb="62,64,6" fpa="/root/image[@id=13]/image[@id=12]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=62]/image[@id=64]/image[@id=6]/" />
+  </track>
+  <track ida="13" namea="Монітор" idb="73" nameb="Особняк">
+    <bridge id="6" lvla="5" lvlb="3" pa="13,12,7,8,6" pb="73,76,6" fpa="/root/image[@id=13]/image[@id=12]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=73]/image[@id=76]/image[@id=6]/" />
+  </track>
+  <track ida="13" namea="Монітор" idb="81" nameb="Фірма">
+    <bridge id="6" lvla="5" lvlb="3" pa="13,12,7,8,6" pb="81,83,6" fpa="/root/image[@id=13]/image[@id=12]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=81]/image[@id=83]/image[@id=6]/" />
+  </track>
+  <track ida="13" namea="Монітор" idb="84" nameb="Завод">
+    <bridge id="6" lvla="5" lvlb="3" pa="13,12,7,8,6" pb="84,85,6" fpa="/root/image[@id=13]/image[@id=12]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=84]/image[@id=85]/image[@id=6]/" />
+  </track>
+  <track ida="13" namea="Монітор" idb="96" nameb="Школа">
+    <bridge id="13" lvla="1" lvlb="3" pa="13" pb="96,1,13" fpa="/root/image[@id=13]/" fpb="/root/image[@id=96]/image[@id=1]/image[@id=13]/" />
+  </track>
+  <track ida="13" namea="Монітор" idb="106" nameb="Смартфон">
+    <bridge id="7" lvla="3" lvlb="4" pa="13,12,7" pb="106,5,4,7" fpa="/root/image[@id=13]/image[@id=12]/image[@id=7]/" fpb="/root/image[@id=106]/image[@id=5]/image[@id=4]/image[@id=7]/" />
+  </track>
+  <track ida="13" namea="Монітор" idb="118" nameb="Комп'ютер">
+    <bridge id="7" lvla="3" lvlb="4" pa="13,12,7" pb="118,5,4,7" fpa="/root/image[@id=13]/image[@id=12]/image[@id=7]/" fpb="/root/image[@id=118]/image[@id=5]/image[@id=4]/image[@id=7]/" />
+  </track>
+  <track ida="13" namea="Монітор" idb="119" nameb="Сервер">
+    <bridge id="7" lvla="3" lvlb="3" pa="13,12,7" pb="119,124,7" fpa="/root/image[@id=13]/image[@id=12]/image[@id=7]/" fpb="/root/image[@id=119]/image[@id=124]/image[@id=7]/" />
+  </track>
+  <track ida="13" namea="Монітор" idb="120" nameb="Чіпсет">
+    <bridge id="7" lvla="3" lvlb="3" pa="13,12,7" pb="120,123,7" fpa="/root/image[@id=13]/image[@id=12]/image[@id=7]/" fpb="/root/image[@id=120]/image[@id=123]/image[@id=7]/" />
+  </track>
+  <track ida="13" namea="Монітор" idb="130" nameb="БлаБлаБла">
+    <bridge id="9" lvla="6" lvlb="2" pa="13,12,7,8,6,9" pb="130,9" fpa="/root/image[@id=13]/image[@id=12]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=9]/" fpb="/root/image[@id=130]/image[@id=9]/" />
+  </track>
+  <track ida="13" namea="Монітор" idb="132" nameb="Машина">
+    <bridge id="13" lvla="1" lvlb="3" pa="13" pb="132,1,13" fpa="/root/image[@id=13]/" fpb="/root/image[@id=132]/image[@id=1]/image[@id=13]/" />
+  </track>
+  <track ida="15" namea="Клавіатура" idb="17" nameb="Материнська плата">
+    <bridge id="7" lvla="3" lvlb="3" pa="15,14,7" pb="17,18,7" fpa="/root/image[@id=15]/image[@id=14]/image[@id=7]/" fpb="/root/image[@id=17]/image[@id=18]/image[@id=7]/" />
+  </track>
+  <track ida="15" namea="Клавіатура" idb="21" nameb="Країна">
+    <bridge id="21" lvla="7" lvlb="1" pa="15,14,7,8,6,19,21" pb="21" fpa="/root/image[@id=15]/image[@id=14]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=19]/image[@id=21]/" fpb="/root/image[@id=21]/" />
+  </track>
+  <track ida="15" namea="Клавіатура" idb="22" nameb="Місто">
+    <bridge id="22" lvla="7" lvlb="1" pa="15,14,7,8,6,20,22" pb="22" fpa="/root/image[@id=15]/image[@id=14]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=20]/image[@id=22]/" fpb="/root/image[@id=22]/" />
+  </track>
+  <track ida="15" namea="Клавіатура" idb="30" nameb="Магазин">
+    <bridge id="6" lvla="5" lvlb="3" pa="15,14,7,8,6" pb="30,29,6" fpa="/root/image[@id=15]/image[@id=14]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=30]/image[@id=29]/image[@id=6]/" />
+  </track>
+  <track ida="15" namea="Клавіатура" idb="32" nameb="Веб камера">
+    <bridge id="7" lvla="3" lvlb="3" pa="15,14,7" pb="32,31,7" fpa="/root/image[@id=15]/image[@id=14]/image[@id=7]/" fpb="/root/image[@id=32]/image[@id=31]/image[@id=7]/" />
+  </track>
+  <track ida="15" namea="Клавіатура" idb="34" nameb="Телевізор">
+    <bridge id="7" lvla="3" lvlb="3" pa="15,14,7" pb="34,35,7" fpa="/root/image[@id=15]/image[@id=14]/image[@id=7]/" fpb="/root/image[@id=34]/image[@id=35]/image[@id=7]/" />
+  </track>
+  <track ida="15" namea="Клавіатура" idb="36" nameb="Телефон">
+    <bridge id="7" lvla="3" lvlb="3" pa="15,14,7" pb="36,37,7" fpa="/root/image[@id=15]/image[@id=14]/image[@id=7]/" fpb="/root/image[@id=36]/image[@id=37]/image[@id=7]/" />
+  </track>
+  <track ida="15" namea="Клавіатура" idb="38" nameb="GSM Модуль">
+    <bridge id="7" lvla="3" lvlb="3" pa="15,14,7" pb="38,39,7" fpa="/root/image[@id=15]/image[@id=14]/image[@id=7]/" fpb="/root/image[@id=38]/image[@id=39]/image[@id=7]/" />
+  </track>
+  <track ida="15" namea="Клавіатура" idb="41" nameb="Планшет">
+    <bridge id="7" lvla="3" lvlb="3" pa="15,14,7" pb="41,42,7" fpa="/root/image[@id=15]/image[@id=14]/image[@id=7]/" fpb="/root/image[@id=41]/image[@id=42]/image[@id=7]/" />
+  </track>
+  <track ida="15" namea="Клавіатура" idb="44" nameb="Ресторан">
+    <bridge id="6" lvla="5" lvlb="3" pa="15,14,7,8,6" pb="44,52,6" fpa="/root/image[@id=15]/image[@id=14]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=44]/image[@id=52]/image[@id=6]/" />
+  </track>
+  <track ida="15" namea="Клавіатура" idb="45" nameb="Підрозділ">
+    <bridge id="6" lvla="5" lvlb="3" pa="15,14,7,8,6" pb="45,66,6" fpa="/root/image[@id=15]/image[@id=14]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=45]/image[@id=66]/image[@id=6]/" />
+  </track>
+  <track ida="15" namea="Клавіатура" idb="49" nameb="Парк">
+    <bridge id="6" lvla="5" lvlb="3" pa="15,14,7,8,6" pb="49,51,6" fpa="/root/image[@id=15]/image[@id=14]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=49]/image[@id=51]/image[@id=6]/" />
+  </track>
+  <track ida="15" namea="Клавіатура" idb="53" nameb="Мобільний телефон">
+    <bridge id="7" lvla="3" lvlb="3" pa="15,14,7" pb="53,37,7" fpa="/root/image[@id=15]/image[@id=14]/image[@id=7]/" fpb="/root/image[@id=53]/image[@id=37]/image[@id=7]/" />
+  </track>
+  <track ida="15" namea="Клавіатура" idb="60" nameb="Вулиця">
+    <bridge id="60" lvla="7" lvlb="1" pa="15,14,7,8,6,9,60" pb="60" fpa="/root/image[@id=15]/image[@id=14]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=9]/image[@id=60]/" fpb="/root/image[@id=60]/" />
+  </track>
+  <track ida="15" namea="Клавіатура" idb="62" nameb="Будинок">
+    <bridge id="6" lvla="5" lvlb="3" pa="15,14,7,8,6" pb="62,64,6" fpa="/root/image[@id=15]/image[@id=14]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=62]/image[@id=64]/image[@id=6]/" />
+  </track>
+  <track ida="15" namea="Клавіатура" idb="73" nameb="Особняк">
+    <bridge id="6" lvla="5" lvlb="3" pa="15,14,7,8,6" pb="73,76,6" fpa="/root/image[@id=15]/image[@id=14]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=73]/image[@id=76]/image[@id=6]/" />
+  </track>
+  <track ida="15" namea="Клавіатура" idb="81" nameb="Фірма">
+    <bridge id="6" lvla="5" lvlb="3" pa="15,14,7,8,6" pb="81,83,6" fpa="/root/image[@id=15]/image[@id=14]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=81]/image[@id=83]/image[@id=6]/" />
+  </track>
+  <track ida="15" namea="Клавіатура" idb="84" nameb="Завод">
+    <bridge id="6" lvla="5" lvlb="3" pa="15,14,7,8,6" pb="84,85,6" fpa="/root/image[@id=15]/image[@id=14]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=84]/image[@id=85]/image[@id=6]/" />
+  </track>
+  <track ida="15" namea="Клавіатура" idb="96" nameb="Школа">
+    <bridge id="15" lvla="1" lvlb="3" pa="15" pb="96,1,15" fpa="/root/image[@id=15]/" fpb="/root/image[@id=96]/image[@id=1]/image[@id=15]/" />
+  </track>
+  <track ida="15" namea="Клавіатура" idb="106" nameb="Смартфон">
+    <bridge id="7" lvla="3" lvlb="4" pa="15,14,7" pb="106,5,4,7" fpa="/root/image[@id=15]/image[@id=14]/image[@id=7]/" fpb="/root/image[@id=106]/image[@id=5]/image[@id=4]/image[@id=7]/" />
+  </track>
+  <track ida="15" namea="Клавіатура" idb="118" nameb="Комп'ютер">
+    <bridge id="7" lvla="3" lvlb="4" pa="15,14,7" pb="118,5,4,7" fpa="/root/image[@id=15]/image[@id=14]/image[@id=7]/" fpb="/root/image[@id=118]/image[@id=5]/image[@id=4]/image[@id=7]/" />
+  </track>
+  <track ida="15" namea="Клавіатура" idb="119" nameb="Сервер">
+    <bridge id="7" lvla="3" lvlb="3" pa="15,14,7" pb="119,124,7" fpa="/root/image[@id=15]/image[@id=14]/image[@id=7]/" fpb="/root/image[@id=119]/image[@id=124]/image[@id=7]/" />
+  </track>
+  <track ida="15" namea="Клавіатура" idb="120" nameb="Чіпсет">
+    <bridge id="7" lvla="3" lvlb="3" pa="15,14,7" pb="120,123,7" fpa="/root/image[@id=15]/image[@id=14]/image[@id=7]/" fpb="/root/image[@id=120]/image[@id=123]/image[@id=7]/" />
+  </track>
+  <track ida="15" namea="Клавіатура" idb="130" nameb="БлаБлаБла">
+    <bridge id="9" lvla="6" lvlb="2" pa="15,14,7,8,6,9" pb="130,9" fpa="/root/image[@id=15]/image[@id=14]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=9]/" fpb="/root/image[@id=130]/image[@id=9]/" />
+  </track>
+  <track ida="15" namea="Клавіатура" idb="132" nameb="Машина">
+    <bridge id="15" lvla="1" lvlb="3" pa="15" pb="132,1,15" fpa="/root/image[@id=15]/" fpb="/root/image[@id=132]/image[@id=1]/image[@id=15]/" />
+  </track>
+  <track ida="17" namea="Материнська плата" idb="21" nameb="Країна">
+    <bridge id="21" lvla="7" lvlb="1" pa="17,18,7,8,6,19,21" pb="21" fpa="/root/image[@id=17]/image[@id=18]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=19]/image[@id=21]/" fpb="/root/image[@id=21]/" />
+  </track>
+  <track ida="17" namea="Материнська плата" idb="22" nameb="Місто">
+    <bridge id="22" lvla="7" lvlb="1" pa="17,18,7,8,6,20,22" pb="22" fpa="/root/image[@id=17]/image[@id=18]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=20]/image[@id=22]/" fpb="/root/image[@id=22]/" />
+  </track>
+  <track ida="17" namea="Материнська плата" idb="30" nameb="Магазин">
+    <bridge id="6" lvla="5" lvlb="3" pa="17,18,7,8,6" pb="30,29,6" fpa="/root/image[@id=17]/image[@id=18]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=30]/image[@id=29]/image[@id=6]/" />
+  </track>
+  <track ida="17" namea="Материнська плата" idb="32" nameb="Веб камера">
+    <bridge id="7" lvla="3" lvlb="3" pa="17,18,7" pb="32,31,7" fpa="/root/image[@id=17]/image[@id=18]/image[@id=7]/" fpb="/root/image[@id=32]/image[@id=31]/image[@id=7]/" />
+  </track>
+  <track ida="17" namea="Материнська плата" idb="34" nameb="Телевізор">
+    <bridge id="7" lvla="3" lvlb="3" pa="17,18,7" pb="34,35,7" fpa="/root/image[@id=17]/image[@id=18]/image[@id=7]/" fpb="/root/image[@id=34]/image[@id=35]/image[@id=7]/" />
+  </track>
+  <track ida="17" namea="Материнська плата" idb="36" nameb="Телефон">
+    <bridge id="17" lvla="1" lvlb="3" pa="17" pb="36,118,17" fpa="/root/image[@id=17]/" fpb="/root/image[@id=36]/image[@id=118]/image[@id=17]/" />
+  </track>
+  <track ida="17" namea="Материнська плата" idb="38" nameb="GSM Модуль">
+    <bridge id="7" lvla="3" lvlb="3" pa="17,18,7" pb="38,39,7" fpa="/root/image[@id=17]/image[@id=18]/image[@id=7]/" fpb="/root/image[@id=38]/image[@id=39]/image[@id=7]/" />
+  </track>
+  <track ida="17" namea="Материнська плата" idb="41" nameb="Планшет">
+    <bridge id="7" lvla="3" lvlb="3" pa="17,18,7" pb="41,42,7" fpa="/root/image[@id=17]/image[@id=18]/image[@id=7]/" fpb="/root/image[@id=41]/image[@id=42]/image[@id=7]/" />
+  </track>
+  <track ida="17" namea="Материнська плата" idb="44" nameb="Ресторан">
+    <bridge id="6" lvla="5" lvlb="3" pa="17,18,7,8,6" pb="44,52,6" fpa="/root/image[@id=17]/image[@id=18]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=44]/image[@id=52]/image[@id=6]/" />
+  </track>
+  <track ida="17" namea="Материнська плата" idb="45" nameb="Підрозділ">
+    <bridge id="6" lvla="5" lvlb="3" pa="17,18,7,8,6" pb="45,66,6" fpa="/root/image[@id=17]/image[@id=18]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=45]/image[@id=66]/image[@id=6]/" />
+  </track>
+  <track ida="17" namea="Материнська плата" idb="49" nameb="Парк">
+    <bridge id="6" lvla="5" lvlb="3" pa="17,18,7,8,6" pb="49,51,6" fpa="/root/image[@id=17]/image[@id=18]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=49]/image[@id=51]/image[@id=6]/" />
+  </track>
+  <track ida="17" namea="Материнська плата" idb="53" nameb="Мобільний телефон">
+    <bridge id="7" lvla="3" lvlb="3" pa="17,18,7" pb="53,37,7" fpa="/root/image[@id=17]/image[@id=18]/image[@id=7]/" fpb="/root/image[@id=53]/image[@id=37]/image[@id=7]/" />
+  </track>
+  <track ida="17" namea="Материнська плата" idb="60" nameb="Вулиця">
+    <bridge id="60" lvla="7" lvlb="1" pa="17,18,7,8,6,9,60" pb="60" fpa="/root/image[@id=17]/image[@id=18]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=9]/image[@id=60]/" fpb="/root/image[@id=60]/" />
+  </track>
+  <track ida="17" namea="Материнська плата" idb="62" nameb="Будинок">
+    <bridge id="6" lvla="5" lvlb="3" pa="17,18,7,8,6" pb="62,64,6" fpa="/root/image[@id=17]/image[@id=18]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=62]/image[@id=64]/image[@id=6]/" />
+  </track>
+  <track ida="17" namea="Материнська плата" idb="73" nameb="Особняк">
+    <bridge id="6" lvla="5" lvlb="3" pa="17,18,7,8,6" pb="73,76,6" fpa="/root/image[@id=17]/image[@id=18]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=73]/image[@id=76]/image[@id=6]/" />
+  </track>
+  <track ida="17" namea="Материнська плата" idb="81" nameb="Фірма">
+    <bridge id="6" lvla="5" lvlb="3" pa="17,18,7,8,6" pb="81,83,6" fpa="/root/image[@id=17]/image[@id=18]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=81]/image[@id=83]/image[@id=6]/" />
+  </track>
+  <track ida="17" namea="Материнська плата" idb="84" nameb="Завод">
+    <bridge id="6" lvla="5" lvlb="3" pa="17,18,7,8,6" pb="84,85,6" fpa="/root/image[@id=17]/image[@id=18]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=84]/image[@id=85]/image[@id=6]/" />
+  </track>
+  <track ida="17" namea="Материнська плата" idb="96" nameb="Школа">
+    <bridge id="17" lvla="1" lvlb="4" pa="17" pb="96,1,118,17" fpa="/root/image[@id=17]/" fpb="/root/image[@id=96]/image[@id=1]/image[@id=118]/image[@id=17]/" />
+  </track>
+  <track ida="17" namea="Материнська плата" idb="106" nameb="Смартфон">
+    <bridge id="7" lvla="3" lvlb="4" pa="17,18,7" pb="106,5,4,7" fpa="/root/image[@id=17]/image[@id=18]/image[@id=7]/" fpb="/root/image[@id=106]/image[@id=5]/image[@id=4]/image[@id=7]/" />
+  </track>
+  <track ida="17" namea="Материнська плата" idb="118" nameb="Комп'ютер">
+    <bridge id="17" lvla="1" lvlb="2" pa="17" pb="118,17" fpa="/root/image[@id=17]/" fpb="/root/image[@id=118]/image[@id=17]/" />
+  </track>
+  <track ida="17" namea="Материнська плата" idb="119" nameb="Сервер">
+    <bridge id="17" lvla="1" lvlb="3" pa="17" pb="119,118,17" fpa="/root/image[@id=17]/" fpb="/root/image[@id=119]/image[@id=118]/image[@id=17]/" />
+  </track>
+  <track ida="17" namea="Материнська плата" idb="120" nameb="Чіпсет">
+    <bridge id="7" lvla="3" lvlb="3" pa="17,18,7" pb="120,123,7" fpa="/root/image[@id=17]/image[@id=18]/image[@id=7]/" fpb="/root/image[@id=120]/image[@id=123]/image[@id=7]/" />
+    <bridge id="120" lvla="2" lvlb="1" pa="17,120" pb="120" fpa="/root/image[@id=17]/image[@id=120]/" fpb="/root/image[@id=120]/" />
+  </track>
+  <track ida="17" namea="Материнська плата" idb="130" nameb="БлаБлаБла">
+    <bridge id="9" lvla="6" lvlb="2" pa="17,18,7,8,6,9" pb="130,9" fpa="/root/image[@id=17]/image[@id=18]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=9]/" fpb="/root/image[@id=130]/image[@id=9]/" />
+  </track>
+  <track ida="17" namea="Материнська плата" idb="132" nameb="Машина">
+    <bridge id="17" lvla="1" lvlb="4" pa="17" pb="132,1,118,17" fpa="/root/image[@id=17]/" fpb="/root/image[@id=132]/image[@id=1]/image[@id=118]/image[@id=17]/" />
+  </track>
+  <track ida="21" namea="Країна" idb="30" nameb="Магазин">
+    <bridge id="21" lvla="1" lvlb="5" pa="21" pb="30,29,6,19,21" fpa="/root/image[@id=21]/" fpb="/root/image[@id=30]/image[@id=29]/image[@id=6]/image[@id=19]/image[@id=21]/" />
+  </track>
+  <track ida="21" namea="Країна" idb="32" nameb="Веб камера">
+    <bridge id="21" lvla="1" lvlb="7" pa="21" pb="32,31,7,8,6,19,21" fpa="/root/image[@id=21]/" fpb="/root/image[@id=32]/image[@id=31]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=19]/image[@id=21]/" />
+  </track>
+  <track ida="21" namea="Країна" idb="34" nameb="Телевізор">
+    <bridge id="21" lvla="1" lvlb="7" pa="21" pb="34,35,7,8,6,19,21" fpa="/root/image[@id=21]/" fpb="/root/image[@id=34]/image[@id=35]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=19]/image[@id=21]/" />
+  </track>
+  <track ida="21" namea="Країна" idb="36" nameb="Телефон">
+    <bridge id="21" lvla="1" lvlb="7" pa="21" pb="36,37,7,8,6,19,21" fpa="/root/image[@id=21]/" fpb="/root/image[@id=36]/image[@id=37]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=19]/image[@id=21]/" />
+  </track>
+  <track ida="21" namea="Країна" idb="38" nameb="GSM Модуль">
+    <bridge id="21" lvla="1" lvlb="7" pa="21" pb="38,39,7,8,6,19,21" fpa="/root/image[@id=21]/" fpb="/root/image[@id=38]/image[@id=39]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=19]/image[@id=21]/" />
+  </track>
+  <track ida="21" namea="Країна" idb="41" nameb="Планшет">
+    <bridge id="21" lvla="1" lvlb="7" pa="21" pb="41,42,7,8,6,19,21" fpa="/root/image[@id=21]/" fpb="/root/image[@id=41]/image[@id=42]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=19]/image[@id=21]/" />
+  </track>
+  <track ida="21" namea="Країна" idb="44" nameb="Ресторан">
+    <bridge id="21" lvla="1" lvlb="5" pa="21" pb="44,52,6,19,21" fpa="/root/image[@id=21]/" fpb="/root/image[@id=44]/image[@id=52]/image[@id=6]/image[@id=19]/image[@id=21]/" />
+  </track>
+  <track ida="21" namea="Країна" idb="45" nameb="Підрозділ">
+    <bridge id="21" lvla="1" lvlb="5" pa="21" pb="45,66,6,19,21" fpa="/root/image[@id=21]/" fpb="/root/image[@id=45]/image[@id=66]/image[@id=6]/image[@id=19]/image[@id=21]/" />
+  </track>
+  <track ida="21" namea="Країна" idb="49" nameb="Парк">
+    <bridge id="21" lvla="1" lvlb="5" pa="21" pb="49,51,6,19,21" fpa="/root/image[@id=21]/" fpb="/root/image[@id=49]/image[@id=51]/image[@id=6]/image[@id=19]/image[@id=21]/" />
+  </track>
+  <track ida="21" namea="Країна" idb="53" nameb="Мобільний телефон">
+    <bridge id="21" lvla="1" lvlb="7" pa="21" pb="53,37,7,8,6,19,21" fpa="/root/image[@id=21]/" fpb="/root/image[@id=53]/image[@id=37]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=19]/image[@id=21]/" />
+  </track>
+  <track ida="21" namea="Країна" idb="62" nameb="Будинок">
+    <bridge id="21" lvla="1" lvlb="5" pa="21" pb="62,64,6,19,21" fpa="/root/image[@id=21]/" fpb="/root/image[@id=62]/image[@id=64]/image[@id=6]/image[@id=19]/image[@id=21]/" />
+  </track>
+  <track ida="21" namea="Країна" idb="73" nameb="Особняк">
+    <bridge id="21" lvla="1" lvlb="5" pa="21" pb="73,76,6,19,21" fpa="/root/image[@id=21]/" fpb="/root/image[@id=73]/image[@id=76]/image[@id=6]/image[@id=19]/image[@id=21]/" />
+  </track>
+  <track ida="21" namea="Країна" idb="81" nameb="Фірма">
+    <bridge id="21" lvla="1" lvlb="5" pa="21" pb="81,83,6,19,21" fpa="/root/image[@id=21]/" fpb="/root/image[@id=81]/image[@id=83]/image[@id=6]/image[@id=19]/image[@id=21]/" />
+  </track>
+  <track ida="21" namea="Країна" idb="84" nameb="Завод">
+    <bridge id="21" lvla="1" lvlb="5" pa="21" pb="84,85,6,19,21" fpa="/root/image[@id=21]/" fpb="/root/image[@id=84]/image[@id=85]/image[@id=6]/image[@id=19]/image[@id=21]/" />
+  </track>
+  <track ida="21" namea="Країна" idb="96" nameb="Школа">
+    <bridge id="21" lvla="1" lvlb="8" pa="21" pb="96,1,2,7,8,6,19,21" fpa="/root/image[@id=21]/" fpb="/root/image[@id=96]/image[@id=1]/image[@id=2]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=19]/image[@id=21]/" />
+  </track>
+  <track ida="21" namea="Країна" idb="106" nameb="Смартфон">
+    <bridge id="21" lvla="1" lvlb="8" pa="21" pb="106,5,4,7,8,6,19,21" fpa="/root/image[@id=21]/" fpb="/root/image[@id=106]/image[@id=5]/image[@id=4]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=19]/image[@id=21]/" />
+  </track>
+  <track ida="21" namea="Країна" idb="118" nameb="Комп'ютер">
+    <bridge id="21" lvla="1" lvlb="8" pa="21" pb="118,5,4,7,8,6,19,21" fpa="/root/image[@id=21]/" fpb="/root/image[@id=118]/image[@id=5]/image[@id=4]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=19]/image[@id=21]/" />
+  </track>
+  <track ida="21" namea="Країна" idb="119" nameb="Сервер">
+    <bridge id="21" lvla="1" lvlb="7" pa="21" pb="119,124,7,8,6,19,21" fpa="/root/image[@id=21]/" fpb="/root/image[@id=119]/image[@id=124]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=19]/image[@id=21]/" />
+  </track>
+  <track ida="21" namea="Країна" idb="120" nameb="Чіпсет">
+    <bridge id="21" lvla="1" lvlb="7" pa="21" pb="120,123,7,8,6,19,21" fpa="/root/image[@id=21]/" fpb="/root/image[@id=120]/image[@id=123]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=19]/image[@id=21]/" />
+  </track>
+  <track ida="21" namea="Країна" idb="132" nameb="Машина">
+    <bridge id="21" lvla="1" lvlb="8" pa="21" pb="132,1,2,7,8,6,19,21" fpa="/root/image[@id=21]/" fpb="/root/image[@id=132]/image[@id=1]/image[@id=2]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=19]/image[@id=21]/" />
+  </track>
+  <track ida="22" namea="Місто" idb="30" nameb="Магазин">
+    <bridge id="22" lvla="1" lvlb="5" pa="22" pb="30,29,6,20,22" fpa="/root/image[@id=22]/" fpb="/root/image[@id=30]/image[@id=29]/image[@id=6]/image[@id=20]/image[@id=22]/" />
+  </track>
+  <track ida="22" namea="Місто" idb="32" nameb="Веб камера">
+    <bridge id="22" lvla="1" lvlb="7" pa="22" pb="32,31,7,8,6,20,22" fpa="/root/image[@id=22]/" fpb="/root/image[@id=32]/image[@id=31]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=20]/image[@id=22]/" />
+  </track>
+  <track ida="22" namea="Місто" idb="34" nameb="Телевізор">
+    <bridge id="22" lvla="1" lvlb="7" pa="22" pb="34,35,7,8,6,20,22" fpa="/root/image[@id=22]/" fpb="/root/image[@id=34]/image[@id=35]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=20]/image[@id=22]/" />
+  </track>
+  <track ida="22" namea="Місто" idb="36" nameb="Телефон">
+    <bridge id="22" lvla="1" lvlb="7" pa="22" pb="36,37,7,8,6,20,22" fpa="/root/image[@id=22]/" fpb="/root/image[@id=36]/image[@id=37]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=20]/image[@id=22]/" />
+  </track>
+  <track ida="22" namea="Місто" idb="38" nameb="GSM Модуль">
+    <bridge id="22" lvla="1" lvlb="7" pa="22" pb="38,39,7,8,6,20,22" fpa="/root/image[@id=22]/" fpb="/root/image[@id=38]/image[@id=39]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=20]/image[@id=22]/" />
+  </track>
+  <track ida="22" namea="Місто" idb="41" nameb="Планшет">
+    <bridge id="22" lvla="1" lvlb="7" pa="22" pb="41,42,7,8,6,20,22" fpa="/root/image[@id=22]/" fpb="/root/image[@id=41]/image[@id=42]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=20]/image[@id=22]/" />
+  </track>
+  <track ida="22" namea="Місто" idb="44" nameb="Ресторан">
+    <bridge id="22" lvla="1" lvlb="5" pa="22" pb="44,52,6,20,22" fpa="/root/image[@id=22]/" fpb="/root/image[@id=44]/image[@id=52]/image[@id=6]/image[@id=20]/image[@id=22]/" />
+  </track>
+  <track ida="22" namea="Місто" idb="45" nameb="Підрозділ">
+    <bridge id="22" lvla="1" lvlb="5" pa="22" pb="45,66,6,20,22" fpa="/root/image[@id=22]/" fpb="/root/image[@id=45]/image[@id=66]/image[@id=6]/image[@id=20]/image[@id=22]/" />
+  </track>
+  <track ida="22" namea="Місто" idb="49" nameb="Парк">
+    <bridge id="22" lvla="1" lvlb="5" pa="22" pb="49,51,6,20,22" fpa="/root/image[@id=22]/" fpb="/root/image[@id=49]/image[@id=51]/image[@id=6]/image[@id=20]/image[@id=22]/" />
+  </track>
+  <track ida="22" namea="Місто" idb="53" nameb="Мобільний телефон">
+    <bridge id="22" lvla="1" lvlb="7" pa="22" pb="53,37,7,8,6,20,22" fpa="/root/image[@id=22]/" fpb="/root/image[@id=53]/image[@id=37]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=20]/image[@id=22]/" />
+  </track>
+  <track ida="22" namea="Місто" idb="62" nameb="Будинок">
+    <bridge id="22" lvla="1" lvlb="5" pa="22" pb="62,64,6,20,22" fpa="/root/image[@id=22]/" fpb="/root/image[@id=62]/image[@id=64]/image[@id=6]/image[@id=20]/image[@id=22]/" />
+  </track>
+  <track ida="22" namea="Місто" idb="73" nameb="Особняк">
+    <bridge id="22" lvla="1" lvlb="5" pa="22" pb="73,76,6,20,22" fpa="/root/image[@id=22]/" fpb="/root/image[@id=73]/image[@id=76]/image[@id=6]/image[@id=20]/image[@id=22]/" />
+  </track>
+  <track ida="22" namea="Місто" idb="81" nameb="Фірма">
+    <bridge id="22" lvla="1" lvlb="5" pa="22" pb="81,83,6,20,22" fpa="/root/image[@id=22]/" fpb="/root/image[@id=81]/image[@id=83]/image[@id=6]/image[@id=20]/image[@id=22]/" />
+  </track>
+  <track ida="22" namea="Місто" idb="84" nameb="Завод">
+    <bridge id="22" lvla="1" lvlb="5" pa="22" pb="84,85,6,20,22" fpa="/root/image[@id=22]/" fpb="/root/image[@id=84]/image[@id=85]/image[@id=6]/image[@id=20]/image[@id=22]/" />
+  </track>
+  <track ida="22" namea="Місто" idb="96" nameb="Школа">
+    <bridge id="22" lvla="1" lvlb="8" pa="22" pb="96,1,2,7,8,6,20,22" fpa="/root/image[@id=22]/" fpb="/root/image[@id=96]/image[@id=1]/image[@id=2]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=20]/image[@id=22]/" />
+  </track>
+  <track ida="22" namea="Місто" idb="106" nameb="Смартфон">
+    <bridge id="22" lvla="1" lvlb="8" pa="22" pb="106,5,4,7,8,6,20,22" fpa="/root/image[@id=22]/" fpb="/root/image[@id=106]/image[@id=5]/image[@id=4]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=20]/image[@id=22]/" />
+  </track>
+  <track ida="22" namea="Місто" idb="118" nameb="Комп'ютер">
+    <bridge id="22" lvla="1" lvlb="8" pa="22" pb="118,5,4,7,8,6,20,22" fpa="/root/image[@id=22]/" fpb="/root/image[@id=118]/image[@id=5]/image[@id=4]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=20]/image[@id=22]/" />
+  </track>
+  <track ida="22" namea="Місто" idb="119" nameb="Сервер">
+    <bridge id="22" lvla="1" lvlb="7" pa="22" pb="119,124,7,8,6,20,22" fpa="/root/image[@id=22]/" fpb="/root/image[@id=119]/image[@id=124]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=20]/image[@id=22]/" />
+  </track>
+  <track ida="22" namea="Місто" idb="120" nameb="Чіпсет">
+    <bridge id="22" lvla="1" lvlb="7" pa="22" pb="120,123,7,8,6,20,22" fpa="/root/image[@id=22]/" fpb="/root/image[@id=120]/image[@id=123]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=20]/image[@id=22]/" />
+  </track>
+  <track ida="22" namea="Місто" idb="132" nameb="Машина">
+    <bridge id="22" lvla="1" lvlb="8" pa="22" pb="132,1,2,7,8,6,20,22" fpa="/root/image[@id=22]/" fpb="/root/image[@id=132]/image[@id=1]/image[@id=2]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=20]/image[@id=22]/" />
+  </track>
+  <track ida="30" namea="Магазин" idb="32" nameb="Веб камера">
+    <bridge id="6" lvla="3" lvlb="5" pa="30,29,6" pb="32,31,7,8,6" fpa="/root/image[@id=30]/image[@id=29]/image[@id=6]/" fpb="/root/image[@id=32]/image[@id=31]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="30" namea="Магазин" idb="34" nameb="Телевізор">
+    <bridge id="6" lvla="3" lvlb="5" pa="30,29,6" pb="34,35,7,8,6" fpa="/root/image[@id=30]/image[@id=29]/image[@id=6]/" fpb="/root/image[@id=34]/image[@id=35]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="30" namea="Магазин" idb="36" nameb="Телефон">
+    <bridge id="6" lvla="3" lvlb="5" pa="30,29,6" pb="36,37,7,8,6" fpa="/root/image[@id=30]/image[@id=29]/image[@id=6]/" fpb="/root/image[@id=36]/image[@id=37]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="30" namea="Магазин" idb="38" nameb="GSM Модуль">
+    <bridge id="6" lvla="3" lvlb="5" pa="30,29,6" pb="38,39,7,8,6" fpa="/root/image[@id=30]/image[@id=29]/image[@id=6]/" fpb="/root/image[@id=38]/image[@id=39]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="30" namea="Магазин" idb="41" nameb="Планшет">
+    <bridge id="6" lvla="3" lvlb="5" pa="30,29,6" pb="41,42,7,8,6" fpa="/root/image[@id=30]/image[@id=29]/image[@id=6]/" fpb="/root/image[@id=41]/image[@id=42]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="30" namea="Магазин" idb="44" nameb="Ресторан">
+    <bridge id="6" lvla="3" lvlb="3" pa="30,29,6" pb="44,52,6" fpa="/root/image[@id=30]/image[@id=29]/image[@id=6]/" fpb="/root/image[@id=44]/image[@id=52]/image[@id=6]/" />
+  </track>
+  <track ida="30" namea="Магазин" idb="45" nameb="Підрозділ">
+    <bridge id="6" lvla="3" lvlb="3" pa="30,29,6" pb="45,66,6" fpa="/root/image[@id=30]/image[@id=29]/image[@id=6]/" fpb="/root/image[@id=45]/image[@id=66]/image[@id=6]/" />
+  </track>
+  <track ida="30" namea="Магазин" idb="49" nameb="Парк">
+    <bridge id="6" lvla="3" lvlb="3" pa="30,29,6" pb="49,51,6" fpa="/root/image[@id=30]/image[@id=29]/image[@id=6]/" fpb="/root/image[@id=49]/image[@id=51]/image[@id=6]/" />
+  </track>
+  <track ida="30" namea="Магазин" idb="53" nameb="Мобільний телефон">
+    <bridge id="6" lvla="3" lvlb="5" pa="30,29,6" pb="53,37,7,8,6" fpa="/root/image[@id=30]/image[@id=29]/image[@id=6]/" fpb="/root/image[@id=53]/image[@id=37]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="30" namea="Магазин" idb="60" nameb="Вулиця">
+    <bridge id="60" lvla="5" lvlb="1" pa="30,29,6,9,60" pb="60" fpa="/root/image[@id=30]/image[@id=29]/image[@id=6]/image[@id=9]/image[@id=60]/" fpb="/root/image[@id=60]/" />
+  </track>
+  <track ida="30" namea="Магазин" idb="62" nameb="Будинок">
+    <bridge id="6" lvla="3" lvlb="3" pa="30,29,6" pb="62,64,6" fpa="/root/image[@id=30]/image[@id=29]/image[@id=6]/" fpb="/root/image[@id=62]/image[@id=64]/image[@id=6]/" />
+  </track>
+  <track ida="30" namea="Магазин" idb="73" nameb="Особняк">
+    <bridge id="6" lvla="3" lvlb="3" pa="30,29,6" pb="73,76,6" fpa="/root/image[@id=30]/image[@id=29]/image[@id=6]/" fpb="/root/image[@id=73]/image[@id=76]/image[@id=6]/" />
+  </track>
+  <track ida="30" namea="Магазин" idb="79" nameb="Власник">
+    <bridge id="79" lvla="3" lvlb="1" pa="30,80,79" pb="79" fpa="/root/image[@id=30]/image[@id=80]/image[@id=79]/" fpb="/root/image[@id=79]/" />
+  </track>
+  <track ida="30" namea="Магазин" idb="81" nameb="Фірма">
+    <bridge id="6" lvla="3" lvlb="3" pa="30,29,6" pb="81,83,6" fpa="/root/image[@id=30]/image[@id=29]/image[@id=6]/" fpb="/root/image[@id=81]/image[@id=83]/image[@id=6]/" />
+    <bridge id="79" lvla="3" lvlb="3" pa="30,80,79" pb="81,82,79" fpa="/root/image[@id=30]/image[@id=80]/image[@id=79]/" fpb="/root/image[@id=81]/image[@id=82]/image[@id=79]/" />
+  </track>
+  <track ida="30" namea="Магазин" idb="84" nameb="Завод">
+    <bridge id="6" lvla="3" lvlb="3" pa="30,29,6" pb="84,85,6" fpa="/root/image[@id=30]/image[@id=29]/image[@id=6]/" fpb="/root/image[@id=84]/image[@id=85]/image[@id=6]/" />
+    <bridge id="79" lvla="3" lvlb="3" pa="30,80,79" pb="84,88,79" fpa="/root/image[@id=30]/image[@id=80]/image[@id=79]/" fpb="/root/image[@id=84]/image[@id=88]/image[@id=79]/" />
+  </track>
+  <track ida="30" namea="Магазин" idb="96" nameb="Школа">
+    <bridge id="6" lvla="3" lvlb="6" pa="30,29,6" pb="96,1,2,7,8,6" fpa="/root/image[@id=30]/image[@id=29]/image[@id=6]/" fpb="/root/image[@id=96]/image[@id=1]/image[@id=2]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="30" namea="Магазин" idb="106" nameb="Смартфон">
+    <bridge id="6" lvla="3" lvlb="6" pa="30,29,6" pb="106,5,4,7,8,6" fpa="/root/image[@id=30]/image[@id=29]/image[@id=6]/" fpb="/root/image[@id=106]/image[@id=5]/image[@id=4]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="30" namea="Магазин" idb="118" nameb="Комп'ютер">
+    <bridge id="6" lvla="3" lvlb="6" pa="30,29,6" pb="118,5,4,7,8,6" fpa="/root/image[@id=30]/image[@id=29]/image[@id=6]/" fpb="/root/image[@id=118]/image[@id=5]/image[@id=4]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="30" namea="Магазин" idb="119" nameb="Сервер">
+    <bridge id="6" lvla="3" lvlb="5" pa="30,29,6" pb="119,124,7,8,6" fpa="/root/image[@id=30]/image[@id=29]/image[@id=6]/" fpb="/root/image[@id=119]/image[@id=124]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="30" namea="Магазин" idb="120" nameb="Чіпсет">
+    <bridge id="6" lvla="3" lvlb="5" pa="30,29,6" pb="120,123,7,8,6" fpa="/root/image[@id=30]/image[@id=29]/image[@id=6]/" fpb="/root/image[@id=120]/image[@id=123]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="30" namea="Магазин" idb="130" nameb="БлаБлаБла">
+    <bridge id="9" lvla="4" lvlb="2" pa="30,29,6,9" pb="130,9" fpa="/root/image[@id=30]/image[@id=29]/image[@id=6]/image[@id=9]/" fpb="/root/image[@id=130]/image[@id=9]/" />
+  </track>
+  <track ida="30" namea="Магазин" idb="132" nameb="Машина">
+    <bridge id="6" lvla="3" lvlb="6" pa="30,29,6" pb="132,1,2,7,8,6" fpa="/root/image[@id=30]/image[@id=29]/image[@id=6]/" fpb="/root/image[@id=132]/image[@id=1]/image[@id=2]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="32" namea="Веб камера" idb="34" nameb="Телевізор">
+    <bridge id="7" lvla="3" lvlb="3" pa="32,31,7" pb="34,35,7" fpa="/root/image[@id=32]/image[@id=31]/image[@id=7]/" fpb="/root/image[@id=34]/image[@id=35]/image[@id=7]/" />
+  </track>
+  <track ida="32" namea="Веб камера" idb="36" nameb="Телефон">
+    <bridge id="7" lvla="3" lvlb="3" pa="32,31,7" pb="36,37,7" fpa="/root/image[@id=32]/image[@id=31]/image[@id=7]/" fpb="/root/image[@id=36]/image[@id=37]/image[@id=7]/" />
+  </track>
+  <track ida="32" namea="Веб камера" idb="38" nameb="GSM Модуль">
+    <bridge id="7" lvla="3" lvlb="3" pa="32,31,7" pb="38,39,7" fpa="/root/image[@id=32]/image[@id=31]/image[@id=7]/" fpb="/root/image[@id=38]/image[@id=39]/image[@id=7]/" />
+  </track>
+  <track ida="32" namea="Веб камера" idb="41" nameb="Планшет">
+    <bridge id="7" lvla="3" lvlb="3" pa="32,31,7" pb="41,42,7" fpa="/root/image[@id=32]/image[@id=31]/image[@id=7]/" fpb="/root/image[@id=41]/image[@id=42]/image[@id=7]/" />
+  </track>
+  <track ida="32" namea="Веб камера" idb="44" nameb="Ресторан">
+    <bridge id="6" lvla="5" lvlb="3" pa="32,31,7,8,6" pb="44,52,6" fpa="/root/image[@id=32]/image[@id=31]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=44]/image[@id=52]/image[@id=6]/" />
+  </track>
+  <track ida="32" namea="Веб камера" idb="45" nameb="Підрозділ">
+    <bridge id="6" lvla="5" lvlb="3" pa="32,31,7,8,6" pb="45,66,6" fpa="/root/image[@id=32]/image[@id=31]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=45]/image[@id=66]/image[@id=6]/" />
+  </track>
+  <track ida="32" namea="Веб камера" idb="49" nameb="Парк">
+    <bridge id="6" lvla="5" lvlb="3" pa="32,31,7,8,6" pb="49,51,6" fpa="/root/image[@id=32]/image[@id=31]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=49]/image[@id=51]/image[@id=6]/" />
+  </track>
+  <track ida="32" namea="Веб камера" idb="53" nameb="Мобільний телефон">
+    <bridge id="7" lvla="3" lvlb="3" pa="32,31,7" pb="53,37,7" fpa="/root/image[@id=32]/image[@id=31]/image[@id=7]/" fpb="/root/image[@id=53]/image[@id=37]/image[@id=7]/" />
+  </track>
+  <track ida="32" namea="Веб камера" idb="60" nameb="Вулиця">
+    <bridge id="60" lvla="7" lvlb="1" pa="32,31,7,8,6,9,60" pb="60" fpa="/root/image[@id=32]/image[@id=31]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=9]/image[@id=60]/" fpb="/root/image[@id=60]/" />
+  </track>
+  <track ida="32" namea="Веб камера" idb="62" nameb="Будинок">
+    <bridge id="6" lvla="5" lvlb="3" pa="32,31,7,8,6" pb="62,64,6" fpa="/root/image[@id=32]/image[@id=31]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=62]/image[@id=64]/image[@id=6]/" />
+  </track>
+  <track ida="32" namea="Веб камера" idb="73" nameb="Особняк">
+    <bridge id="6" lvla="5" lvlb="3" pa="32,31,7,8,6" pb="73,76,6" fpa="/root/image[@id=32]/image[@id=31]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=73]/image[@id=76]/image[@id=6]/" />
+  </track>
+  <track ida="32" namea="Веб камера" idb="81" nameb="Фірма">
+    <bridge id="6" lvla="5" lvlb="3" pa="32,31,7,8,6" pb="81,83,6" fpa="/root/image[@id=32]/image[@id=31]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=81]/image[@id=83]/image[@id=6]/" />
+  </track>
+  <track ida="32" namea="Веб камера" idb="84" nameb="Завод">
+    <bridge id="6" lvla="5" lvlb="3" pa="32,31,7,8,6" pb="84,85,6" fpa="/root/image[@id=32]/image[@id=31]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=84]/image[@id=85]/image[@id=6]/" />
+  </track>
+  <track ida="32" namea="Веб камера" idb="96" nameb="Школа">
+    <bridge id="32" lvla="1" lvlb="3" pa="32" pb="96,1,32" fpa="/root/image[@id=32]/" fpb="/root/image[@id=96]/image[@id=1]/image[@id=32]/" />
+  </track>
+  <track ida="32" namea="Веб камера" idb="106" nameb="Смартфон">
+    <bridge id="7" lvla="3" lvlb="4" pa="32,31,7" pb="106,5,4,7" fpa="/root/image[@id=32]/image[@id=31]/image[@id=7]/" fpb="/root/image[@id=106]/image[@id=5]/image[@id=4]/image[@id=7]/" />
+  </track>
+  <track ida="32" namea="Веб камера" idb="118" nameb="Комп'ютер">
+    <bridge id="7" lvla="3" lvlb="4" pa="32,31,7" pb="118,5,4,7" fpa="/root/image[@id=32]/image[@id=31]/image[@id=7]/" fpb="/root/image[@id=118]/image[@id=5]/image[@id=4]/image[@id=7]/" />
+  </track>
+  <track ida="32" namea="Веб камера" idb="119" nameb="Сервер">
+    <bridge id="7" lvla="3" lvlb="3" pa="32,31,7" pb="119,124,7" fpa="/root/image[@id=32]/image[@id=31]/image[@id=7]/" fpb="/root/image[@id=119]/image[@id=124]/image[@id=7]/" />
+  </track>
+  <track ida="32" namea="Веб камера" idb="120" nameb="Чіпсет">
+    <bridge id="7" lvla="3" lvlb="3" pa="32,31,7" pb="120,123,7" fpa="/root/image[@id=32]/image[@id=31]/image[@id=7]/" fpb="/root/image[@id=120]/image[@id=123]/image[@id=7]/" />
+  </track>
+  <track ida="32" namea="Веб камера" idb="130" nameb="БлаБлаБла">
+    <bridge id="9" lvla="6" lvlb="2" pa="32,31,7,8,6,9" pb="130,9" fpa="/root/image[@id=32]/image[@id=31]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=9]/" fpb="/root/image[@id=130]/image[@id=9]/" />
+  </track>
+  <track ida="32" namea="Веб камера" idb="132" nameb="Машина">
+    <bridge id="32" lvla="1" lvlb="3" pa="32" pb="132,1,32" fpa="/root/image[@id=32]/" fpb="/root/image[@id=132]/image[@id=1]/image[@id=32]/" />
+  </track>
+  <track ida="34" namea="Телевізор" idb="36" nameb="Телефон">
+    <bridge id="7" lvla="3" lvlb="3" pa="34,35,7" pb="36,37,7" fpa="/root/image[@id=34]/image[@id=35]/image[@id=7]/" fpb="/root/image[@id=36]/image[@id=37]/image[@id=7]/" />
+  </track>
+  <track ida="34" namea="Телевізор" idb="38" nameb="GSM Модуль">
+    <bridge id="7" lvla="3" lvlb="3" pa="34,35,7" pb="38,39,7" fpa="/root/image[@id=34]/image[@id=35]/image[@id=7]/" fpb="/root/image[@id=38]/image[@id=39]/image[@id=7]/" />
+  </track>
+  <track ida="34" namea="Телевізор" idb="41" nameb="Планшет">
+    <bridge id="7" lvla="3" lvlb="3" pa="34,35,7" pb="41,42,7" fpa="/root/image[@id=34]/image[@id=35]/image[@id=7]/" fpb="/root/image[@id=41]/image[@id=42]/image[@id=7]/" />
+  </track>
+  <track ida="34" namea="Телевізор" idb="44" nameb="Ресторан">
+    <bridge id="6" lvla="5" lvlb="3" pa="34,35,7,8,6" pb="44,52,6" fpa="/root/image[@id=34]/image[@id=35]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=44]/image[@id=52]/image[@id=6]/" />
+  </track>
+  <track ida="34" namea="Телевізор" idb="45" nameb="Підрозділ">
+    <bridge id="6" lvla="5" lvlb="3" pa="34,35,7,8,6" pb="45,66,6" fpa="/root/image[@id=34]/image[@id=35]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=45]/image[@id=66]/image[@id=6]/" />
+  </track>
+  <track ida="34" namea="Телевізор" idb="49" nameb="Парк">
+    <bridge id="6" lvla="5" lvlb="3" pa="34,35,7,8,6" pb="49,51,6" fpa="/root/image[@id=34]/image[@id=35]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=49]/image[@id=51]/image[@id=6]/" />
+  </track>
+  <track ida="34" namea="Телевізор" idb="53" nameb="Мобільний телефон">
+    <bridge id="7" lvla="3" lvlb="3" pa="34,35,7" pb="53,37,7" fpa="/root/image[@id=34]/image[@id=35]/image[@id=7]/" fpb="/root/image[@id=53]/image[@id=37]/image[@id=7]/" />
+  </track>
+  <track ida="34" namea="Телевізор" idb="60" nameb="Вулиця">
+    <bridge id="60" lvla="7" lvlb="1" pa="34,35,7,8,6,9,60" pb="60" fpa="/root/image[@id=34]/image[@id=35]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=9]/image[@id=60]/" fpb="/root/image[@id=60]/" />
+  </track>
+  <track ida="34" namea="Телевізор" idb="62" nameb="Будинок">
+    <bridge id="6" lvla="5" lvlb="3" pa="34,35,7,8,6" pb="62,64,6" fpa="/root/image[@id=34]/image[@id=35]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=62]/image[@id=64]/image[@id=6]/" />
+  </track>
+  <track ida="34" namea="Телевізор" idb="73" nameb="Особняк">
+    <bridge id="6" lvla="5" lvlb="3" pa="34,35,7,8,6" pb="73,76,6" fpa="/root/image[@id=34]/image[@id=35]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=73]/image[@id=76]/image[@id=6]/" />
+  </track>
+  <track ida="34" namea="Телевізор" idb="81" nameb="Фірма">
+    <bridge id="6" lvla="5" lvlb="3" pa="34,35,7,8,6" pb="81,83,6" fpa="/root/image[@id=34]/image[@id=35]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=81]/image[@id=83]/image[@id=6]/" />
+  </track>
+  <track ida="34" namea="Телевізор" idb="84" nameb="Завод">
+    <bridge id="6" lvla="5" lvlb="3" pa="34,35,7,8,6" pb="84,85,6" fpa="/root/image[@id=34]/image[@id=35]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=84]/image[@id=85]/image[@id=6]/" />
+  </track>
+  <track ida="34" namea="Телевізор" idb="96" nameb="Школа">
+    <bridge id="7" lvla="3" lvlb="4" pa="34,35,7" pb="96,1,2,7" fpa="/root/image[@id=34]/image[@id=35]/image[@id=7]/" fpb="/root/image[@id=96]/image[@id=1]/image[@id=2]/image[@id=7]/" />
+  </track>
+  <track ida="34" namea="Телевізор" idb="106" nameb="Смартфон">
+    <bridge id="7" lvla="3" lvlb="4" pa="34,35,7" pb="106,5,4,7" fpa="/root/image[@id=34]/image[@id=35]/image[@id=7]/" fpb="/root/image[@id=106]/image[@id=5]/image[@id=4]/image[@id=7]/" />
+  </track>
+  <track ida="34" namea="Телевізор" idb="118" nameb="Комп'ютер">
+    <bridge id="7" lvla="3" lvlb="4" pa="34,35,7" pb="118,5,4,7" fpa="/root/image[@id=34]/image[@id=35]/image[@id=7]/" fpb="/root/image[@id=118]/image[@id=5]/image[@id=4]/image[@id=7]/" />
+  </track>
+  <track ida="34" namea="Телевізор" idb="119" nameb="Сервер">
+    <bridge id="7" lvla="3" lvlb="3" pa="34,35,7" pb="119,124,7" fpa="/root/image[@id=34]/image[@id=35]/image[@id=7]/" fpb="/root/image[@id=119]/image[@id=124]/image[@id=7]/" />
+  </track>
+  <track ida="34" namea="Телевізор" idb="120" nameb="Чіпсет">
+    <bridge id="7" lvla="3" lvlb="3" pa="34,35,7" pb="120,123,7" fpa="/root/image[@id=34]/image[@id=35]/image[@id=7]/" fpb="/root/image[@id=120]/image[@id=123]/image[@id=7]/" />
+  </track>
+  <track ida="34" namea="Телевізор" idb="130" nameb="БлаБлаБла">
+    <bridge id="9" lvla="6" lvlb="2" pa="34,35,7,8,6,9" pb="130,9" fpa="/root/image[@id=34]/image[@id=35]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=9]/" fpb="/root/image[@id=130]/image[@id=9]/" />
+  </track>
+  <track ida="34" namea="Телевізор" idb="132" nameb="Машина">
+    <bridge id="7" lvla="3" lvlb="4" pa="34,35,7" pb="132,1,2,7" fpa="/root/image[@id=34]/image[@id=35]/image[@id=7]/" fpb="/root/image[@id=132]/image[@id=1]/image[@id=2]/image[@id=7]/" />
+  </track>
+  <track ida="36" namea="Телефон" idb="38" nameb="GSM Модуль">
+    <bridge id="7" lvla="3" lvlb="3" pa="36,37,7" pb="38,39,7" fpa="/root/image[@id=36]/image[@id=37]/image[@id=7]/" fpb="/root/image[@id=38]/image[@id=39]/image[@id=7]/" />
+    <bridge id="38" lvla="2" lvlb="1" pa="36,38" pb="38" fpa="/root/image[@id=36]/image[@id=38]/" fpb="/root/image[@id=38]/" />
+  </track>
+  <track ida="36" namea="Телефон" idb="41" nameb="Планшет">
+    <bridge id="7" lvla="3" lvlb="3" pa="36,37,7" pb="41,42,7" fpa="/root/image[@id=36]/image[@id=37]/image[@id=7]/" fpb="/root/image[@id=41]/image[@id=42]/image[@id=7]/" />
+    <bridge id="13" lvla="2" lvlb="2" pa="36,13" pb="41,13" fpa="/root/image[@id=36]/image[@id=13]/" fpb="/root/image[@id=41]/image[@id=13]/" />
+    <bridge id="5" lvla="3" lvlb="2" pa="36,118,5" pb="41,5" fpa="/root/image[@id=36]/image[@id=118]/image[@id=5]/" fpb="/root/image[@id=41]/image[@id=5]/" />
+  </track>
+  <track ida="36" namea="Телефон" idb="44" nameb="Ресторан">
+    <bridge id="6" lvla="5" lvlb="3" pa="36,37,7,8,6" pb="44,52,6" fpa="/root/image[@id=36]/image[@id=37]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=44]/image[@id=52]/image[@id=6]/" />
+  </track>
+  <track ida="36" namea="Телефон" idb="45" nameb="Підрозділ">
+    <bridge id="6" lvla="5" lvlb="3" pa="36,37,7,8,6" pb="45,66,6" fpa="/root/image[@id=36]/image[@id=37]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=45]/image[@id=66]/image[@id=6]/" />
+  </track>
+  <track ida="36" namea="Телефон" idb="49" nameb="Парк">
+    <bridge id="6" lvla="5" lvlb="3" pa="36,37,7,8,6" pb="49,51,6" fpa="/root/image[@id=36]/image[@id=37]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=49]/image[@id=51]/image[@id=6]/" />
+  </track>
+  <track ida="36" namea="Телефон" idb="53" nameb="Мобільний телефон">
+    <bridge id="37" lvla="2" lvlb="2" pa="36,37" pb="53,37" fpa="/root/image[@id=36]/image[@id=37]/" fpb="/root/image[@id=53]/image[@id=37]/" />
+  </track>
+  <track ida="36" namea="Телефон" idb="60" nameb="Вулиця">
+    <bridge id="60" lvla="7" lvlb="1" pa="36,37,7,8,6,9,60" pb="60" fpa="/root/image[@id=36]/image[@id=37]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=9]/image[@id=60]/" fpb="/root/image[@id=60]/" />
+  </track>
+  <track ida="36" namea="Телефон" idb="62" nameb="Будинок">
+    <bridge id="6" lvla="5" lvlb="3" pa="36,37,7,8,6" pb="62,64,6" fpa="/root/image[@id=36]/image[@id=37]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=62]/image[@id=64]/image[@id=6]/" />
+  </track>
+  <track ida="36" namea="Телефон" idb="73" nameb="Особняк">
+    <bridge id="6" lvla="5" lvlb="3" pa="36,37,7,8,6" pb="73,76,6" fpa="/root/image[@id=36]/image[@id=37]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=73]/image[@id=76]/image[@id=6]/" />
+  </track>
+  <track ida="36" namea="Телефон" idb="81" nameb="Фірма">
+    <bridge id="6" lvla="5" lvlb="3" pa="36,37,7,8,6" pb="81,83,6" fpa="/root/image[@id=36]/image[@id=37]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=81]/image[@id=83]/image[@id=6]/" />
+  </track>
+  <track ida="36" namea="Телефон" idb="84" nameb="Завод">
+    <bridge id="6" lvla="5" lvlb="3" pa="36,37,7,8,6" pb="84,85,6" fpa="/root/image[@id=36]/image[@id=37]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=84]/image[@id=85]/image[@id=6]/" />
+  </track>
+  <track ida="36" namea="Телефон" idb="96" nameb="Школа">
+    <bridge id="7" lvla="3" lvlb="4" pa="36,37,7" pb="96,1,2,7" fpa="/root/image[@id=36]/image[@id=37]/image[@id=7]/" fpb="/root/image[@id=96]/image[@id=1]/image[@id=2]/image[@id=7]/" />
+    <bridge id="13" lvla="2" lvlb="3" pa="36,13" pb="96,1,13" fpa="/root/image[@id=36]/image[@id=13]/" fpb="/root/image[@id=96]/image[@id=1]/image[@id=13]/" />
+    <bridge id="118" lvla="2" lvlb="3" pa="36,118" pb="96,1,118" fpa="/root/image[@id=36]/image[@id=118]/" fpb="/root/image[@id=96]/image[@id=1]/image[@id=118]/" />
+  </track>
+  <track ida="36" namea="Телефон" idb="106" nameb="Смартфон">
+    <bridge id="7" lvla="3" lvlb="4" pa="36,37,7" pb="106,5,4,7" fpa="/root/image[@id=36]/image[@id=37]/image[@id=7]/" fpb="/root/image[@id=106]/image[@id=5]/image[@id=4]/image[@id=7]/" />
+    <bridge id="5" lvla="3" lvlb="2" pa="36,118,5" pb="106,5" fpa="/root/image[@id=36]/image[@id=118]/image[@id=5]/" fpb="/root/image[@id=106]/image[@id=5]/" />
+  </track>
+  <track ida="36" namea="Телефон" idb="118" nameb="Комп'ютер">
+    <bridge id="7" lvla="3" lvlb="4" pa="36,37,7" pb="118,5,4,7" fpa="/root/image[@id=36]/image[@id=37]/image[@id=7]/" fpb="/root/image[@id=118]/image[@id=5]/image[@id=4]/image[@id=7]/" />
+    <bridge id="118" lvla="2" lvlb="1" pa="36,118" pb="118" fpa="/root/image[@id=36]/image[@id=118]/" fpb="/root/image[@id=118]/" />
+  </track>
+  <track ida="36" namea="Телефон" idb="119" nameb="Сервер">
+    <bridge id="7" lvla="3" lvlb="3" pa="36,37,7" pb="119,124,7" fpa="/root/image[@id=36]/image[@id=37]/image[@id=7]/" fpb="/root/image[@id=119]/image[@id=124]/image[@id=7]/" />
+    <bridge id="118" lvla="2" lvlb="2" pa="36,118" pb="119,118" fpa="/root/image[@id=36]/image[@id=118]/" fpb="/root/image[@id=119]/image[@id=118]/" />
+  </track>
+  <track ida="36" namea="Телефон" idb="120" nameb="Чіпсет">
+    <bridge id="7" lvla="3" lvlb="3" pa="36,37,7" pb="120,123,7" fpa="/root/image[@id=36]/image[@id=37]/image[@id=7]/" fpb="/root/image[@id=120]/image[@id=123]/image[@id=7]/" />
+    <bridge id="120" lvla="4" lvlb="1" pa="36,118,17,120" pb="120" fpa="/root/image[@id=36]/image[@id=118]/image[@id=17]/image[@id=120]/" fpb="/root/image[@id=120]/" />
+  </track>
+  <track ida="36" namea="Телефон" idb="130" nameb="БлаБлаБла">
+    <bridge id="9" lvla="6" lvlb="2" pa="36,37,7,8,6,9" pb="130,9" fpa="/root/image[@id=36]/image[@id=37]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=9]/" fpb="/root/image[@id=130]/image[@id=9]/" />
+  </track>
+  <track ida="36" namea="Телефон" idb="132" nameb="Машина">
+    <bridge id="7" lvla="3" lvlb="4" pa="36,37,7" pb="132,1,2,7" fpa="/root/image[@id=36]/image[@id=37]/image[@id=7]/" fpb="/root/image[@id=132]/image[@id=1]/image[@id=2]/image[@id=7]/" />
+    <bridge id="13" lvla="2" lvlb="3" pa="36,13" pb="132,1,13" fpa="/root/image[@id=36]/image[@id=13]/" fpb="/root/image[@id=132]/image[@id=1]/image[@id=13]/" />
+    <bridge id="118" lvla="2" lvlb="3" pa="36,118" pb="132,1,118" fpa="/root/image[@id=36]/image[@id=118]/" fpb="/root/image[@id=132]/image[@id=1]/image[@id=118]/" />
+  </track>
+  <track ida="38" namea="GSM Модуль" idb="41" nameb="Планшет">
+    <bridge id="7" lvla="3" lvlb="3" pa="38,39,7" pb="41,42,7" fpa="/root/image[@id=38]/image[@id=39]/image[@id=7]/" fpb="/root/image[@id=41]/image[@id=42]/image[@id=7]/" />
+  </track>
+  <track ida="38" namea="GSM Модуль" idb="44" nameb="Ресторан">
+    <bridge id="6" lvla="5" lvlb="3" pa="38,39,7,8,6" pb="44,52,6" fpa="/root/image[@id=38]/image[@id=39]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=44]/image[@id=52]/image[@id=6]/" />
+  </track>
+  <track ida="38" namea="GSM Модуль" idb="45" nameb="Підрозділ">
+    <bridge id="6" lvla="5" lvlb="3" pa="38,39,7,8,6" pb="45,66,6" fpa="/root/image[@id=38]/image[@id=39]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=45]/image[@id=66]/image[@id=6]/" />
+  </track>
+  <track ida="38" namea="GSM Модуль" idb="49" nameb="Парк">
+    <bridge id="6" lvla="5" lvlb="3" pa="38,39,7,8,6" pb="49,51,6" fpa="/root/image[@id=38]/image[@id=39]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=49]/image[@id=51]/image[@id=6]/" />
+  </track>
+  <track ida="38" namea="GSM Модуль" idb="53" nameb="Мобільний телефон">
+    <bridge id="7" lvla="3" lvlb="3" pa="38,39,7" pb="53,37,7" fpa="/root/image[@id=38]/image[@id=39]/image[@id=7]/" fpb="/root/image[@id=53]/image[@id=37]/image[@id=7]/" />
+  </track>
+  <track ida="38" namea="GSM Модуль" idb="60" nameb="Вулиця">
+    <bridge id="60" lvla="7" lvlb="1" pa="38,39,7,8,6,9,60" pb="60" fpa="/root/image[@id=38]/image[@id=39]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=9]/image[@id=60]/" fpb="/root/image[@id=60]/" />
+  </track>
+  <track ida="38" namea="GSM Модуль" idb="62" nameb="Будинок">
+    <bridge id="6" lvla="5" lvlb="3" pa="38,39,7,8,6" pb="62,64,6" fpa="/root/image[@id=38]/image[@id=39]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=62]/image[@id=64]/image[@id=6]/" />
+  </track>
+  <track ida="38" namea="GSM Модуль" idb="73" nameb="Особняк">
+    <bridge id="6" lvla="5" lvlb="3" pa="38,39,7,8,6" pb="73,76,6" fpa="/root/image[@id=38]/image[@id=39]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=73]/image[@id=76]/image[@id=6]/" />
+  </track>
+  <track ida="38" namea="GSM Модуль" idb="81" nameb="Фірма">
+    <bridge id="6" lvla="5" lvlb="3" pa="38,39,7,8,6" pb="81,83,6" fpa="/root/image[@id=38]/image[@id=39]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=81]/image[@id=83]/image[@id=6]/" />
+  </track>
+  <track ida="38" namea="GSM Модуль" idb="84" nameb="Завод">
+    <bridge id="6" lvla="5" lvlb="3" pa="38,39,7,8,6" pb="84,85,6" fpa="/root/image[@id=38]/image[@id=39]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=84]/image[@id=85]/image[@id=6]/" />
+  </track>
+  <track ida="38" namea="GSM Модуль" idb="96" nameb="Школа">
+    <bridge id="7" lvla="3" lvlb="4" pa="38,39,7" pb="96,1,2,7" fpa="/root/image[@id=38]/image[@id=39]/image[@id=7]/" fpb="/root/image[@id=96]/image[@id=1]/image[@id=2]/image[@id=7]/" />
+  </track>
+  <track ida="38" namea="GSM Модуль" idb="106" nameb="Смартфон">
+    <bridge id="7" lvla="3" lvlb="4" pa="38,39,7" pb="106,5,4,7" fpa="/root/image[@id=38]/image[@id=39]/image[@id=7]/" fpb="/root/image[@id=106]/image[@id=5]/image[@id=4]/image[@id=7]/" />
+  </track>
+  <track ida="38" namea="GSM Модуль" idb="118" nameb="Комп'ютер">
+    <bridge id="7" lvla="3" lvlb="4" pa="38,39,7" pb="118,5,4,7" fpa="/root/image[@id=38]/image[@id=39]/image[@id=7]/" fpb="/root/image[@id=118]/image[@id=5]/image[@id=4]/image[@id=7]/" />
+  </track>
+  <track ida="38" namea="GSM Модуль" idb="119" nameb="Сервер">
+    <bridge id="7" lvla="3" lvlb="3" pa="38,39,7" pb="119,124,7" fpa="/root/image[@id=38]/image[@id=39]/image[@id=7]/" fpb="/root/image[@id=119]/image[@id=124]/image[@id=7]/" />
+  </track>
+  <track ida="38" namea="GSM Модуль" idb="120" nameb="Чіпсет">
+    <bridge id="7" lvla="3" lvlb="3" pa="38,39,7" pb="120,123,7" fpa="/root/image[@id=38]/image[@id=39]/image[@id=7]/" fpb="/root/image[@id=120]/image[@id=123]/image[@id=7]/" />
+  </track>
+  <track ida="38" namea="GSM Модуль" idb="130" nameb="БлаБлаБла">
+    <bridge id="9" lvla="6" lvlb="2" pa="38,39,7,8,6,9" pb="130,9" fpa="/root/image[@id=38]/image[@id=39]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=9]/" fpb="/root/image[@id=130]/image[@id=9]/" />
+  </track>
+  <track ida="38" namea="GSM Модуль" idb="132" nameb="Машина">
+    <bridge id="7" lvla="3" lvlb="4" pa="38,39,7" pb="132,1,2,7" fpa="/root/image[@id=38]/image[@id=39]/image[@id=7]/" fpb="/root/image[@id=132]/image[@id=1]/image[@id=2]/image[@id=7]/" />
+  </track>
+  <track ida="41" namea="Планшет" idb="44" nameb="Ресторан">
+    <bridge id="6" lvla="5" lvlb="3" pa="41,42,7,8,6" pb="44,52,6" fpa="/root/image[@id=41]/image[@id=42]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=44]/image[@id=52]/image[@id=6]/" />
+  </track>
+  <track ida="41" namea="Планшет" idb="45" nameb="Підрозділ">
+    <bridge id="6" lvla="5" lvlb="3" pa="41,42,7,8,6" pb="45,66,6" fpa="/root/image[@id=41]/image[@id=42]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=45]/image[@id=66]/image[@id=6]/" />
+  </track>
+  <track ida="41" namea="Планшет" idb="49" nameb="Парк">
+    <bridge id="6" lvla="5" lvlb="3" pa="41,42,7,8,6" pb="49,51,6" fpa="/root/image[@id=41]/image[@id=42]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=49]/image[@id=51]/image[@id=6]/" />
+  </track>
+  <track ida="41" namea="Планшет" idb="53" nameb="Мобільний телефон">
+    <bridge id="7" lvla="3" lvlb="3" pa="41,42,7" pb="53,37,7" fpa="/root/image[@id=41]/image[@id=42]/image[@id=7]/" fpb="/root/image[@id=53]/image[@id=37]/image[@id=7]/" />
+  </track>
+  <track ida="41" namea="Планшет" idb="60" nameb="Вулиця">
+    <bridge id="60" lvla="7" lvlb="1" pa="41,42,7,8,6,9,60" pb="60" fpa="/root/image[@id=41]/image[@id=42]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=9]/image[@id=60]/" fpb="/root/image[@id=60]/" />
+  </track>
+  <track ida="41" namea="Планшет" idb="62" nameb="Будинок">
+    <bridge id="6" lvla="5" lvlb="3" pa="41,42,7,8,6" pb="62,64,6" fpa="/root/image[@id=41]/image[@id=42]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=62]/image[@id=64]/image[@id=6]/" />
+  </track>
+  <track ida="41" namea="Планшет" idb="73" nameb="Особняк">
+    <bridge id="6" lvla="5" lvlb="3" pa="41,42,7,8,6" pb="73,76,6" fpa="/root/image[@id=41]/image[@id=42]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=73]/image[@id=76]/image[@id=6]/" />
+  </track>
+  <track ida="41" namea="Планшет" idb="81" nameb="Фірма">
+    <bridge id="6" lvla="5" lvlb="3" pa="41,42,7,8,6" pb="81,83,6" fpa="/root/image[@id=41]/image[@id=42]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=81]/image[@id=83]/image[@id=6]/" />
+  </track>
+  <track ida="41" namea="Планшет" idb="84" nameb="Завод">
+    <bridge id="6" lvla="5" lvlb="3" pa="41,42,7,8,6" pb="84,85,6" fpa="/root/image[@id=41]/image[@id=42]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=84]/image[@id=85]/image[@id=6]/" />
+  </track>
+  <track ida="41" namea="Планшет" idb="96" nameb="Школа">
+    <bridge id="7" lvla="3" lvlb="4" pa="41,42,7" pb="96,1,2,7" fpa="/root/image[@id=41]/image[@id=42]/image[@id=7]/" fpb="/root/image[@id=96]/image[@id=1]/image[@id=2]/image[@id=7]/" />
+    <bridge id="5" lvla="2" lvlb="4" pa="41,5" pb="96,1,118,5" fpa="/root/image[@id=41]/image[@id=5]/" fpb="/root/image[@id=96]/image[@id=1]/image[@id=118]/image[@id=5]/" />
+    <bridge id="13" lvla="2" lvlb="3" pa="41,13" pb="96,1,13" fpa="/root/image[@id=41]/image[@id=13]/" fpb="/root/image[@id=96]/image[@id=1]/image[@id=13]/" />
+  </track>
+  <track ida="41" namea="Планшет" idb="106" nameb="Смартфон">
+    <bridge id="7" lvla="3" lvlb="4" pa="41,42,7" pb="106,5,4,7" fpa="/root/image[@id=41]/image[@id=42]/image[@id=7]/" fpb="/root/image[@id=106]/image[@id=5]/image[@id=4]/image[@id=7]/" />
+    <bridge id="5" lvla="2" lvlb="2" pa="41,5" pb="106,5" fpa="/root/image[@id=41]/image[@id=5]/" fpb="/root/image[@id=106]/image[@id=5]/" />
+  </track>
+  <track ida="41" namea="Планшет" idb="118" nameb="Комп'ютер">
+    <bridge id="7" lvla="3" lvlb="4" pa="41,42,7" pb="118,5,4,7" fpa="/root/image[@id=41]/image[@id=42]/image[@id=7]/" fpb="/root/image[@id=118]/image[@id=5]/image[@id=4]/image[@id=7]/" />
+    <bridge id="5" lvla="2" lvlb="2" pa="41,5" pb="118,5" fpa="/root/image[@id=41]/image[@id=5]/" fpb="/root/image[@id=118]/image[@id=5]/" />
+  </track>
+  <track ida="41" namea="Планшет" idb="119" nameb="Сервер">
+    <bridge id="7" lvla="3" lvlb="3" pa="41,42,7" pb="119,124,7" fpa="/root/image[@id=41]/image[@id=42]/image[@id=7]/" fpb="/root/image[@id=119]/image[@id=124]/image[@id=7]/" />
+    <bridge id="5" lvla="2" lvlb="3" pa="41,5" pb="119,118,5" fpa="/root/image[@id=41]/image[@id=5]/" fpb="/root/image[@id=119]/image[@id=118]/image[@id=5]/" />
+  </track>
+  <track ida="41" namea="Планшет" idb="120" nameb="Чіпсет">
+    <bridge id="7" lvla="3" lvlb="3" pa="41,42,7" pb="120,123,7" fpa="/root/image[@id=41]/image[@id=42]/image[@id=7]/" fpb="/root/image[@id=120]/image[@id=123]/image[@id=7]/" />
+  </track>
+  <track ida="41" namea="Планшет" idb="130" nameb="БлаБлаБла">
+    <bridge id="9" lvla="6" lvlb="2" pa="41,42,7,8,6,9" pb="130,9" fpa="/root/image[@id=41]/image[@id=42]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=9]/" fpb="/root/image[@id=130]/image[@id=9]/" />
+  </track>
+  <track ida="41" namea="Планшет" idb="132" nameb="Машина">
+    <bridge id="7" lvla="3" lvlb="4" pa="41,42,7" pb="132,1,2,7" fpa="/root/image[@id=41]/image[@id=42]/image[@id=7]/" fpb="/root/image[@id=132]/image[@id=1]/image[@id=2]/image[@id=7]/" />
+    <bridge id="5" lvla="2" lvlb="4" pa="41,5" pb="132,1,118,5" fpa="/root/image[@id=41]/image[@id=5]/" fpb="/root/image[@id=132]/image[@id=1]/image[@id=118]/image[@id=5]/" />
+    <bridge id="13" lvla="2" lvlb="3" pa="41,13" pb="132,1,13" fpa="/root/image[@id=41]/image[@id=13]/" fpb="/root/image[@id=132]/image[@id=1]/image[@id=13]/" />
+  </track>
+  <track ida="44" namea="Ресторан" idb="45" nameb="Підрозділ">
+    <bridge id="6" lvla="3" lvlb="3" pa="44,52,6" pb="45,66,6" fpa="/root/image[@id=44]/image[@id=52]/image[@id=6]/" fpb="/root/image[@id=45]/image[@id=66]/image[@id=6]/" />
+  </track>
+  <track ida="44" namea="Ресторан" idb="49" nameb="Парк">
+    <bridge id="6" lvla="3" lvlb="3" pa="44,52,6" pb="49,51,6" fpa="/root/image[@id=44]/image[@id=52]/image[@id=6]/" fpb="/root/image[@id=49]/image[@id=51]/image[@id=6]/" />
+  </track>
+  <track ida="44" namea="Ресторан" idb="53" nameb="Мобільний телефон">
+    <bridge id="6" lvla="3" lvlb="5" pa="44,52,6" pb="53,37,7,8,6" fpa="/root/image[@id=44]/image[@id=52]/image[@id=6]/" fpb="/root/image[@id=53]/image[@id=37]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="44" namea="Ресторан" idb="60" nameb="Вулиця">
+    <bridge id="60" lvla="5" lvlb="1" pa="44,52,6,9,60" pb="60" fpa="/root/image[@id=44]/image[@id=52]/image[@id=6]/image[@id=9]/image[@id=60]/" fpb="/root/image[@id=60]/" />
+  </track>
+  <track ida="44" namea="Ресторан" idb="62" nameb="Будинок">
+    <bridge id="6" lvla="3" lvlb="3" pa="44,52,6" pb="62,64,6" fpa="/root/image[@id=44]/image[@id=52]/image[@id=6]/" fpb="/root/image[@id=62]/image[@id=64]/image[@id=6]/" />
+  </track>
+  <track ida="44" namea="Ресторан" idb="73" nameb="Особняк">
+    <bridge id="6" lvla="3" lvlb="3" pa="44,52,6" pb="73,76,6" fpa="/root/image[@id=44]/image[@id=52]/image[@id=6]/" fpb="/root/image[@id=73]/image[@id=76]/image[@id=6]/" />
+  </track>
+  <track ida="44" namea="Ресторан" idb="81" nameb="Фірма">
+    <bridge id="6" lvla="3" lvlb="3" pa="44,52,6" pb="81,83,6" fpa="/root/image[@id=44]/image[@id=52]/image[@id=6]/" fpb="/root/image[@id=81]/image[@id=83]/image[@id=6]/" />
+  </track>
+  <track ida="44" namea="Ресторан" idb="84" nameb="Завод">
+    <bridge id="6" lvla="3" lvlb="3" pa="44,52,6" pb="84,85,6" fpa="/root/image[@id=44]/image[@id=52]/image[@id=6]/" fpb="/root/image[@id=84]/image[@id=85]/image[@id=6]/" />
+  </track>
+  <track ida="44" namea="Ресторан" idb="96" nameb="Школа">
+    <bridge id="44" lvla="1" lvlb="4" pa="44" pb="96,1,16,44" fpa="/root/image[@id=44]/" fpb="/root/image[@id=96]/image[@id=1]/image[@id=16]/image[@id=44]/" />
+  </track>
+  <track ida="44" namea="Ресторан" idb="106" nameb="Смартфон">
+    <bridge id="6" lvla="3" lvlb="6" pa="44,52,6" pb="106,5,4,7,8,6" fpa="/root/image[@id=44]/image[@id=52]/image[@id=6]/" fpb="/root/image[@id=106]/image[@id=5]/image[@id=4]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="44" namea="Ресторан" idb="118" nameb="Комп'ютер">
+    <bridge id="6" lvla="3" lvlb="6" pa="44,52,6" pb="118,5,4,7,8,6" fpa="/root/image[@id=44]/image[@id=52]/image[@id=6]/" fpb="/root/image[@id=118]/image[@id=5]/image[@id=4]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="44" namea="Ресторан" idb="119" nameb="Сервер">
+    <bridge id="6" lvla="3" lvlb="5" pa="44,52,6" pb="119,124,7,8,6" fpa="/root/image[@id=44]/image[@id=52]/image[@id=6]/" fpb="/root/image[@id=119]/image[@id=124]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="44" namea="Ресторан" idb="120" nameb="Чіпсет">
+    <bridge id="6" lvla="3" lvlb="5" pa="44,52,6" pb="120,123,7,8,6" fpa="/root/image[@id=44]/image[@id=52]/image[@id=6]/" fpb="/root/image[@id=120]/image[@id=123]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="44" namea="Ресторан" idb="130" nameb="БлаБлаБла">
+    <bridge id="9" lvla="4" lvlb="2" pa="44,52,6,9" pb="130,9" fpa="/root/image[@id=44]/image[@id=52]/image[@id=6]/image[@id=9]/" fpb="/root/image[@id=130]/image[@id=9]/" />
+  </track>
+  <track ida="44" namea="Ресторан" idb="132" nameb="Машина">
+    <bridge id="44" lvla="1" lvlb="4" pa="44" pb="132,1,16,44" fpa="/root/image[@id=44]/" fpb="/root/image[@id=132]/image[@id=1]/image[@id=16]/image[@id=44]/" />
+  </track>
+  <track ida="45" namea="Підрозділ" idb="49" nameb="Парк">
+    <bridge id="6" lvla="3" lvlb="3" pa="45,66,6" pb="49,51,6" fpa="/root/image[@id=45]/image[@id=66]/image[@id=6]/" fpb="/root/image[@id=49]/image[@id=51]/image[@id=6]/" />
+  </track>
+  <track ida="45" namea="Підрозділ" idb="53" nameb="Мобільний телефон">
+    <bridge id="6" lvla="3" lvlb="5" pa="45,66,6" pb="53,37,7,8,6" fpa="/root/image[@id=45]/image[@id=66]/image[@id=6]/" fpb="/root/image[@id=53]/image[@id=37]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="45" namea="Підрозділ" idb="60" nameb="Вулиця">
+    <bridge id="60" lvla="5" lvlb="1" pa="45,66,6,9,60" pb="60" fpa="/root/image[@id=45]/image[@id=66]/image[@id=6]/image[@id=9]/image[@id=60]/" fpb="/root/image[@id=60]/" />
+  </track>
+  <track ida="45" namea="Підрозділ" idb="62" nameb="Будинок">
+    <bridge id="6" lvla="3" lvlb="3" pa="45,66,6" pb="62,64,6" fpa="/root/image[@id=45]/image[@id=66]/image[@id=6]/" fpb="/root/image[@id=62]/image[@id=64]/image[@id=6]/" />
+  </track>
+  <track ida="45" namea="Підрозділ" idb="73" nameb="Особняк">
+    <bridge id="6" lvla="3" lvlb="3" pa="45,66,6" pb="73,76,6" fpa="/root/image[@id=45]/image[@id=66]/image[@id=6]/" fpb="/root/image[@id=73]/image[@id=76]/image[@id=6]/" />
+  </track>
+  <track ida="45" namea="Підрозділ" idb="81" nameb="Фірма">
+    <bridge id="6" lvla="3" lvlb="3" pa="45,66,6" pb="81,83,6" fpa="/root/image[@id=45]/image[@id=66]/image[@id=6]/" fpb="/root/image[@id=81]/image[@id=83]/image[@id=6]/" />
+  </track>
+  <track ida="45" namea="Підрозділ" idb="84" nameb="Завод">
+    <bridge id="6" lvla="3" lvlb="3" pa="45,66,6" pb="84,85,6" fpa="/root/image[@id=45]/image[@id=66]/image[@id=6]/" fpb="/root/image[@id=84]/image[@id=85]/image[@id=6]/" />
+  </track>
+  <track ida="45" namea="Підрозділ" idb="96" nameb="Школа">
+    <bridge id="6" lvla="3" lvlb="6" pa="45,66,6" pb="96,1,2,7,8,6" fpa="/root/image[@id=45]/image[@id=66]/image[@id=6]/" fpb="/root/image[@id=96]/image[@id=1]/image[@id=2]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="45" namea="Підрозділ" idb="106" nameb="Смартфон">
+    <bridge id="6" lvla="3" lvlb="6" pa="45,66,6" pb="106,5,4,7,8,6" fpa="/root/image[@id=45]/image[@id=66]/image[@id=6]/" fpb="/root/image[@id=106]/image[@id=5]/image[@id=4]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="45" namea="Підрозділ" idb="118" nameb="Комп'ютер">
+    <bridge id="6" lvla="3" lvlb="6" pa="45,66,6" pb="118,5,4,7,8,6" fpa="/root/image[@id=45]/image[@id=66]/image[@id=6]/" fpb="/root/image[@id=118]/image[@id=5]/image[@id=4]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="45" namea="Підрозділ" idb="119" nameb="Сервер">
+    <bridge id="6" lvla="3" lvlb="5" pa="45,66,6" pb="119,124,7,8,6" fpa="/root/image[@id=45]/image[@id=66]/image[@id=6]/" fpb="/root/image[@id=119]/image[@id=124]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="45" namea="Підрозділ" idb="120" nameb="Чіпсет">
+    <bridge id="6" lvla="3" lvlb="5" pa="45,66,6" pb="120,123,7,8,6" fpa="/root/image[@id=45]/image[@id=66]/image[@id=6]/" fpb="/root/image[@id=120]/image[@id=123]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="45" namea="Підрозділ" idb="130" nameb="БлаБлаБла">
+    <bridge id="9" lvla="4" lvlb="2" pa="45,66,6,9" pb="130,9" fpa="/root/image[@id=45]/image[@id=66]/image[@id=6]/image[@id=9]/" fpb="/root/image[@id=130]/image[@id=9]/" />
+  </track>
+  <track ida="45" namea="Підрозділ" idb="132" nameb="Машина">
+    <bridge id="6" lvla="3" lvlb="6" pa="45,66,6" pb="132,1,2,7,8,6" fpa="/root/image[@id=45]/image[@id=66]/image[@id=6]/" fpb="/root/image[@id=132]/image[@id=1]/image[@id=2]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="49" namea="Парк" idb="53" nameb="Мобільний телефон">
+    <bridge id="6" lvla="3" lvlb="5" pa="49,51,6" pb="53,37,7,8,6" fpa="/root/image[@id=49]/image[@id=51]/image[@id=6]/" fpb="/root/image[@id=53]/image[@id=37]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="49" namea="Парк" idb="60" nameb="Вулиця">
+    <bridge id="60" lvla="5" lvlb="1" pa="49,51,6,9,60" pb="60" fpa="/root/image[@id=49]/image[@id=51]/image[@id=6]/image[@id=9]/image[@id=60]/" fpb="/root/image[@id=60]/" />
+  </track>
+  <track ida="49" namea="Парк" idb="62" nameb="Будинок">
+    <bridge id="6" lvla="3" lvlb="3" pa="49,51,6" pb="62,64,6" fpa="/root/image[@id=49]/image[@id=51]/image[@id=6]/" fpb="/root/image[@id=62]/image[@id=64]/image[@id=6]/" />
+  </track>
+  <track ida="49" namea="Парк" idb="73" nameb="Особняк">
+    <bridge id="6" lvla="3" lvlb="3" pa="49,51,6" pb="73,76,6" fpa="/root/image[@id=49]/image[@id=51]/image[@id=6]/" fpb="/root/image[@id=73]/image[@id=76]/image[@id=6]/" />
+  </track>
+  <track ida="49" namea="Парк" idb="81" nameb="Фірма">
+    <bridge id="6" lvla="3" lvlb="3" pa="49,51,6" pb="81,83,6" fpa="/root/image[@id=49]/image[@id=51]/image[@id=6]/" fpb="/root/image[@id=81]/image[@id=83]/image[@id=6]/" />
+  </track>
+  <track ida="49" namea="Парк" idb="84" nameb="Завод">
+    <bridge id="6" lvla="3" lvlb="3" pa="49,51,6" pb="84,85,6" fpa="/root/image[@id=49]/image[@id=51]/image[@id=6]/" fpb="/root/image[@id=84]/image[@id=85]/image[@id=6]/" />
+  </track>
+  <track ida="49" namea="Парк" idb="96" nameb="Школа">
+    <bridge id="6" lvla="3" lvlb="6" pa="49,51,6" pb="96,1,2,7,8,6" fpa="/root/image[@id=49]/image[@id=51]/image[@id=6]/" fpb="/root/image[@id=96]/image[@id=1]/image[@id=2]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="49" namea="Парк" idb="106" nameb="Смартфон">
+    <bridge id="6" lvla="3" lvlb="6" pa="49,51,6" pb="106,5,4,7,8,6" fpa="/root/image[@id=49]/image[@id=51]/image[@id=6]/" fpb="/root/image[@id=106]/image[@id=5]/image[@id=4]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="49" namea="Парк" idb="118" nameb="Комп'ютер">
+    <bridge id="6" lvla="3" lvlb="6" pa="49,51,6" pb="118,5,4,7,8,6" fpa="/root/image[@id=49]/image[@id=51]/image[@id=6]/" fpb="/root/image[@id=118]/image[@id=5]/image[@id=4]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="49" namea="Парк" idb="119" nameb="Сервер">
+    <bridge id="6" lvla="3" lvlb="5" pa="49,51,6" pb="119,124,7,8,6" fpa="/root/image[@id=49]/image[@id=51]/image[@id=6]/" fpb="/root/image[@id=119]/image[@id=124]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="49" namea="Парк" idb="120" nameb="Чіпсет">
+    <bridge id="6" lvla="3" lvlb="5" pa="49,51,6" pb="120,123,7,8,6" fpa="/root/image[@id=49]/image[@id=51]/image[@id=6]/" fpb="/root/image[@id=120]/image[@id=123]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="49" namea="Парк" idb="130" nameb="БлаБлаБла">
+    <bridge id="9" lvla="4" lvlb="2" pa="49,51,6,9" pb="130,9" fpa="/root/image[@id=49]/image[@id=51]/image[@id=6]/image[@id=9]/" fpb="/root/image[@id=130]/image[@id=9]/" />
+  </track>
+  <track ida="49" namea="Парк" idb="132" nameb="Машина">
+    <bridge id="6" lvla="3" lvlb="6" pa="49,51,6" pb="132,1,2,7,8,6" fpa="/root/image[@id=49]/image[@id=51]/image[@id=6]/" fpb="/root/image[@id=132]/image[@id=1]/image[@id=2]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="53" namea="Мобільний телефон" idb="60" nameb="Вулиця">
+    <bridge id="60" lvla="7" lvlb="1" pa="53,37,7,8,6,9,60" pb="60" fpa="/root/image[@id=53]/image[@id=37]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=9]/image[@id=60]/" fpb="/root/image[@id=60]/" />
+  </track>
+  <track ida="53" namea="Мобільний телефон" idb="62" nameb="Будинок">
+    <bridge id="6" lvla="5" lvlb="3" pa="53,37,7,8,6" pb="62,64,6" fpa="/root/image[@id=53]/image[@id=37]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=62]/image[@id=64]/image[@id=6]/" />
+  </track>
+  <track ida="53" namea="Мобільний телефон" idb="73" nameb="Особняк">
+    <bridge id="6" lvla="5" lvlb="3" pa="53,37,7,8,6" pb="73,76,6" fpa="/root/image[@id=53]/image[@id=37]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=73]/image[@id=76]/image[@id=6]/" />
+  </track>
+  <track ida="53" namea="Мобільний телефон" idb="81" nameb="Фірма">
+    <bridge id="6" lvla="5" lvlb="3" pa="53,37,7,8,6" pb="81,83,6" fpa="/root/image[@id=53]/image[@id=37]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=81]/image[@id=83]/image[@id=6]/" />
+  </track>
+  <track ida="53" namea="Мобільний телефон" idb="84" nameb="Завод">
+    <bridge id="6" lvla="5" lvlb="3" pa="53,37,7,8,6" pb="84,85,6" fpa="/root/image[@id=53]/image[@id=37]/image[@id=7]/image[@id=8]/image[@id=6]/" fpb="/root/image[@id=84]/image[@id=85]/image[@id=6]/" />
+  </track>
+  <track ida="53" namea="Мобільний телефон" idb="96" nameb="Школа">
+    <bridge id="7" lvla="3" lvlb="4" pa="53,37,7" pb="96,1,2,7" fpa="/root/image[@id=53]/image[@id=37]/image[@id=7]/" fpb="/root/image[@id=96]/image[@id=1]/image[@id=2]/image[@id=7]/" />
+  </track>
+  <track ida="53" namea="Мобільний телефон" idb="106" nameb="Смартфон">
+    <bridge id="7" lvla="3" lvlb="4" pa="53,37,7" pb="106,5,4,7" fpa="/root/image[@id=53]/image[@id=37]/image[@id=7]/" fpb="/root/image[@id=106]/image[@id=5]/image[@id=4]/image[@id=7]/" />
+  </track>
+  <track ida="53" namea="Мобільний телефон" idb="118" nameb="Комп'ютер">
+    <bridge id="7" lvla="3" lvlb="4" pa="53,37,7" pb="118,5,4,7" fpa="/root/image[@id=53]/image[@id=37]/image[@id=7]/" fpb="/root/image[@id=118]/image[@id=5]/image[@id=4]/image[@id=7]/" />
+  </track>
+  <track ida="53" namea="Мобільний телефон" idb="119" nameb="Сервер">
+    <bridge id="7" lvla="3" lvlb="3" pa="53,37,7" pb="119,124,7" fpa="/root/image[@id=53]/image[@id=37]/image[@id=7]/" fpb="/root/image[@id=119]/image[@id=124]/image[@id=7]/" />
+  </track>
+  <track ida="53" namea="Мобільний телефон" idb="120" nameb="Чіпсет">
+    <bridge id="7" lvla="3" lvlb="3" pa="53,37,7" pb="120,123,7" fpa="/root/image[@id=53]/image[@id=37]/image[@id=7]/" fpb="/root/image[@id=120]/image[@id=123]/image[@id=7]/" />
+  </track>
+  <track ida="53" namea="Мобільний телефон" idb="130" nameb="БлаБлаБла">
+    <bridge id="9" lvla="6" lvlb="2" pa="53,37,7,8,6,9" pb="130,9" fpa="/root/image[@id=53]/image[@id=37]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=9]/" fpb="/root/image[@id=130]/image[@id=9]/" />
+  </track>
+  <track ida="53" namea="Мобільний телефон" idb="132" nameb="Машина">
+    <bridge id="7" lvla="3" lvlb="4" pa="53,37,7" pb="132,1,2,7" fpa="/root/image[@id=53]/image[@id=37]/image[@id=7]/" fpb="/root/image[@id=132]/image[@id=1]/image[@id=2]/image[@id=7]/" />
+  </track>
+  <track ida="60" namea="Вулиця" idb="62" nameb="Будинок">
+    <bridge id="60" lvla="1" lvlb="5" pa="60" pb="62,64,6,9,60" fpa="/root/image[@id=60]/" fpb="/root/image[@id=62]/image[@id=64]/image[@id=6]/image[@id=9]/image[@id=60]/" />
+  </track>
+  <track ida="60" namea="Вулиця" idb="73" nameb="Особняк">
+    <bridge id="60" lvla="1" lvlb="5" pa="60" pb="73,76,6,9,60" fpa="/root/image[@id=60]/" fpb="/root/image[@id=73]/image[@id=76]/image[@id=6]/image[@id=9]/image[@id=60]/" />
+  </track>
+  <track ida="60" namea="Вулиця" idb="81" nameb="Фірма">
+    <bridge id="60" lvla="1" lvlb="5" pa="60" pb="81,83,6,9,60" fpa="/root/image[@id=60]/" fpb="/root/image[@id=81]/image[@id=83]/image[@id=6]/image[@id=9]/image[@id=60]/" />
+  </track>
+  <track ida="60" namea="Вулиця" idb="84" nameb="Завод">
+    <bridge id="60" lvla="1" lvlb="5" pa="60" pb="84,85,6,9,60" fpa="/root/image[@id=60]/" fpb="/root/image[@id=84]/image[@id=85]/image[@id=6]/image[@id=9]/image[@id=60]/" />
+  </track>
+  <track ida="60" namea="Вулиця" idb="96" nameb="Школа">
+    <bridge id="60" lvla="1" lvlb="8" pa="60" pb="96,1,2,7,8,6,9,60" fpa="/root/image[@id=60]/" fpb="/root/image[@id=96]/image[@id=1]/image[@id=2]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=9]/image[@id=60]/" />
+  </track>
+  <track ida="60" namea="Вулиця" idb="106" nameb="Смартфон">
+    <bridge id="60" lvla="1" lvlb="8" pa="60" pb="106,5,4,7,8,6,9,60" fpa="/root/image[@id=60]/" fpb="/root/image[@id=106]/image[@id=5]/image[@id=4]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=9]/image[@id=60]/" />
+  </track>
+  <track ida="60" namea="Вулиця" idb="118" nameb="Комп'ютер">
+    <bridge id="60" lvla="1" lvlb="8" pa="60" pb="118,5,4,7,8,6,9,60" fpa="/root/image[@id=60]/" fpb="/root/image[@id=118]/image[@id=5]/image[@id=4]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=9]/image[@id=60]/" />
+  </track>
+  <track ida="60" namea="Вулиця" idb="119" nameb="Сервер">
+    <bridge id="60" lvla="1" lvlb="7" pa="60" pb="119,124,7,8,6,9,60" fpa="/root/image[@id=60]/" fpb="/root/image[@id=119]/image[@id=124]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=9]/image[@id=60]/" />
+  </track>
+  <track ida="60" namea="Вулиця" idb="120" nameb="Чіпсет">
+    <bridge id="60" lvla="1" lvlb="7" pa="60" pb="120,123,7,8,6,9,60" fpa="/root/image[@id=60]/" fpb="/root/image[@id=120]/image[@id=123]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=9]/image[@id=60]/" />
+  </track>
+  <track ida="60" namea="Вулиця" idb="130" nameb="БлаБлаБла">
+    <bridge id="60" lvla="1" lvlb="3" pa="60" pb="130,9,60" fpa="/root/image[@id=60]/" fpb="/root/image[@id=130]/image[@id=9]/image[@id=60]/" />
+  </track>
+  <track ida="60" namea="Вулиця" idb="132" nameb="Машина">
+    <bridge id="60" lvla="1" lvlb="8" pa="60" pb="132,1,2,7,8,6,9,60" fpa="/root/image[@id=60]/" fpb="/root/image[@id=132]/image[@id=1]/image[@id=2]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=9]/image[@id=60]/" />
+  </track>
+  <track ida="62" namea="Будинок" idb="67" nameb="Квартира">
+    <bridge id="67" lvla="2" lvlb="1" pa="62,67" pb="67" fpa="/root/image[@id=62]/image[@id=67]/" fpb="/root/image[@id=67]/" />
+  </track>
+  <track ida="62" namea="Будинок" idb="68" nameb="Кімната">
+    <bridge id="68" lvla="3" lvlb="1" pa="62,67,68" pb="68" fpa="/root/image[@id=62]/image[@id=67]/image[@id=68]/" fpb="/root/image[@id=68]/" />
+  </track>
+  <track ida="62" namea="Будинок" idb="69" nameb="Кухня">
+    <bridge id="70" lvla="4" lvlb="2" pa="62,67,68,70" pb="69,70" fpa="/root/image[@id=62]/image[@id=67]/image[@id=68]/image[@id=70]/" fpb="/root/image[@id=69]/image[@id=70]/" />
+    <bridge id="69" lvla="3" lvlb="1" pa="62,67,69" pb="69" fpa="/root/image[@id=62]/image[@id=67]/image[@id=69]/" fpb="/root/image[@id=69]/" />
+  </track>
+  <track ida="62" namea="Будинок" idb="70" nameb="Меблі">
+    <bridge id="70" lvla="4" lvlb="1" pa="62,67,68,70" pb="70" fpa="/root/image[@id=62]/image[@id=67]/image[@id=68]/image[@id=70]/" fpb="/root/image[@id=70]/" />
+  </track>
+  <track ida="62" namea="Будинок" idb="71" nameb="Ванна">
+    <bridge id="71" lvla="3" lvlb="1" pa="62,67,71" pb="71" fpa="/root/image[@id=62]/image[@id=67]/image[@id=71]/" fpb="/root/image[@id=71]/" />
+  </track>
+  <track ida="62" namea="Будинок" idb="72" nameb="Коридор">
+    <bridge id="72" lvla="3" lvlb="1" pa="62,67,72" pb="72" fpa="/root/image[@id=62]/image[@id=67]/image[@id=72]/" fpb="/root/image[@id=72]/" />
+  </track>
+  <track ida="62" namea="Будинок" idb="73" nameb="Особняк">
+    <bridge id="6" lvla="3" lvlb="3" pa="62,64,6" pb="73,76,6" fpa="/root/image[@id=62]/image[@id=64]/image[@id=6]/" fpb="/root/image[@id=73]/image[@id=76]/image[@id=6]/" />
+    <bridge id="68" lvla="3" lvlb="2" pa="62,67,68" pb="73,68" fpa="/root/image[@id=62]/image[@id=67]/image[@id=68]/" fpb="/root/image[@id=73]/image[@id=68]/" />
+    <bridge id="69" lvla="3" lvlb="2" pa="62,67,69" pb="73,69" fpa="/root/image[@id=62]/image[@id=67]/image[@id=69]/" fpb="/root/image[@id=73]/image[@id=69]/" />
+    <bridge id="71" lvla="3" lvlb="2" pa="62,67,71" pb="73,71" fpa="/root/image[@id=62]/image[@id=67]/image[@id=71]/" fpb="/root/image[@id=73]/image[@id=71]/" />
+  </track>
+  <track ida="62" namea="Будинок" idb="74" nameb="Ліфт">
+    <bridge id="74" lvla="2" lvlb="1" pa="62,74" pb="74" fpa="/root/image[@id=62]/image[@id=74]/" fpb="/root/image[@id=74]/" />
+  </track>
+  <track ida="62" namea="Будинок" idb="75" nameb="Підїзд">
+    <bridge id="75" lvla="2" lvlb="1" pa="62,75" pb="75" fpa="/root/image[@id=62]/image[@id=75]/" fpb="/root/image[@id=75]/" />
+  </track>
+  <track ida="62" namea="Будинок" idb="81" nameb="Фірма">
+    <bridge id="6" lvla="3" lvlb="3" pa="62,64,6" pb="81,83,6" fpa="/root/image[@id=62]/image[@id=64]/image[@id=6]/" fpb="/root/image[@id=81]/image[@id=83]/image[@id=6]/" />
+  </track>
+  <track ida="62" namea="Будинок" idb="84" nameb="Завод">
+    <bridge id="6" lvla="3" lvlb="3" pa="62,64,6" pb="84,85,6" fpa="/root/image[@id=62]/image[@id=64]/image[@id=6]/" fpb="/root/image[@id=84]/image[@id=85]/image[@id=6]/" />
+  </track>
+  <track ida="62" namea="Будинок" idb="96" nameb="Школа">
+    <bridge id="6" lvla="3" lvlb="6" pa="62,64,6" pb="96,1,2,7,8,6" fpa="/root/image[@id=62]/image[@id=64]/image[@id=6]/" fpb="/root/image[@id=96]/image[@id=1]/image[@id=2]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="62" namea="Будинок" idb="106" nameb="Смартфон">
+    <bridge id="6" lvla="3" lvlb="6" pa="62,64,6" pb="106,5,4,7,8,6" fpa="/root/image[@id=62]/image[@id=64]/image[@id=6]/" fpb="/root/image[@id=106]/image[@id=5]/image[@id=4]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="62" namea="Будинок" idb="118" nameb="Комп'ютер">
+    <bridge id="6" lvla="3" lvlb="6" pa="62,64,6" pb="118,5,4,7,8,6" fpa="/root/image[@id=62]/image[@id=64]/image[@id=6]/" fpb="/root/image[@id=118]/image[@id=5]/image[@id=4]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="62" namea="Будинок" idb="119" nameb="Сервер">
+    <bridge id="6" lvla="3" lvlb="5" pa="62,64,6" pb="119,124,7,8,6" fpa="/root/image[@id=62]/image[@id=64]/image[@id=6]/" fpb="/root/image[@id=119]/image[@id=124]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="62" namea="Будинок" idb="120" nameb="Чіпсет">
+    <bridge id="6" lvla="3" lvlb="5" pa="62,64,6" pb="120,123,7,8,6" fpa="/root/image[@id=62]/image[@id=64]/image[@id=6]/" fpb="/root/image[@id=120]/image[@id=123]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="62" namea="Будинок" idb="130" nameb="БлаБлаБла">
+    <bridge id="9" lvla="4" lvlb="2" pa="62,64,6,9" pb="130,9" fpa="/root/image[@id=62]/image[@id=64]/image[@id=6]/image[@id=9]/" fpb="/root/image[@id=130]/image[@id=9]/" />
+  </track>
+  <track ida="62" namea="Будинок" idb="132" nameb="Машина">
+    <bridge id="6" lvla="3" lvlb="6" pa="62,64,6" pb="132,1,2,7,8,6" fpa="/root/image[@id=62]/image[@id=64]/image[@id=6]/" fpb="/root/image[@id=132]/image[@id=1]/image[@id=2]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="67" namea="Квартира" idb="68" nameb="Кімната">
+    <bridge id="68" lvla="2" lvlb="1" pa="67,68" pb="68" fpa="/root/image[@id=67]/image[@id=68]/" fpb="/root/image[@id=68]/" />
+  </track>
+  <track ida="67" namea="Квартира" idb="69" nameb="Кухня">
+    <bridge id="70" lvla="3" lvlb="2" pa="67,68,70" pb="69,70" fpa="/root/image[@id=67]/image[@id=68]/image[@id=70]/" fpb="/root/image[@id=69]/image[@id=70]/" />
+    <bridge id="69" lvla="2" lvlb="1" pa="67,69" pb="69" fpa="/root/image[@id=67]/image[@id=69]/" fpb="/root/image[@id=69]/" />
+  </track>
+  <track ida="67" namea="Квартира" idb="70" nameb="Меблі">
+    <bridge id="70" lvla="3" lvlb="1" pa="67,68,70" pb="70" fpa="/root/image[@id=67]/image[@id=68]/image[@id=70]/" fpb="/root/image[@id=70]/" />
+  </track>
+  <track ida="67" namea="Квартира" idb="71" nameb="Ванна">
+    <bridge id="71" lvla="2" lvlb="1" pa="67,71" pb="71" fpa="/root/image[@id=67]/image[@id=71]/" fpb="/root/image[@id=71]/" />
+  </track>
+  <track ida="67" namea="Квартира" idb="72" nameb="Коридор">
+    <bridge id="72" lvla="2" lvlb="1" pa="67,72" pb="72" fpa="/root/image[@id=67]/image[@id=72]/" fpb="/root/image[@id=72]/" />
+  </track>
+  <track ida="67" namea="Квартира" idb="73" nameb="Особняк">
+    <bridge id="68" lvla="2" lvlb="2" pa="67,68" pb="73,68" fpa="/root/image[@id=67]/image[@id=68]/" fpb="/root/image[@id=73]/image[@id=68]/" />
+    <bridge id="69" lvla="2" lvlb="2" pa="67,69" pb="73,69" fpa="/root/image[@id=67]/image[@id=69]/" fpb="/root/image[@id=73]/image[@id=69]/" />
+    <bridge id="71" lvla="2" lvlb="2" pa="67,71" pb="73,71" fpa="/root/image[@id=67]/image[@id=71]/" fpb="/root/image[@id=73]/image[@id=71]/" />
+  </track>
+  <track ida="68" namea="Кімната" idb="69" nameb="Кухня">
+    <bridge id="70" lvla="2" lvlb="2" pa="68,70" pb="69,70" fpa="/root/image[@id=68]/image[@id=70]/" fpb="/root/image[@id=69]/image[@id=70]/" />
+  </track>
+  <track ida="68" namea="Кімната" idb="70" nameb="Меблі">
+    <bridge id="70" lvla="2" lvlb="1" pa="68,70" pb="70" fpa="/root/image[@id=68]/image[@id=70]/" fpb="/root/image[@id=70]/" />
+  </track>
+  <track ida="68" namea="Кімната" idb="73" nameb="Особняк">
+    <bridge id="68" lvla="1" lvlb="2" pa="68" pb="73,68" fpa="/root/image[@id=68]/" fpb="/root/image[@id=73]/image[@id=68]/" />
+  </track>
+  <track ida="69" namea="Кухня" idb="70" nameb="Меблі">
+    <bridge id="70" lvla="2" lvlb="1" pa="69,70" pb="70" fpa="/root/image[@id=69]/image[@id=70]/" fpb="/root/image[@id=70]/" />
+  </track>
+  <track ida="69" namea="Кухня" idb="73" nameb="Особняк">
+    <bridge id="69" lvla="1" lvlb="2" pa="69" pb="73,69" fpa="/root/image[@id=69]/" fpb="/root/image[@id=73]/image[@id=69]/" />
+  </track>
+  <track ida="70" namea="Меблі" idb="73" nameb="Особняк">
+    <bridge id="70" lvla="1" lvlb="3" pa="70" pb="73,68,70" fpa="/root/image[@id=70]/" fpb="/root/image[@id=73]/image[@id=68]/image[@id=70]/" />
+  </track>
+  <track ida="71" namea="Ванна" idb="73" nameb="Особняк">
+    <bridge id="71" lvla="1" lvlb="2" pa="71" pb="73,71" fpa="/root/image[@id=71]/" fpb="/root/image[@id=73]/image[@id=71]/" />
+  </track>
+  <track ida="73" namea="Особняк" idb="81" nameb="Фірма">
+    <bridge id="6" lvla="3" lvlb="3" pa="73,76,6" pb="81,83,6" fpa="/root/image[@id=73]/image[@id=76]/image[@id=6]/" fpb="/root/image[@id=81]/image[@id=83]/image[@id=6]/" />
+  </track>
+  <track ida="73" namea="Особняк" idb="84" nameb="Завод">
+    <bridge id="6" lvla="3" lvlb="3" pa="73,76,6" pb="84,85,6" fpa="/root/image[@id=73]/image[@id=76]/image[@id=6]/" fpb="/root/image[@id=84]/image[@id=85]/image[@id=6]/" />
+  </track>
+  <track ida="73" namea="Особняк" idb="96" nameb="Школа">
+    <bridge id="6" lvla="3" lvlb="6" pa="73,76,6" pb="96,1,2,7,8,6" fpa="/root/image[@id=73]/image[@id=76]/image[@id=6]/" fpb="/root/image[@id=96]/image[@id=1]/image[@id=2]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="73" namea="Особняк" idb="106" nameb="Смартфон">
+    <bridge id="6" lvla="3" lvlb="6" pa="73,76,6" pb="106,5,4,7,8,6" fpa="/root/image[@id=73]/image[@id=76]/image[@id=6]/" fpb="/root/image[@id=106]/image[@id=5]/image[@id=4]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="73" namea="Особняк" idb="118" nameb="Комп'ютер">
+    <bridge id="6" lvla="3" lvlb="6" pa="73,76,6" pb="118,5,4,7,8,6" fpa="/root/image[@id=73]/image[@id=76]/image[@id=6]/" fpb="/root/image[@id=118]/image[@id=5]/image[@id=4]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="73" namea="Особняк" idb="119" nameb="Сервер">
+    <bridge id="6" lvla="3" lvlb="5" pa="73,76,6" pb="119,124,7,8,6" fpa="/root/image[@id=73]/image[@id=76]/image[@id=6]/" fpb="/root/image[@id=119]/image[@id=124]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="73" namea="Особняк" idb="120" nameb="Чіпсет">
+    <bridge id="6" lvla="3" lvlb="5" pa="73,76,6" pb="120,123,7,8,6" fpa="/root/image[@id=73]/image[@id=76]/image[@id=6]/" fpb="/root/image[@id=120]/image[@id=123]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="73" namea="Особняк" idb="130" nameb="БлаБлаБла">
+    <bridge id="9" lvla="4" lvlb="2" pa="73,76,6,9" pb="130,9" fpa="/root/image[@id=73]/image[@id=76]/image[@id=6]/image[@id=9]/" fpb="/root/image[@id=130]/image[@id=9]/" />
+  </track>
+  <track ida="73" namea="Особняк" idb="132" nameb="Машина">
+    <bridge id="6" lvla="3" lvlb="6" pa="73,76,6" pb="132,1,2,7,8,6" fpa="/root/image[@id=73]/image[@id=76]/image[@id=6]/" fpb="/root/image[@id=132]/image[@id=1]/image[@id=2]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="79" namea="Власник" idb="81" nameb="Фірма">
+    <bridge id="79" lvla="1" lvlb="3" pa="79" pb="81,82,79" fpa="/root/image[@id=79]/" fpb="/root/image[@id=81]/image[@id=82]/image[@id=79]/" />
+  </track>
+  <track ida="79" namea="Власник" idb="84" nameb="Завод">
+    <bridge id="79" lvla="1" lvlb="3" pa="79" pb="84,88,79" fpa="/root/image[@id=79]/" fpb="/root/image[@id=84]/image[@id=88]/image[@id=79]/" />
+  </track>
+  <track ida="81" namea="Фірма" idb="84" nameb="Завод">
+    <bridge id="79" lvla="3" lvlb="3" pa="81,82,79" pb="84,88,79" fpa="/root/image[@id=81]/image[@id=82]/image[@id=79]/" fpb="/root/image[@id=84]/image[@id=88]/image[@id=79]/" />
+    <bridge id="6" lvla="3" lvlb="3" pa="81,83,6" pb="84,85,6" fpa="/root/image[@id=81]/image[@id=83]/image[@id=6]/" fpb="/root/image[@id=84]/image[@id=85]/image[@id=6]/" />
+  </track>
+  <track ida="81" namea="Фірма" idb="96" nameb="Школа">
+    <bridge id="6" lvla="3" lvlb="6" pa="81,83,6" pb="96,1,2,7,8,6" fpa="/root/image[@id=81]/image[@id=83]/image[@id=6]/" fpb="/root/image[@id=96]/image[@id=1]/image[@id=2]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="81" namea="Фірма" idb="106" nameb="Смартфон">
+    <bridge id="6" lvla="3" lvlb="6" pa="81,83,6" pb="106,5,4,7,8,6" fpa="/root/image[@id=81]/image[@id=83]/image[@id=6]/" fpb="/root/image[@id=106]/image[@id=5]/image[@id=4]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="81" namea="Фірма" idb="118" nameb="Комп'ютер">
+    <bridge id="6" lvla="3" lvlb="6" pa="81,83,6" pb="118,5,4,7,8,6" fpa="/root/image[@id=81]/image[@id=83]/image[@id=6]/" fpb="/root/image[@id=118]/image[@id=5]/image[@id=4]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="81" namea="Фірма" idb="119" nameb="Сервер">
+    <bridge id="6" lvla="3" lvlb="5" pa="81,83,6" pb="119,124,7,8,6" fpa="/root/image[@id=81]/image[@id=83]/image[@id=6]/" fpb="/root/image[@id=119]/image[@id=124]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="81" namea="Фірма" idb="120" nameb="Чіпсет">
+    <bridge id="6" lvla="3" lvlb="5" pa="81,83,6" pb="120,123,7,8,6" fpa="/root/image[@id=81]/image[@id=83]/image[@id=6]/" fpb="/root/image[@id=120]/image[@id=123]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="81" namea="Фірма" idb="130" nameb="БлаБлаБла">
+    <bridge id="9" lvla="4" lvlb="2" pa="81,83,6,9" pb="130,9" fpa="/root/image[@id=81]/image[@id=83]/image[@id=6]/image[@id=9]/" fpb="/root/image[@id=130]/image[@id=9]/" />
+  </track>
+  <track ida="81" namea="Фірма" idb="132" nameb="Машина">
+    <bridge id="6" lvla="3" lvlb="6" pa="81,83,6" pb="132,1,2,7,8,6" fpa="/root/image[@id=81]/image[@id=83]/image[@id=6]/" fpb="/root/image[@id=132]/image[@id=1]/image[@id=2]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="84" namea="Завод" idb="86" nameb="Продукція">
+    <bridge id="86" lvla="3" lvlb="1" pa="84,87,86" pb="86" fpa="/root/image[@id=84]/image[@id=87]/image[@id=86]/" fpb="/root/image[@id=86]/" />
+  </track>
+  <track ida="84" namea="Завод" idb="96" nameb="Школа">
+    <bridge id="6" lvla="3" lvlb="6" pa="84,85,6" pb="96,1,2,7,8,6" fpa="/root/image[@id=84]/image[@id=85]/image[@id=6]/" fpb="/root/image[@id=96]/image[@id=1]/image[@id=2]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="84" namea="Завод" idb="106" nameb="Смартфон">
+    <bridge id="6" lvla="3" lvlb="6" pa="84,85,6" pb="106,5,4,7,8,6" fpa="/root/image[@id=84]/image[@id=85]/image[@id=6]/" fpb="/root/image[@id=106]/image[@id=5]/image[@id=4]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="84" namea="Завод" idb="118" nameb="Комп'ютер">
+    <bridge id="6" lvla="3" lvlb="6" pa="84,85,6" pb="118,5,4,7,8,6" fpa="/root/image[@id=84]/image[@id=85]/image[@id=6]/" fpb="/root/image[@id=118]/image[@id=5]/image[@id=4]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="84" namea="Завод" idb="119" nameb="Сервер">
+    <bridge id="6" lvla="3" lvlb="5" pa="84,85,6" pb="119,124,7,8,6" fpa="/root/image[@id=84]/image[@id=85]/image[@id=6]/" fpb="/root/image[@id=119]/image[@id=124]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="84" namea="Завод" idb="120" nameb="Чіпсет">
+    <bridge id="6" lvla="3" lvlb="5" pa="84,85,6" pb="120,123,7,8,6" fpa="/root/image[@id=84]/image[@id=85]/image[@id=6]/" fpb="/root/image[@id=120]/image[@id=123]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="84" namea="Завод" idb="130" nameb="БлаБлаБла">
+    <bridge id="9" lvla="4" lvlb="2" pa="84,85,6,9" pb="130,9" fpa="/root/image[@id=84]/image[@id=85]/image[@id=6]/image[@id=9]/" fpb="/root/image[@id=130]/image[@id=9]/" />
+  </track>
+  <track ida="84" namea="Завод" idb="132" nameb="Машина">
+    <bridge id="6" lvla="3" lvlb="6" pa="84,85,6" pb="132,1,2,7,8,6" fpa="/root/image[@id=84]/image[@id=85]/image[@id=6]/" fpb="/root/image[@id=132]/image[@id=1]/image[@id=2]/image[@id=7]/image[@id=8]/image[@id=6]/" />
+  </track>
+  <track ida="96" namea="Школа" idb="100" nameb="Директор">
+    <bridge id="100" lvla="3" lvlb="1" pa="96,99,100" pb="100" fpa="/root/image[@id=96]/image[@id=99]/image[@id=100]/" fpb="/root/image[@id=100]/" />
+  </track>
+  <track ida="96" namea="Школа" idb="106" nameb="Смартфон">
+    <bridge id="7" lvla="4" lvlb="4" pa="96,1,2,7" pb="106,5,4,7" fpa="/root/image[@id=96]/image[@id=1]/image[@id=2]/image[@id=7]/" fpb="/root/image[@id=106]/image[@id=5]/image[@id=4]/image[@id=7]/" />
+    <bridge id="5" lvla="4" lvlb="2" pa="96,1,118,5" pb="106,5" fpa="/root/image[@id=96]/image[@id=1]/image[@id=118]/image[@id=5]/" fpb="/root/image[@id=106]/image[@id=5]/" />
+  </track>
+  <track ida="96" namea="Школа" idb="118" nameb="Комп'ютер">
+    <bridge id="7" lvla="4" lvlb="4" pa="96,1,2,7" pb="118,5,4,7" fpa="/root/image[@id=96]/image[@id=1]/image[@id=2]/image[@id=7]/" fpb="/root/image[@id=118]/image[@id=5]/image[@id=4]/image[@id=7]/" />
+    <bridge id="118" lvla="3" lvlb="1" pa="96,1,118" pb="118" fpa="/root/image[@id=96]/image[@id=1]/image[@id=118]/" fpb="/root/image[@id=118]/" />
+  </track>
+  <track ida="96" namea="Школа" idb="119" nameb="Сервер">
+    <bridge id="7" lvla="4" lvlb="3" pa="96,1,2,7" pb="119,124,7" fpa="/root/image[@id=96]/image[@id=1]/image[@id=2]/image[@id=7]/" fpb="/root/image[@id=119]/image[@id=124]/image[@id=7]/" />
+    <bridge id="118" lvla="3" lvlb="2" pa="96,1,118" pb="119,118" fpa="/root/image[@id=96]/image[@id=1]/image[@id=118]/" fpb="/root/image[@id=119]/image[@id=118]/" />
+  </track>
+  <track ida="96" namea="Школа" idb="120" nameb="Чіпсет">
+    <bridge id="7" lvla="4" lvlb="3" pa="96,1,2,7" pb="120,123,7" fpa="/root/image[@id=96]/image[@id=1]/image[@id=2]/image[@id=7]/" fpb="/root/image[@id=120]/image[@id=123]/image[@id=7]/" />
+    <bridge id="120" lvla="5" lvlb="1" pa="96,1,118,17,120" pb="120" fpa="/root/image[@id=96]/image[@id=1]/image[@id=118]/image[@id=17]/image[@id=120]/" fpb="/root/image[@id=120]/" />
+  </track>
+  <track ida="96" namea="Школа" idb="130" nameb="БлаБлаБла">
+    <bridge id="9" lvla="7" lvlb="2" pa="96,1,2,7,8,6,9" pb="130,9" fpa="/root/image[@id=96]/image[@id=1]/image[@id=2]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=9]/" fpb="/root/image[@id=130]/image[@id=9]/" />
+  </track>
+  <track ida="96" namea="Школа" idb="132" nameb="Машина">
+    <bridge id="1" lvla="2" lvlb="2" pa="96,1" pb="132,1" fpa="/root/image[@id=96]/image[@id=1]/" fpb="/root/image[@id=132]/image[@id=1]/" />
+  </track>
+  <track ida="106" namea="Смартфон" idb="118" nameb="Комп'ютер">
+    <bridge id="5" lvla="2" lvlb="2" pa="106,5" pb="118,5" fpa="/root/image[@id=106]/image[@id=5]/" fpb="/root/image[@id=118]/image[@id=5]/" />
+  </track>
+  <track ida="106" namea="Смартфон" idb="119" nameb="Сервер">
+    <bridge id="5" lvla="2" lvlb="3" pa="106,5" pb="119,118,5" fpa="/root/image[@id=106]/image[@id=5]/" fpb="/root/image[@id=119]/image[@id=118]/image[@id=5]/" />
+  </track>
+  <track ida="106" namea="Смартфон" idb="120" nameb="Чіпсет">
+    <bridge id="7" lvla="4" lvlb="3" pa="106,5,4,7" pb="120,123,7" fpa="/root/image[@id=106]/image[@id=5]/image[@id=4]/image[@id=7]/" fpb="/root/image[@id=120]/image[@id=123]/image[@id=7]/" />
+  </track>
+  <track ida="106" namea="Смартфон" idb="130" nameb="БлаБлаБла">
+    <bridge id="9" lvla="7" lvlb="2" pa="106,5,4,7,8,6,9" pb="130,9" fpa="/root/image[@id=106]/image[@id=5]/image[@id=4]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=9]/" fpb="/root/image[@id=130]/image[@id=9]/" />
+  </track>
+  <track ida="106" namea="Смартфон" idb="132" nameb="Машина">
+    <bridge id="5" lvla="2" lvlb="4" pa="106,5" pb="132,1,118,5" fpa="/root/image[@id=106]/image[@id=5]/" fpb="/root/image[@id=132]/image[@id=1]/image[@id=118]/image[@id=5]/" />
+  </track>
+  <track ida="118" namea="Комп'ютер" idb="119" nameb="Сервер">
+    <bridge id="118" lvla="1" lvlb="2" pa="118" pb="119,118" fpa="/root/image[@id=118]/" fpb="/root/image[@id=119]/image[@id=118]/" />
+  </track>
+  <track ida="118" namea="Комп'ютер" idb="120" nameb="Чіпсет">
+    <bridge id="7" lvla="4" lvlb="3" pa="118,5,4,7" pb="120,123,7" fpa="/root/image[@id=118]/image[@id=5]/image[@id=4]/image[@id=7]/" fpb="/root/image[@id=120]/image[@id=123]/image[@id=7]/" />
+    <bridge id="120" lvla="3" lvlb="1" pa="118,17,120" pb="120" fpa="/root/image[@id=118]/image[@id=17]/image[@id=120]/" fpb="/root/image[@id=120]/" />
+  </track>
+  <track ida="118" namea="Комп'ютер" idb="130" nameb="БлаБлаБла">
+    <bridge id="9" lvla="7" lvlb="2" pa="118,5,4,7,8,6,9" pb="130,9" fpa="/root/image[@id=118]/image[@id=5]/image[@id=4]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=9]/" fpb="/root/image[@id=130]/image[@id=9]/" />
+  </track>
+  <track ida="118" namea="Комп'ютер" idb="132" nameb="Машина">
+    <bridge id="118" lvla="1" lvlb="3" pa="118" pb="132,1,118" fpa="/root/image[@id=118]/" fpb="/root/image[@id=132]/image[@id=1]/image[@id=118]/" />
+  </track>
+  <track ida="119" namea="Сервер" idb="120" nameb="Чіпсет">
+    <bridge id="7" lvla="3" lvlb="3" pa="119,124,7" pb="120,123,7" fpa="/root/image[@id=119]/image[@id=124]/image[@id=7]/" fpb="/root/image[@id=120]/image[@id=123]/image[@id=7]/" />
+    <bridge id="120" lvla="4" lvlb="1" pa="119,118,17,120" pb="120" fpa="/root/image[@id=119]/image[@id=118]/image[@id=17]/image[@id=120]/" fpb="/root/image[@id=120]/" />
+  </track>
+  <track ida="119" namea="Сервер" idb="130" nameb="БлаБлаБла">
+    <bridge id="9" lvla="6" lvlb="2" pa="119,124,7,8,6,9" pb="130,9" fpa="/root/image[@id=119]/image[@id=124]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=9]/" fpb="/root/image[@id=130]/image[@id=9]/" />
+  </track>
+  <track ida="119" namea="Сервер" idb="132" nameb="Машина">
+    <bridge id="7" lvla="3" lvlb="4" pa="119,124,7" pb="132,1,2,7" fpa="/root/image[@id=119]/image[@id=124]/image[@id=7]/" fpb="/root/image[@id=132]/image[@id=1]/image[@id=2]/image[@id=7]/" />
+    <bridge id="118" lvla="2" lvlb="3" pa="119,118" pb="132,1,118" fpa="/root/image[@id=119]/image[@id=118]/" fpb="/root/image[@id=132]/image[@id=1]/image[@id=118]/" />
+  </track>
+  <track ida="120" namea="Чіпсет" idb="130" nameb="БлаБлаБла">
+    <bridge id="9" lvla="6" lvlb="2" pa="120,123,7,8,6,9" pb="130,9" fpa="/root/image[@id=120]/image[@id=123]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=9]/" fpb="/root/image[@id=130]/image[@id=9]/" />
+  </track>
+  <track ida="120" namea="Чіпсет" idb="132" nameb="Машина">
+    <bridge id="120" lvla="1" lvlb="5" pa="120" pb="132,1,118,17,120" fpa="/root/image[@id=120]/" fpb="/root/image[@id=132]/image[@id=1]/image[@id=118]/image[@id=17]/image[@id=120]/" />
+  </track>
+  <track ida="121" namea="Порт" idb="129" nameb="Ntcn">
+    <bridge id="125" lvla="2" lvlb="2" pa="121,125" pb="129,125" fpa="/root/image[@id=121]/image[@id=125]/" fpb="/root/image[@id=129]/image[@id=125]/" />
+  </track>
+  <track ida="130" namea="БлаБлаБла" idb="132" nameb="Машина">
+    <bridge id="9" lvla="2" lvlb="7" pa="130,9" pb="132,1,2,7,8,6,9" fpa="/root/image[@id=130]/image[@id=9]/" fpb="/root/image[@id=132]/image[@id=1]/image[@id=2]/image[@id=7]/image[@id=8]/image[@id=6]/image[@id=9]/" />
+  </track>
+</root>

@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <table id="1" name="Ноутбук" code="img_1" context_id="1" context_name="~Abstract" link_context_id="4" link_context_name="Ноутбук">
+    <field id="7" name="Виробник" code="img_7" type="link" table_link="img_7" />
+    <field id="3" name="Модель" code="img_3" type="link" table_link="img_3" />
+    <field id="16" name="Назва" code="img_16" type="link" table_link="img_16" />
+    <field id="NAME" name="NAME" code="NAME" type="string" table_link="" />
+    <field id="0" name="Колір" code="ch_Colir" type="string" table_link="" />
+    <field id="0" name="Модель" code="ch_Model" type="string" table_link="" />
+    <field id="0" name="Назва" code="ch_Name" type="string" table_link="" />
+    <field id="0" name="Серія" code="ch_Serija" type="string" table_link="" />
+    <field id="5" name="Процесор" code="ing_img_5" type="link" table_link="img_5" />
+    <field id="11" name="Вінчестер" code="ing_img_11" type="link" table_link="img_11" />
+    <field id="13" name="Монітор" code="ing_img_13" type="link" table_link="img_13" />
+    <field id="15" name="Клавіатура" code="ing_img_15" type="link" table_link="img_15" />
+    <field id="17" name="Материнська плата" code="ing_img_17" type="link" table_link="img_17" />
+    <field id="32" name="Веб камера" code="ing_img_32" type="link" table_link="img_32" />
+  </table>
+  <table id="3" name="Модель" code="img_3" context_id="4" context_name="Ноутбук">
+    <field id="NAME" name="NAME" code="NAME" type="string" table_link="" />
+  </table>
+  <table id="16" name="Назва" code="img_16" context_id="4" context_name="Ноутбук">
+    <field id="NAME" name="NAME" code="NAME" type="string" table_link="" />
+  </table>
+  <table id="5" name="Процесор" code="img_5" context_id="1" context_name="~Abstract" link_context_id="6" link_context_name="Процесор">
+    <field id="7" name="Виробник" code="img_7" type="link" table_link="img_7" />
+    <field id="NAME" name="NAME" code="NAME" type="string" table_link="" />
+    <field id="0" name="Частота" code="ch_Chastota" type="string" table_link="" />
+    <field id="0" name="Кількість ядер" code="ch_KvoJader" type="string" table_link="" />
+    <field id="0" name="Назва" code="ch_Name" type="string" table_link="" />
+  </table>
+  <table id="6" name="Адреса" code="img_6" context_id="1" context_name="~Abstract" link_context_id="13" link_context_name="Адреса">
+    <field id="9" name="Індекс" code="img_9" type="link" table_link="img_9" />
+    <field id="21" name="Країна" code="img_21" type="link" table_link="img_21" />
+    <field id="22" name="Місто" code="img_22" type="link" table_link="img_22" />
+    <field id="NAME" name="NAME" code="NAME" type="string" table_link="" />
+    <field id="0" name="Email" code="ch_Email" type="string" table_link="" />
+    <field id="0" name="Індекс" code="ch_Index" type="string" table_link="" />
+  </table>
+  <table id="9" name="Індекс" code="img_9" context_id="13" context_name="Адреса">
+    <field id="NAME" name="NAME" code="NAME" type="string" table_link="" />
+  </table>
+  <table id="7" name="Виробник" code="img_7" context_id="1" context_name="~Abstract" link_context_id="5" link_context_name="Виробник">
+    <field id="6" name="Адреса" code="img_6" type="link" table_link="img_6" />
+    <field id="NAME" name="NAME" code="NAME" type="string" table_link="" />
+  </table>
+  <table id="11" name="Вінчестер" code="img_11" context_id="1" context_name="~Abstract" link_context_id="14" link_context_name="Вінчестер">
+    <field id="7" name="Виробник" code="img_7" type="link" table_link="img_7" />
+    <field id="NAME" name="NAME" code="NAME" type="string" table_link="" />
+    <field id="0" name="Обєм" code="ch_Gb" type="string" table_link="" />
+    <field id="0" name="Назва" code="ch_Name" type="string" table_link="" />
+  </table>
+  <table id="13" name="Монітор" code="img_13" context_id="1" context_name="~Abstract" link_context_id="15" link_context_name="Монітор">
+    <field id="7" name="Виробник" code="img_7" type="link" table_link="img_7" />
+    <field id="NAME" name="NAME" code="NAME" type="string" table_link="" />
+    <field id="0" name="Частота" code="ch_Chastota" type="string" table_link="" />
+    <field id="0" name="Назва" code="ch_Name" type="string" table_link="" />
+  </table>
+  <table id="15" name="Клавіатура" code="img_15" context_id="1" context_name="~Abstract" link_context_id="16" link_context_name="Клавіатура">
+    <field id="7" name="Виробник" code="img_7" type="link" table_link="img_7" />
+    <field id="NAME" name="NAME" code="NAME" type="string" table_link="" />
+    <field id="0" name="Назва" code="ch_Name" type="string" table_link="" />
+    <field id="0" name="Тип" code="ch_Type" type="string" table_link="" />
+  </table>
+  <table id="17" name="Материнська плата" code="img_17" context_id="1" context_name="~Abstract" link_context_id="17" link_context_name="Материнська плата">
+    <field id="7" name="Виробник" code="img_7" type="link" table_link="img_7" />
+    <field id="NAME" name="NAME" code="NAME" type="string" table_link="" />
+    <field id="0" name="Чіпсет" code="ch_Chipset" type="string" table_link="" />
+    <field id="0" name="Назва" code="ch_Name" type="string" table_link="" />
+  </table>
+  <table id="21" name="Країна" code="img_21" context_id="1" context_name="~Abstract" link_context_id="18" link_context_name="Країна">
+    <subtable id="22" name="Місто" code="img_22" type="link" table_link="img_22" />
+    <subtable id="26" name="Село" code="img_26" type="link" table_link="img_26" />
+    <subtable id="27" name="Область" code="img_27" type="link" table_link="img_27" />
+    <field id="NAME" name="NAME" code="NAME" type="string" table_link="" />
+  </table>
+  <table id="23" name="Міста" code="img_23" context_id="18" context_name="Країна" link_context_id="19" link_context_name="Місто">
+    <field id="NAME" name="NAME" code="NAME" type="string" table_link="" />
+    <field id="PARENTID" name="PARENTID" code="PARENTID" type="integer" table_link="" />
+    <field id="OBJECTID" name="OBJECTID" code="OBJECTID" type="link" table_link="img_22" />
+  </table>
+  <table id="24" name="Села" code="img_24" context_id="18" context_name="Країна" link_context_id="22" link_context_name="Село">
+    <field id="NAME" name="NAME" code="NAME" type="string" table_link="" />
+    <field id="PARENTID" name="PARENTID" code="PARENTID" type="integer" table_link="" />
+    <field id="OBJECTID" name="OBJECTID" code="OBJECTID" type="link" table_link="img_26" />
+  </table>
+  <table id="25" name="Області" code="img_25" context_id="18" context_name="Країна" link_context_id="21" link_context_name="Область">
+    <field id="NAME" name="NAME" code="NAME" type="string" table_link="" />
+    <field id="PARENTID" name="PARENTID" code="PARENTID" type="integer" table_link="" />
+    <field id="OBJECTID" name="OBJECTID" code="OBJECTID" type="link" table_link="img_27" />
+  </table>
+  <table id="22" name="Місто" code="img_22" context_id="1" context_name="~Abstract" link_context_id="19" link_context_name="Місто">
+    <field id="NAME" name="NAME" code="NAME" type="string" table_link="" />
+    <field id="40" name="Керівник" code="ing_img_40" type="link" table_link="img_40" />
+  </table>
+  <table id="26" name="Село" code="img_26" context_id="1" context_name="~Abstract" link_context_id="22" link_context_name="Село">
+    <field id="NAME" name="NAME" code="NAME" type="string" table_link="" />
+  </table>
+  <table id="27" name="Область" code="img_27" context_id="1" context_name="~Abstract" link_context_id="21" link_context_name="Область">
+    <field id="NAME" name="NAME" code="NAME" type="string" table_link="" />
+  </table>
+  <table id="28" name="Товари" code="img_28" context_id="1" context_name="~Abstract" link_context_id="25" link_context_name="Товари">
+    <field id="NAME" name="NAME" code="NAME" type="string" table_link="" />
+  </table>
+  <table id="30" name="Магазин" code="img_30" context_id="1" context_name="~Abstract" link_context_id="23" link_context_name="Магазин">
+    <field id="29" name="Адреса" code="img_29" type="link" table_link="img_29" />
+    <field id="33" name="Товари" code="img_33" type="link" table_link="img_33" />
+    <field id="NAME" name="NAME" code="NAME" type="string" table_link="" />
+  </table>
+  <table id="29" name="Адреса" code="img_29" context_id="23" context_name="Магазин" link_context_id="13" link_context_name="Адреса">
+    <field id="9" name="Індекс" code="img_9" type="link" table_link="img_9" />
+    <field id="21" name="Країна" code="img_21" type="link" table_link="img_21" />
+    <field id="22" name="Місто" code="img_22" type="link" table_link="img_22" />
+    <field id="NAME" name="NAME" code="NAME" type="string" table_link="" />
+  </table>
+  <table id="33" name="Товари" code="img_33" context_id="23" context_name="Магазин" link_context_id="25" link_context_name="Товари">
+    <field id="NAME" name="NAME" code="NAME" type="string" table_link="" />
+  </table>
+  <table id="32" name="Веб камера" code="img_32" context_id="1" context_name="~Abstract" link_context_id="24" link_context_name="Веб камера">
+    <field id="7" name="Виробник" code="img_7" type="link" table_link="img_7" />
+    <field id="NAME" name="NAME" code="NAME" type="string" table_link="" />
+    <field id="0" name="Роздільна здатність" code="ch_Size" type="string" table_link="" />
+  </table>
+  <table id="34" name="Телевізор" code="img_34" context_id="1" context_name="~Abstract" link_context_id="26" link_context_name="Телевізор">
+    <field id="7" name="Виробник" code="img_7" type="link" table_link="img_7" />
+    <field id="NAME" name="NAME" code="NAME" type="string" table_link="" />
+  </table>
+  <table id="36" name="Телефон" code="img_36" context_id="1" context_name="~Abstract" link_context_id="27" link_context_name="Телефон">
+    <field id="7" name="Виробник" code="img_7" type="link" table_link="img_7" />
+    <field id="NAME" name="NAME" code="NAME" type="string" table_link="" />
+    <field id="5" name="Процесор" code="ing_img_5" type="link" table_link="img_5" />
+    <field id="13" name="Монітор" code="ing_img_13" type="link" table_link="img_13" />
+    <field id="38" name="GSM Модуль" code="ing_img_38" type="link" table_link="img_38" />
+  </table>
+  <table id="38" name="GSM Модуль" code="img_38" context_id="1" context_name="~Abstract" link_context_id="28" link_context_name="GSM Модуль">
+    <field id="7" name="Виробник" code="img_7" type="link" table_link="img_7" />
+    <field id="NAME" name="NAME" code="NAME" type="string" table_link="" />
+  </table>
+  <table id="40" name="Керівник" code="img_40" context_id="1" context_name="~Abstract" link_context_id="29" link_context_name="Керівник">
+    <field id="NAME" name="NAME" code="NAME" type="string" table_link="" />
+  </table>
+</root>

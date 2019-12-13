@@ -1,0 +1,640 @@
+﻿
+            /*
+        private void Func2()
+        {
+
+        }
+
+        /// <summary>
+        /// Функція шукає слово різними методами
+        /// </summary>
+        /// <param name="word">Слово</param>
+        /// <returns>Список знайдених даних</returns>
+        private List<RowData> Fuc(string word)
+        {
+            //Прямий пошук слова в схемі
+            List<RowData> listDirectWordShema = SearchDirectShema(word);
+
+            //Якщо слово знайшлось в схемі (має бути одне)
+            if (listDirectWordShema.Count > 0)
+            {
+                return listDirectWordShema;
+            }
+            else
+            {
+                //Прямий пошук слова в даних 
+                List<RowData> listDirectWordData = SearchDirectData(word);
+
+                //Якщо слово знайшлось в даних
+                if (listDirectWordData.Count > 0)
+                {
+                    return listDirectWordData;
+                }
+                else
+                {
+                    //Якщо прямий пошук не дав результатів
+                    //шукаємо входження слова в даних
+                    List<RowData> listEntryWordData = SearchEntryData(word);
+
+                    //Якщо є входження слова
+                    if (listEntryWordData.Count > 0)
+                    {
+                        return listEntryWordData;
+                    }
+                    else
+                    {
+                        return null;
+                    }
+                }
+            }
+        }
+
+
+      
+
+        private XmlWriter XMLTableShema;
+
+        private StringBuilder OneResult(List<List<RowData>> listResult, string query, string[] words)
+        {
+            XmlWriterSettings XMLSettings = new XmlWriterSettings();
+            XMLSettings.Encoding = System.Text.Encoding.UTF8;
+            XMLSettings.Indent = true;
+
+            XMLTableShema = XmlWriter.Create("C:\\Users\\user\\Documents\\visual studio 2015\\Projects\\Image\\ImageForms\\XML\\result.xml", XMLSettings);
+            XMLTableShema.WriteComment(DateTime.Now.ToString());
+            XMLTableShema.WriteStartElement("root");
+
+            XMLTableShema.WriteStartElement("query");
+            XMLTableShema.WriteString(query);
+            XMLTableShema.WriteEndElement();
+
+            XMLTableShema.WriteStartElement("words");
+
+            for (int i = 0; i < words.Length; i++)
+            {
+                XMLTableShema.WriteStartElement("word");
+                XMLTableShema.WriteString(words[i]);
+                XMLTableShema.WriteEndElement();
+            }
+
+            XMLTableShema.WriteEndElement();
+
+            StringBuilder sb = new StringBuilder();
+
+            List<RowData> listShema = new List<RowData>();
+            List<RowData> listDirect = new List<RowData>();
+            List<RowData> listEntry = new List<RowData>();
+
+
+
+            XMLTableShema.WriteStartElement("list");
+
+            XMLTableShema.WriteStartElement("listallrowdata");
+
+            foreach (List<RowData> listRowData in listResult)
+            {
+                //Розділення даних по пріоритету
+                foreach (RowData rowDataItem in listRowData)
+                {
+                    XMLTableShema.WriteStartElement("rowdata");
+                    XMLTableShema.WriteAttributeString("ShemaID", rowDataItem.ShemaID);
+                    XMLTableShema.WriteAttributeString("DataID", rowDataItem.DataID);
+                    XMLTableShema.WriteAttributeString("Name", rowDataItem.Name);
+                    XMLTableShema.WriteAttributeString("IsShema", rowDataItem.IsShema.ToString());
+                    XMLTableShema.WriteAttributeString("IsDirect", rowDataItem.IsDirect.ToString());
+                    XMLTableShema.WriteAttributeString("IsEntry", rowDataItem.IsEntry.ToString());
+                    XMLTableShema.WriteEndElement();
+
+                    if (rowDataItem.IsShema)
+                    {
+                        listShema.Add(rowDataItem);
+                    }
+                    else if (rowDataItem.IsDirect)
+                    {
+                        listDirect.Add(rowDataItem);
+                    }
+                    else if (rowDataItem.IsEntry)
+                    {
+                        listEntry.Add(rowDataItem);
+                    }
+                }
+            }
+
+            XMLTableShema.WriteEndElement();
+
+            if (listShema.Count > 0)
+            {
+                XMLTableShema.WriteStartElement("listshema");
+
+                foreach (RowData rowItem in listShema)
+                {
+                    XMLTableShema.WriteStartElement("rowdata");
+                    XMLTableShema.WriteAttributeString("ShemaID", rowItem.ShemaID);
+                    XMLTableShema.WriteAttributeString("DataID", rowItem.DataID);
+                    XMLTableShema.WriteAttributeString("Name", rowItem.Name);
+                    XMLTableShema.WriteAttributeString("IsShema", rowItem.IsShema.ToString());
+                    XMLTableShema.WriteAttributeString("IsDirect", rowItem.IsDirect.ToString());
+                    XMLTableShema.WriteAttributeString("IsEntry", rowItem.IsEntry.ToString());
+                    XMLTableShema.WriteEndElement();
+                }
+
+                XMLTableShema.WriteEndElement();
+            }
+
+            if (listDirect.Count > 0)
+            {
+                XMLTableShema.WriteStartElement("listdirect");
+
+                foreach (RowData rowItem in listDirect)
+                {
+                    XMLTableShema.WriteStartElement("rowdata");
+                    XMLTableShema.WriteAttributeString("ShemaID", rowItem.ShemaID);
+                    XMLTableShema.WriteAttributeString("DataID", rowItem.DataID);
+                    XMLTableShema.WriteAttributeString("Name", rowItem.Name);
+                    XMLTableShema.WriteAttributeString("IsShema", rowItem.IsShema.ToString());
+                    XMLTableShema.WriteAttributeString("IsDirect", rowItem.IsDirect.ToString());
+                    XMLTableShema.WriteAttributeString("IsEntry", rowItem.IsEntry.ToString());
+                    XMLTableShema.WriteEndElement();
+                }
+
+                XMLTableShema.WriteEndElement();
+            }
+
+            if (listEntry.Count > 0)
+            {
+                XMLTableShema.WriteStartElement("listentry");
+
+                foreach (RowData rowItem in listEntry)
+                {
+                    XMLTableShema.WriteStartElement("rowdata");
+                    XMLTableShema.WriteAttributeString("ShemaID", rowItem.ShemaID);
+                    XMLTableShema.WriteAttributeString("DataID", rowItem.DataID);
+                    XMLTableShema.WriteAttributeString("Name", rowItem.Name);
+                    XMLTableShema.WriteAttributeString("IsShema", rowItem.IsShema.ToString());
+                    XMLTableShema.WriteAttributeString("IsDirect", rowItem.IsDirect.ToString());
+                    XMLTableShema.WriteAttributeString("IsEntry", rowItem.IsEntry.ToString());
+                    XMLTableShema.WriteEndElement();
+                }
+
+                XMLTableShema.WriteEndElement();
+            }
+
+            XMLTableShema.WriteEndElement();
+
+            //Якщо результати із схеми, значить вони мають
+            //вищий пріоритет і всі інші результати будуть 
+            //обчислюватися відносно схеми
+            if (listShema.Count > 0)
+            {
+                //Список переходів
+                List<List<Track>> ListShemaDataTracks = new List<List<Track>>();
+                List<List<Track>> ListShemaShemaTracks = new List<List<Track>>();
+
+                Dictionary<string, List<Track>> DictionaryShemaDataTracks = new Dictionary<string, List<Track>>();
+                Dictionary<string, List<Track>> DictionaryShemaShemaTracks = new Dictionary<string, List<Track>>();
+
+                //List<List<string>> listListShemaA = new List<List<string>>();
+
+                List<string> listShemaA = new List<string>();
+
+                List<string> listShemaB = new List<string>();
+
+                foreach (RowData rowDirectDataItem in listDirect)
+                {
+                    listShemaB.Add(rowDirectDataItem.ShemaID);
+                }
+
+                int counter = 0;
+                int count = listShema.Count;
+
+                foreach (RowData rowShemaDataItem in listShema)
+                {
+                    listShemaA.Clear();
+                    listShemaA.Add(rowShemaDataItem.ShemaID);
+
+                    List<string> listShemaAOld1 = new List<string>();
+                    string nameAOld1 = listShema[counter].Name;
+                    listShemaAOld1.Add(listShema[counter].ShemaID);
+
+                    counter++;
+
+                    for (int i = counter; i < count; i++)
+                    {
+                        List<string> listShemaAOld2 = new List<string>();
+                        string nameAOld2 = listShema[i].Name;
+                        listShemaAOld2.Add(listShema[i].ShemaID);
+
+                        List<Track> ShemaShemaTracks = new List<Track>();
+                        GetTracks(ShemaShemaTracks, listShemaAOld1, listShemaAOld2);
+
+                        DictionaryShemaShemaTracks.Add(nameAOld1 + "-" + nameAOld2, ShemaShemaTracks);
+                    }
+
+                    List<Track> Tracks = new List<Track>();
+                    GetTracks(Tracks, listShemaA, listShemaB);
+                    ListShemaDataTracks.Add(Tracks);
+
+                    DictionaryShemaDataTracks.Add(rowShemaDataItem.Name, Tracks);
+
+                    if (listEntry.Count > 0)
+                    {
+                        //Між прямим і входженням
+
+                    }
+                }
+
+                List<int> Bridge = new List<int>();
+
+                if (DictionaryShemaShemaTracks.Count > 0)
+                {
+                    XMLTableShema.WriteStartElement("shemashema");
+
+                    foreach (KeyValuePair<string, List<Track>> tracksItem in DictionaryShemaShemaTracks)
+                    {
+                        foreach (Track item in tracksItem.Value)
+                        {
+                            if (Bridge.Find(x => x == item.Bridge) == 0)
+                                Bridge.Add(item.Bridge);
+
+                            XMLTableShema.WriteStartElement("track");
+                            XMLTableShema.WriteAttributeString("Bridge", item.Bridge.ToString());
+                            XMLTableShema.WriteAttributeString("ImageA", item.ImageA.ToString());
+                            XMLTableShema.WriteAttributeString("ImageB", item.ImageB.ToString());
+                            XMLTableShema.WriteAttributeString("LevelA", item.LevelA.ToString());
+                            XMLTableShema.WriteAttributeString("LevelB", item.LevelB.ToString());
+                            XMLTableShema.WriteEndElement();
+                        }
+                    }
+
+                    XMLTableShema.WriteEndElement();
+                }
+
+                if (DictionaryShemaDataTracks.Count > 0)
+                {
+                    XMLTableShema.WriteStartElement("shemadata");
+
+                    foreach (KeyValuePair<string, List<Track>> tracksItem in DictionaryShemaDataTracks)
+                    {
+                        foreach (Track item in tracksItem.Value)
+                        {
+                            if (Bridge.Find(x => x == item.Bridge) == 0)
+                                Bridge.Add(item.Bridge);
+
+                            XMLTableShema.WriteStartElement("track");
+                            XMLTableShema.WriteAttributeString("Bridge", item.Bridge.ToString());
+                            XMLTableShema.WriteAttributeString("ImageA", item.ImageA.ToString());
+                            XMLTableShema.WriteAttributeString("ImageB", item.ImageB.ToString());
+                            XMLTableShema.WriteAttributeString("LevelA", item.LevelA.ToString());
+                            XMLTableShema.WriteAttributeString("LevelB", item.LevelB.ToString());
+                            XMLTableShema.WriteEndElement();
+                        }
+                    }
+
+                    XMLTableShema.WriteEndElement();
+                }
+
+                Dictionary<string, string> BrigesInfo = GetBrigesInfo(Bridge);
+
+                if (BrigesInfo.Count > 0)
+                {
+                    XMLTableShema.WriteStartElement("bridges");
+
+                    List<string> briges_list = new List<string>();
+                    Dictionary<string, List<Track>> DictionaryBridgesTracks = new Dictionary<string, List<Track>>();
+
+                    foreach (KeyValuePair<string, string> item in BrigesInfo)
+                    {
+                        briges_list.Add(item.Key);
+
+                        XMLTableShema.WriteStartElement("bridge");
+                        XMLTableShema.WriteAttributeString("ID", item.Key);
+                        XMLTableShema.WriteAttributeString("Name", item.Value);
+                        XMLTableShema.WriteEndElement();
+                    }
+
+                    XMLTableShema.WriteEndElement();
+
+                    //Звязки між мостиками
+                    int counter2 = 0;
+                    int count2 = briges_list.Count;
+
+                    foreach (string item in briges_list)
+                    {
+                        List<string> listShemaAOld1 = new List<string>();
+                        listShemaAOld1.Add(item);
+
+                        counter2++;
+
+                        for (int i = counter2; i < count2; i++)
+                        {
+                            List<string> listShemaAOld2 = new List<string>();
+                            listShemaAOld2.Add(briges_list[i]);
+
+                            List<Track> BridgesBridgesTracks = new List<Track>();
+                            GetTracks(BridgesBridgesTracks, listShemaAOld1, listShemaAOld2);
+
+                            DictionaryBridgesTracks.Add(item + "-" + briges_list[i], BridgesBridgesTracks);
+                        }
+                    }
+
+                    if (DictionaryBridgesTracks.Count > 0)
+                    {
+                        XMLTableShema.WriteStartElement("bridgesbridges");
+
+                        foreach (KeyValuePair<string, List<Track>> tracksItem in DictionaryBridgesTracks)
+                        {
+                            foreach (Track item in tracksItem.Value)
+                            {
+                                XMLTableShema.WriteStartElement("track");
+                                XMLTableShema.WriteAttributeString("Bridge", item.Bridge.ToString());
+                                XMLTableShema.WriteAttributeString("ImageA", item.ImageA.ToString());
+                                XMLTableShema.WriteAttributeString("ImageB", item.ImageB.ToString());
+                                XMLTableShema.WriteAttributeString("LevelA", item.LevelA.ToString());
+                                XMLTableShema.WriteAttributeString("LevelB", item.LevelB.ToString());
+                                XMLTableShema.WriteEndElement();
+                            }
+                        }
+
+                        XMLTableShema.WriteEndElement();
+                    }
+
+                }
+            }
+            //Дані прямого пошуку
+            else if (listDirect.Count > 0)
+            {
+                foreach (RowData rowDataItem in listDirect)
+                {
+                    if (listEntry.Count > 0)
+                    {
+                        //Між прямим і входженням
+                    }
+                }
+            }
+            //Дані пошуку входження
+            else if (listEntry.Count > 0)
+            {
+                //Між собою
+            }
+
+            XMLTableShema.WriteEndElement();
+            XMLTableShema.Close();
+
+            return sb;
+        }
+
+        private Dictionary<string, string> GetBrigesInfo(List<int> Bridge)
+        {
+            Dictionary<string, string> BrigesInfo = new Dictionary<string, string>();
+
+            string listIDQuery = "";
+            int couter = 0;
+
+            foreach (int item in Bridge)
+            {
+                listIDQuery += (couter > 0 ? "," : "") + item.ToString();
+                couter++;
+            }
+
+            MySqlCommand myCommand = new MySqlCommand();
+            myCommand.Connection = this.m_Connect;
+
+            myCommand.CommandText = "SELECT `ID`, `Name` FROM `image` " +
+                                    "WHERE `ID` IN (" + listIDQuery + ")";
+
+            MySqlDataReader reader = myCommand.ExecuteReader();
+            while (reader.Read())
+            {
+                BrigesInfo.Add(reader["ID"].ToString(), reader["Name"].ToString());
+            }
+            reader.Close();
+
+            return BrigesInfo;
+        }
+
+        public StringBuilder SearchTestAlfa(string query)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            //Розбивка на слова
+            string[] words = query.Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries);
+
+            //Треба функція яка перевірить слова і видалить лишні
+
+            if (words.Length > 0)
+            {
+                //Список результатів
+                List<List<RowData>> listResult = new List<List<RowData>>();
+
+                for (int i = 0; i < words.Length; i++)
+                {
+                    List<RowData> listItemResult = Fuc(words[i]);
+
+                    if (listItemResult != null)
+                        listResult.Add(listItemResult);
+                }
+
+                //Якщо є результати
+                if (listResult.Count > 0)
+                {
+                    sb.Append(OneResult(listResult, query, words).ToString());
+
+                    //Якщо результат один
+                    if (listResult.Count == 1)
+                    {
+
+                    }
+                    else
+                    {
+
+                    }
+                }
+                else
+                {
+
+                }
+            }
+
+            List<List<RowData>> listDirectWordsData = new List<List<RowData>>();
+            List<List<RowData>> listEntryWordsData = new List<List<RowData>>();
+
+            List<List<RowData>> listDirectWordsShema = new List<List<RowData>>();
+            List<List<RowData>> listEntryWordsShema = new List<List<RowData>>();
+
+
+
+            if (words.Length > 1)
+            {
+                //Пошук по словах
+                for (int i = 0; i < words.Length; i++)
+                {
+                    //Прямий пошук слова в даних
+                    List<RowData> listDirectWordData = SearchDirectData(words[i]);
+                    listDirectWordsData.Add(listDirectWordData);
+
+                    //Пошук входження слова в даних
+                    List<RowData> listEntryWordData = SearchEntryData(words[i]);
+                    listEntryWordsData.Add(listEntryWordData);
+
+                    //Прямий пошук слова в схемі
+                    List<RowData> listDirectWordShema = SearchDirectShema(words[i]);
+                    listDirectWordsShema.Add(listDirectWordShema);
+
+                    //Пошук входження слова в схемі
+                    List<RowData> listEntryWordShema = SearchEntryShema(words[i]);
+                    listEntryWordsShema.Add(listEntryWordShema);
+                }
+            }
+
+            //sb.AppendLine("@Direct all:");
+            //foreach (string item in listDirectAll)
+            //    sb.AppendLine(item);
+
+            //sb.AppendLine("@Entry all:");
+            //foreach (string item in listEntryAll)
+            //    sb.AppendLine(item);
+
+            sb.AppendLine();
+            sb.AppendLine("@Words:");
+            for (int i = 0; i < words.Length; i++)
+                sb.AppendLine(words[i]);
+
+            sb.AppendLine();
+            sb.AppendLine("@Words Data Direct:");
+            foreach (List<RowData> itemList in listDirectWordsData)
+                foreach (RowData item in itemList)
+                    sb.AppendLine(item.ToString());
+
+            sb.AppendLine();
+            sb.AppendLine("@Words Data Entry:");
+            foreach (List<RowData> itemList in listEntryWordsData)
+                foreach (RowData item in itemList)
+                    sb.AppendLine(item.ToString());
+
+            sb.AppendLine();
+            sb.AppendLine("@Words Shema Direct:");
+            foreach (List<RowData> itemList in listDirectWordsShema)
+                foreach (RowData item in itemList)
+                    sb.AppendLine(item.ToString());
+
+            sb.AppendLine();
+            sb.AppendLine("@Words Shema Entry:");
+            foreach (List<RowData> itemList in listEntryWordsShema)
+                foreach (RowData item in itemList)
+                    sb.AppendLine(item.ToString());
+
+            return sb;
+        }
+
+       
+
+
+        /// <summary>
+        /// Пошук входежня в схемі
+        /// </summary>
+        private List<RowData> SearchEntryShema(string query)
+        {
+            List<RowData> list = new List<RowData>();
+
+            MySqlCommand myCommand = new MySqlCommand();
+            myCommand.Connection = this.m_Connect;
+
+            myCommand.CommandText = "SELECT `ID`, `Name` FROM `image_indexes_shema` " +
+                                    "WHERE `Name` LIKE @Query";
+
+            myCommand.Parameters.AddWithValue("@Query", "%" + query + "%");
+
+            try
+            {
+                MySqlDataReader reader = myCommand.ExecuteReader();
+                while (reader.Read())
+                {
+                    list.Add(new RowData(reader["ID"].ToString(), reader["Name"].ToString(), "", true, false, true));
+                }
+                reader.Close();
+            }
+            catch (MySqlException e)
+            {
+                ErrorReporting("Проблема при пошку", e.Message);
+                return null;
+            }
+
+            return list;
+        }
+
+    */
+
+	 //public class RowShema
+    //{
+    //    private string m_ID;
+    //    private string m_Name;
+
+    //    public RowShema(string id, string name)
+    //    {
+    //        ID = id;
+    //        Name = name;
+    //    }
+
+    //    public string ID
+    //    {
+    //        get
+    //        {
+    //            return m_ID;
+    //        }
+    //        set
+    //        {
+    //            m_ID = value;
+    //        }
+    //    }
+
+    //    public string Name
+    //    {
+    //        get
+    //        {
+    //            return m_Name;
+    //        }
+    //        set
+    //        {
+    //            m_Name = value;
+    //        }
+    //    }
+
+    //    public override string ToString()
+    //    {
+    //        return ID + " - " + Name;
+    //    }
+    //}
+
+        /*
+    public class RowData
+    {
+        public RowData(string shema_id, string name, string data_id, bool isShema, bool isDirect, bool isEntry)
+        {
+            DataID = data_id;
+            ShemaID = shema_id;
+            Name = name;
+
+            IsShema = isShema;
+            IsDirect = isDirect;
+            IsEntry = isEntry;
+        }
+
+        public string DataID { get; set; }
+
+        public string Name { get; set; }
+
+        public string ShemaID { get; set; }
+
+        public bool IsShema { get; set; }
+
+        public bool IsDirect { get; set; }
+
+        public bool IsEntry { get; set; }
+
+        public override string ToString()
+        {
+            return "[S:" + ShemaID + ", D:" + DataID + "] - " + Name;
+        }
+    }
+    */
+

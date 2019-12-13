@@ -1,0 +1,540 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--05.06.2017 23:40:15-->
+<comparison>
+  <table state="exist" code="img_1" name="Ноутбук">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+    <field state="exist" code="img_7" name="Виробник" type="link" index="exist" />
+    <field state="exist" code="img_3" name="Модель" type="link" index="exist" />
+    <field state="exist" code="img_16" name="Назва" type="link" index="exist" />
+    <field state="exist" code="img_109" name="TEst" type="link" index="exist" />
+    <field state="exist" code="ch_Colir" name="Колір" type="string" />
+    <field state="exist" code="ch_Model" name="Модель" type="string" />
+    <field state="exist" code="ch_Name" name="Назва" type="string" />
+    <field state="exist" code="ch_Serija" name="Серія" type="string" />
+    <field state="exist" code="ing_img_13" name="Монітор" type="link" index="exist" />
+    <field state="exist" code="ing_img_15" name="Клавіатура" type="link" index="exist" />
+    <field state="exist" code="ing_img_32" name="Веб камера" type="link" index="exist" />
+    <field state="exist" code="ing_img_118" name="Комп'ютер" type="link" index="exist" />
+  </table>
+  <table state="exist" code="img_3" name="Модель">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+    <field state="exist" code="ch_rtyr" name="yrtyr" type="string" />
+    <field state="exist" code="ch_rtyrt" name="rty" type="string" />
+    <field state="exist" code="ch_rtyrtyrty" name="tyrty" type="string" />
+  </table>
+  <table state="exist" code="img_5" name="Процесор">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+    <field state="exist" code="img_7" name="Виробник" type="link" index="exist" />
+    <field state="exist" code="ch_Chastota" name="Частота" type="string" />
+    <field state="exist" code="ch_KvoJader" name="Кількість ядер" type="string" />
+    <field state="exist" code="ch_Name" name="Назва" type="string" />
+    <field state="exist" code="ch_Technologia" name="Технологія" type="string" />
+  </table>
+  <table state="exist" code="img_6" name="Адреса">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+    <field state="exist" code="img_60" name="Вулиця" type="link" index="exist" />
+    <field state="exist" code="img_21" name="Країна" type="link" index="exist" />
+    <field state="exist" code="img_22" name="Місто" type="link" index="exist" />
+    <field state="exist" code="ch_Email" name="Email" type="string" />
+    <field state="exist" code="ch_Index" name="Index" type="string" />
+  </table>
+  <table state="exist" code="img_7" name="Виробник">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+    <field state="exist" code="img_6" name="Адреса" type="link" index="exist" />
+    <field state="exist" code="ch_level" name="level" type="string" />
+  </table>
+  <table state="exist" code="img_11" name="Вінчестер">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+    <field state="exist" code="img_7" name="Виробник" type="link" index="exist" />
+    <field state="exist" code="ch_Gb" name="Об'єм" type="string" />
+  </table>
+  <table state="exist" code="img_13" name="Монітор">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+    <field state="exist" code="img_7" name="Виробник" type="link" index="exist" />
+    <field state="exist" code="ch_Diagonal" name="Діагональ" type="string" />
+  </table>
+  <table state="exist" code="img_15" name="Клавіатура">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+    <field state="exist" code="img_7" name="Виробник" type="link" index="exist" />
+    <field state="exist" code="ch_Type" name="Type" type="string" />
+  </table>
+  <table state="exist" code="img_16" name="Назва">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+    <field state="exist" code="ch_Тарахомин Юрій Іванович" name="укенцуке" type="string" />
+    <field state="exist" code="ch_тест" name="" type="string" />
+    <field state="exist" code="ch_ук ецук" name="ецук ец" type="string" />
+    <field state="exist" code="ch_Юра" name="вапвапіва" type="string" />
+    <field state="exist" code="ing_img_1" name="Ноутбук" type="link" index="exist" />
+    <field state="exist" code="ing_img_44" name="Ресторан" type="link" index="exist" />
+  </table>
+  <table state="exist" code="img_17" name="Материнська плата">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+    <field state="exist" code="img_7" name="Виробник" type="link" index="exist" />
+    <field state="exist" code="ing_img_120" name="Чіпсет" type="link" index="exist" />
+  </table>
+  <table state="exist" code="img_21" name="Країна">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+  </table>
+  <table state="exist" code="img_22" name="Місто">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+    <field state="exist" code="img_117" name="НоутбукТест" type="link" index="exist" />
+  </table>
+  <table state="exist" code="img_23" name="Міста">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="PARENTID" name="Родитель" type="integer" index="exist" />
+    <field state="exist" code="OBJECTID" name="Об'єкт" type="link" index="exist" />
+  </table>
+  <table state="exist" code="img_24" name="Села">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="PARENTID" name="Родитель" type="integer" index="exist" />
+    <field state="exist" code="OBJECTID" name="Об'єкт" type="link" index="exist" />
+  </table>
+  <table state="exist" code="img_25" name="Області">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="PARENTID" name="Родитель" type="integer" index="exist" />
+    <field state="exist" code="OBJECTID" name="Об'єкт" type="link" index="exist" />
+  </table>
+  <table state="exist" code="img_26" name="Село">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+  </table>
+  <table state="exist" code="img_27" name="Область">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+  </table>
+  <table state="exist" code="img_28" name="Товар">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+  </table>
+  <table state="exist" code="img_30" name="Магазин">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+    <field state="exist" code="img_6" name="Адреса" type="link" index="exist" />
+    <field state="exist" code="img_79" name="Власник" type="link" index="exist" />
+    <field state="exist" code="ch_dfgs" name="sdfgs" type="string" />
+    <field state="exist" code="ch_dfgsdf" name="dfgs" type="string" />
+  </table>
+  <table state="exist" code="img_32" name="Веб камера">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+    <field state="exist" code="img_7" name="Виробник" type="link" index="exist" />
+    <field state="exist" code="ch_Size" name="Size" type="string" />
+  </table>
+  <table state="exist" code="img_33" name="Товари">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="PARENTID" name="Родитель" type="integer" index="exist" />
+    <field state="exist" code="OBJECTID" name="Об'єкт" type="link" index="exist" />
+    <field state="exist" code="ch_Cena" name="Ціна" type="string" />
+  </table>
+  <table state="exist" code="img_34" name="Телевізор">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+    <field state="exist" code="img_7" name="Виробник" type="link" index="exist" />
+    <field state="exist" code="ch_Diagonal" name="Діагональ" type="string" />
+    <field state="exist" code="ch_Type" name="Тип" type="string" />
+  </table>
+  <table state="exist" code="img_36" name="Телефон">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+    <field state="exist" code="img_7" name="Виробник" type="link" index="exist" />
+    <field state="exist" code="ch_Type" name="Тип" type="string" />
+    <field state="exist" code="ing_img_13" name="Монітор" type="link" index="exist" />
+    <field state="exist" code="ing_img_38" name="GSM Модуль" type="link" index="exist" />
+    <field state="exist" code="ing_img_118" name="Комп'ютер" type="link" index="exist" />
+  </table>
+  <table state="exist" code="img_38" name="GSM Модуль">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+    <field state="exist" code="img_7" name="Виробник" type="link" index="exist" />
+    <field state="exist" code="ch_Chastota" name="Частота" type="string" />
+  </table>
+  <table state="exist" code="img_40" name="Керівник">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+  </table>
+  <table state="exist" code="img_41" name="Планшет">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+    <field state="exist" code="img_7" name="Виробник" type="link" index="exist" />
+    <field state="exist" code="ing_img_5" name="Процесор" type="link" index="exist" />
+    <field state="exist" code="ing_img_13" name="Монітор" type="link" index="exist" />
+  </table>
+  <table state="exist" code="img_43" name="Ресторани">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="PARENTID" name="Родитель" type="integer" index="exist" />
+    <field state="exist" code="OBJECTID" name="Об'єкт" type="link" index="exist" />
+  </table>
+  <table state="exist" code="img_44" name="Ресторан">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+    <field state="exist" code="img_6" name="Адреса" type="link" index="exist" />
+  </table>
+  <table state="exist" code="img_45" name="Підрозділ">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+    <field state="exist" code="img_6" name="Адреса" type="link" index="exist" />
+  </table>
+  <table state="exist" code="img_46" name="Підрозділи">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="PARENTID" name="Родитель" type="integer" index="exist" />
+    <field state="exist" code="OBJECTID" name="Об'єкт" type="link" index="exist" />
+  </table>
+  <table state="exist" code="img_47" name="Товари">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="PARENTID" name="Родитель" type="integer" index="exist" />
+    <field state="exist" code="OBJECTID" name="Об'єкт" type="link" index="exist" />
+  </table>
+  <table state="exist" code="img_48" name="Президент">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+  </table>
+  <table state="exist" code="img_49" name="Парк">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+    <field state="exist" code="img_6" name="Адреса" type="link" index="exist" />
+    <field state="exist" code="ch_Ploscha" name="Ploscha" type="string" />
+  </table>
+  <table state="exist" code="img_50" name="Парки">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="PARENTID" name="Родитель" type="integer" index="exist" />
+    <field state="exist" code="OBJECTID" name="Об'єкт" type="link" index="exist" />
+  </table>
+  <table state="exist" code="img_53" name="Мобільний телефон">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+    <field state="exist" code="img_7" name="Виробник" type="link" index="exist" />
+  </table>
+  <table state="exist" code="img_54" name="Місця відпочинку">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="PARENTID" name="Родитель" type="integer" index="exist" />
+    <field state="exist" code="OBJECTID" name="Об'єкт" type="link" index="exist" />
+  </table>
+  <table state="exist" code="img_60" name="Вулиця">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+    <field state="exist" code="img_114" name="АдресаТест" type="link" index="exist" />
+  </table>
+  <table state="exist" code="img_61" name="Вулиці">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="PARENTID" name="Родитель" type="integer" index="exist" />
+    <field state="exist" code="OBJECTID" name="Об'єкт" type="link" index="exist" />
+  </table>
+  <table state="exist" code="img_62" name="Будинок">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+    <field state="exist" code="img_6" name="Адреса" type="link" index="exist" />
+    <field state="exist" code="ch_KvoPoverchiv" name="KvoPoverchiv" type="string" />
+    <field state="exist" code="ch_Number" name="Number" type="string" />
+    <field state="exist" code="ch_Type" name="Type" type="string" />
+    <field state="exist" code="ing_img_67" name="Квартира" type="link" index="exist" />
+    <field state="exist" code="ing_img_72" name="Коридор" type="link" index="exist" />
+    <field state="exist" code="ing_img_74" name="Ліфт" type="link" index="exist" />
+    <field state="exist" code="ing_img_75" name="Підїзд" type="link" index="exist" />
+  </table>
+  <table state="exist" code="img_63" name="Будинки">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="PARENTID" name="Родитель" type="integer" index="exist" />
+    <field state="exist" code="OBJECTID" name="Об'єкт" type="link" index="exist" />
+  </table>
+  <table state="exist" code="img_65" name="Магазини">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="PARENTID" name="Родитель" type="integer" index="exist" />
+    <field state="exist" code="OBJECTID" name="Об'єкт" type="link" index="exist" />
+  </table>
+  <table state="exist" code="img_67" name="Квартира">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+    <field state="exist" code="ch_KvoKimnat" name="KvoKimnat" type="string" />
+    <field state="exist" code="ch_Nomer" name="Nomer" type="string" />
+    <field state="exist" code="ch_Ploscha" name="Ploscha" type="string" />
+    <field state="exist" code="ch_Poverh" name="Poverh" type="string" />
+    <field state="exist" code="ing_img_68" name="Кімната" type="link" index="exist" />
+    <field state="exist" code="ing_img_69" name="Кухня" type="link" index="exist" />
+    <field state="exist" code="ing_img_71" name="Ванна" type="link" index="exist" />
+    <field state="exist" code="ing_img_72" name="Коридор" type="link" index="exist" />
+  </table>
+  <table state="exist" code="img_68" name="Кімната">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+    <field state="exist" code="ing_img_70" name="Меблі" type="link" index="exist" />
+  </table>
+  <table state="exist" code="img_69" name="Кухня">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+    <field state="exist" code="ch_Ploscha" name="Ploscha" type="string" />
+    <field state="exist" code="ing_img_70" name="Меблі" type="link" index="exist" />
+  </table>
+  <table state="exist" code="img_70" name="Меблі">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+    <field state="exist" code="img_115" name="АдресаТестМеблі" type="link" index="exist" />
+  </table>
+  <table state="exist" code="img_71" name="Ванна">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+  </table>
+  <table state="exist" code="img_72" name="Коридор">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+  </table>
+  <table state="exist" code="img_73" name="Особняк">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+    <field state="exist" code="img_6" name="Адреса" type="link" index="exist" />
+    <field state="exist" code="ch_KvoPoverchiv" name="KvoPoverchiv" type="string" />
+    <field state="exist" code="ing_img_68" name="Кімната" type="link" index="exist" />
+    <field state="exist" code="ing_img_69" name="Кухня" type="link" index="exist" />
+    <field state="exist" code="ing_img_71" name="Ванна" type="link" index="exist" />
+  </table>
+  <table state="exist" code="img_74" name="Ліфт">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+  </table>
+  <table state="exist" code="img_75" name="Підїзд">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+  </table>
+  <table state="exist" code="img_77" name="Стіл">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+    <field state="exist" code="ch_Forma" name="Forma" type="string" />
+    <field state="exist" code="ch_Type" name="Type" type="string" />
+  </table>
+  <table state="exist" code="img_78" name="Шафа">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+  </table>
+  <table state="exist" code="img_79" name="Власник">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+    <field state="exist" code="img_116" name="АдресаВласникНоут" type="link" index="exist" />
+  </table>
+  <table state="exist" code="img_81" name="Фірма">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+    <field state="exist" code="img_79" name="Власник" type="link" index="exist" />
+    <field state="exist" code="img_6" name="Адреса" type="link" index="exist" />
+  </table>
+  <table state="exist" code="img_84" name="Завод">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+    <field state="exist" code="img_6" name="Адреса" type="link" index="exist" />
+    <field state="exist" code="img_86" name="Продукція" type="link" index="exist" />
+    <field state="exist" code="img_79" name="Власник" type="link" index="exist" />
+  </table>
+  <table state="exist" code="img_86" name="Продукція">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+  </table>
+  <table state="exist" code="img_89" name="Магазини">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="PARENTID" name="Родитель" type="integer" index="exist" />
+    <field state="exist" code="OBJECTID" name="Об'єкт" type="link" index="exist" />
+  </table>
+  <table state="exist" code="img_90" name="Села">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="PARENTID" name="Родитель" type="integer" index="exist" />
+    <field state="exist" code="OBJECTID" name="Об'єкт" type="link" index="exist" />
+  </table>
+  <table state="exist" code="img_91" name="Міста">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="PARENTID" name="Родитель" type="integer" index="exist" />
+    <field state="exist" code="OBJECTID" name="Об'єкт" type="link" index="exist" />
+  </table>
+  <table state="exist" code="img_92" name="Райони">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="PARENTID" name="Родитель" type="integer" index="exist" />
+    <field state="exist" code="OBJECTID" name="Об'єкт" type="link" index="exist" />
+  </table>
+  <table state="exist" code="img_93" name="Район">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+  </table>
+  <table state="exist" code="img_94" name="Села">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="PARENTID" name="Родитель" type="integer" index="exist" />
+    <field state="exist" code="OBJECTID" name="Об'єкт" type="link" index="exist" />
+  </table>
+  <table state="exist" code="img_95" name="Міста">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="PARENTID" name="Родитель" type="integer" index="exist" />
+    <field state="exist" code="OBJECTID" name="Об'єкт" type="link" index="exist" />
+  </table>
+  <table state="exist" code="img_96" name="Школа">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+    <field state="exist" code="img_100" name="Директор" type="link" index="exist" />
+    <field state="exist" code="ch_Number" name="Номер" type="string" />
+    <field state="exist" code="ing_img_1" name="Ноутбук" type="link" index="exist" />
+  </table>
+  <table state="exist" code="img_97" name="Школи">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="PARENTID" name="Родитель" type="integer" index="exist" />
+    <field state="exist" code="OBJECTID" name="Об'єкт" type="link" index="exist" />
+  </table>
+  <table state="exist" code="img_98" name="Школи">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="PARENTID" name="Родитель" type="integer" index="exist" />
+    <field state="exist" code="OBJECTID" name="Об'єкт" type="link" index="exist" />
+  </table>
+  <table state="exist" code="img_100" name="Директор">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+  </table>
+  <table state="exist" code="img_105" name="Заводи">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="PARENTID" name="Родитель" type="integer" index="exist" />
+    <field state="exist" code="OBJECTID" name="Об'єкт" type="link" index="exist" />
+  </table>
+  <table state="exist" code="img_106" name="Смартфон">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+    <field state="exist" code="ing_img_5" name="Процесор" type="link" index="exist" />
+  </table>
+  <table state="exist" code="img_108" name="Будинки">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="PARENTID" name="Родитель" type="integer" index="exist" />
+    <field state="exist" code="OBJECTID" name="Об'єкт" type="link" index="exist" />
+  </table>
+  <table state="exist" code="img_109" name="TEst">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+    <field state="exist" code="ch_test" name="test" type="string" />
+  </table>
+  <table state="exist" code="img_110" name="Холодильник">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+    <field state="exist" code="ch_Gabaryty" name="Габарити" type="string" />
+  </table>
+  <table state="exist" code="img_111" name="Чайник">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+    <field state="exist" code="ch_Vmistymist" name="Вмістимість" type="string" />
+  </table>
+  <table state="exist" code="img_112" name="Тарілка">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+  </table>
+  <table state="exist" code="img_113" name="Ящик">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+  </table>
+  <table state="exist" code="img_114" name="АдресаТест">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+  </table>
+  <table state="exist" code="img_115" name="АдресаТестМеблі">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+  </table>
+  <table state="exist" code="img_116" name="АдресаВласникНоут">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+  </table>
+  <table state="exist" code="img_117" name="НоутбукТест">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+  </table>
+  <table state="exist" code="img_118" name="Комп'ютер">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+    <field state="exist" code="ing_img_5" name="Процесор" type="link" index="exist" />
+    <field state="exist" code="ing_img_11" name="Вінчестер" type="link" index="exist" />
+    <field state="exist" code="ing_img_17" name="Материнська плата" type="link" index="exist" />
+  </table>
+  <table state="exist" code="img_119" name="Сервер">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+    <field state="exist" code="img_7" name="Виробник" type="link" index="exist" />
+    <field state="exist" code="ing_img_118" name="Комп'ютер" type="link" index="exist" />
+  </table>
+  <table state="exist" code="img_120" name="Чіпсет">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+    <field state="exist" code="img_7" name="Виробник" type="link" index="exist" />
+  </table>
+  <table state="exist" code="img_121" name="Порт">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+    <field state="exist" code="img_125" name="Технологія" type="link" index="exist" />
+  </table>
+  <table state="exist" code="img_122" name="Порти">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="PARENTID" name="Родитель" type="integer" index="exist" />
+    <field state="exist" code="OBJECTID" name="Об'єкт" type="link" index="exist" />
+  </table>
+  <table state="exist" code="img_125" name="Технологія">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+  </table>
+  <table state="exist" code="img_126" name="Ноутбук+Товар">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+    <field state="exist" code="ing_img_1" name="Ноутбук" type="link" index="exist" />
+    <field state="exist" code="ing_img_56" name="Товари" type="link" index="exist" />
+  </table>
+  <table state="exist" code="img_127" name="Телефон+Товар">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+    <field state="exist" code="ing_img_36" name="Телефон" type="link" index="exist" />
+    <field state="exist" code="ing_img_56" name="Товари" type="link" index="exist" />
+  </table>
+  <table state="exist" code="img_128" name="Ресторан+Місця відпочинку">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+    <field state="exist" code="ing_img_44" name="Ресторан" type="link" index="exist" />
+    <field state="exist" code="ing_img_55" name="Місця відпочинку" type="link" index="exist" />
+  </table>
+  <table state="exist" code="img_129" name="Ntcn">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+    <field state="exist" code="img_125" name="Технологія" type="link" index="exist" />
+    <field state="exist" code="ch_fghfg" name="fghfg" type="string" />
+  </table>
+  <table state="exist" code="img_130" name="БлаБлаБла">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+    <field state="exist" code="img_131" name="укаецукецук" type="link" index="exist" />
+    <field state="exist" code="ch_name" name="назва" type="string" />
+    <field state="exist" code="ing_img_9" name="Вулиця" type="link" index="exist" />
+  </table>
+  <table state="exist" code="img_131" name="укаецукецук">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+  </table>
+  <table state="exist" code="img_132" name="Машина">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+    <field state="exist" code="img_133" name="тест" type="link" index="exist" />
+    <field state="exist" code="img_1" name="Ноутбук" type="link" index="exist" />
+    <field state="exist" code="img_135" name="wert 3e5wertewrt" type="link" index="exist" />
+    <field state="exist" code="ch_ цукец" name="кецуке" type="string" />
+    <field state="exist" code="ch_укйц" name="кйцукй" type="string" />
+    <field state="exist" code="ch_цук йцукй" name="укйцук йцук" type="string" />
+    <field state="exist" code="ing_img_1" name="Ноутбук" type="link" index="exist" />
+  </table>
+  <table state="exist" code="img_133" name="тест">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+    <field state="exist" code="ch_ укецу" name="ецук" type="string" />
+    <field state="exist" code="ch_нкен" name="е нуке" type="string" />
+    <field state="exist" code="ch_у кецу" name="е цу" type="string" />
+  </table>
+  <table state="exist" code="img_135" name="wert 3e5wertewrt">
+    <field state="exist" code="ID" name="ID" type="auto_increment" />
+    <field state="exist" code="NAME" name="Назва" type="string" />
+    <field state="exist" code="ch_rt ertw" name="rt wert" type="string" />
+  </table>
+</comparison>

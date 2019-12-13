@@ -1,0 +1,127 @@
+﻿        
+		
+		
+		
+		
+		public void NormalizeTablePictures()
+        {
+            //MySqlCommand myCommand = new MySqlCommand();
+            //myCommand.Connection = this.m_Connect;
+
+            ////Ставим флажок 'key_delete' в 0
+            //myCommand.CommandText = "UPDATE `pictures` SET `key_delete` = 0";
+            //myCommand.ExecuteNonQuery();
+
+            ////Скільки в базі записів
+            //myCommand.CommandText = "SELECT count(`ID`) FROM `pictures` WHERE `key_delete` = 0";
+            //int countTableRows = int.Parse(myCommand.ExecuteScalar().ToString());
+            //int stepRow = 100;
+
+            //for (int i = 0; i < countTableRows; i += stepRow)
+            //{
+            //    //
+            //    // Вибірка
+            //    //
+
+            //    System.Diagnostics.Debug.WriteLine("Вибірка: " + i.ToString() + " " + stepRow.ToString());
+
+            //    Dictionary<string, string> rowsSelect = new Dictionary<string, string>();
+
+            //    myCommand.CommandText = "SELECT `ID`, `Name` FROM `pictures` " +
+            //                            "WHERE `key_delete` = 0 LIMIT " + i.ToString() + ", " + stepRow.ToString();
+
+            //    MySqlDataReader reader = myCommand.ExecuteReader();
+            //    while (reader.Read()) rowsSelect.Add(reader["ID"].ToString(), reader["Name"].ToString());
+            //    reader.Close();
+
+            //    //
+            //    // Аналіз
+            //    //
+
+            //    foreach (KeyValuePair<string, string> ID_Name in rowsSelect)
+            //    {
+            //        string id = ID_Name.Key;
+            //        string word = ID_Name.Value.Trim();
+
+            //        //Привести слово до нормального виду
+            //        // 1. Забрати \n , \t, \r
+            //        word = word.Replace("\r\n", " ");
+            //        word = word.Replace("\t", " ");
+
+            //        //Перевірити чи щось змінилося
+            //        if (word != ID_Name.Value)
+            //        {
+
+            //            myCommand.Parameters.Clear();
+            //            myCommand.Parameters.AddWithValue("@Name", word);
+            //            myCommand.Parameters.AddWithValue("@ID", id);
+
+            //            //Перевірити чи вже є таке слово в базі
+            //            myCommand.CommandText = "SELECT count(`ID`) FROM `pictures` " +
+            //                                    "WHERE `ID` != @ID AND `key_delete` = 0 AND `Name` = @Name";
+
+            //            int countWord = int.Parse(myCommand.ExecuteScalar().ToString());
+
+            //            if (countWord > 0)
+            //            {
+            //                myCommand.CommandText = "UPDATE `pictures` SET `key_delete` = 1 WHERE `ID` = @ID";
+            //                System.Diagnostics.Debug.WriteLine(" --> Помічено на видалення: " + word);
+            //            }
+            //            else
+            //            {
+            //                myCommand.CommandText = "UPDATE `pictures` SET `Name` = @Name WHERE `ID` = @ID";
+            //                System.Diagnostics.Debug.WriteLine(" --> Обновлено: " + ID_Name.Value + " до " + word);
+            //            }
+
+            //        }
+
+            //    }
+            //}
+
+            //Видалити помічені слова
+            //myCommand.CommandText = "DELETE FROM `pictures` WHERE `key_delete` = 1";
+            //myCommand.ExecuteNonQuery();
+        }
+
+
+
+
+		/// <summary>
+        /// 
+        /// </summary>
+        /// <param name="ID"></param>
+        /// <returns></returns>
+        public Dictionary<string, string> GetIngradientyForImage(string ImageID)
+        {
+            Dictionary<string, string> dictionary_list = new Dictionary<string, string>();
+
+            MySqlCommand myCommand = new MySqlCommand();
+            myCommand.Connection = this.m_Connect;
+
+            //Знайти і вивести список образів
+            //@@@ 1 @@@
+            //myCommand.CommandText = "SELECT `Image`.`Name` as `Im_name`, " +
+            //                        "       `Image`.`ID` as `Im_id`      " +
+            //                        "FROM `image_ingradienty` " +
+            //                        "      LEFT JOIN `image` ON  `Image`.`ID` = `image_ingradienty`.`Image`" +
+            //                        "WHERE `image_ingradienty`.`Ingradient` = @image";
+
+            // @@@ 2 @@@
+            myCommand.CommandText = "SELECT `Image`.`Name` as `Im_name`, " +
+                                    "       `Image`.`ID` as `Im_id`      " +
+                                    "FROM `image`, `image_ingradienty` " +
+                                    "WHERE `image`.`id` = `image_ingradienty`.`Ingradient` AND " +
+                                    "      `image_ingradienty`.`Image` = @image";
+
+            //Відбір по ІД образу
+            myCommand.Parameters.AddWithValue("@Image", ImageID);
+
+            MySqlDataReader reader = myCommand.ExecuteReader();
+            while (reader.Read())
+                dictionary_list.Add(reader["Im_id"].ToString(), reader["Im_name"].ToString());
+
+            reader.Close();
+
+            return dictionary_list;
+        }
+

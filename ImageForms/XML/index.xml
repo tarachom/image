@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--05.06.2017 23:35:28-->
+<shema>
+  <image>
+    <table id="1" code="img_1" name="Ноутбук" />
+    <table id="5" code="img_5" name="Процесор" />
+    <table id="6" code="img_6" name="Адреса" />
+    <table id="7" code="img_7" name="Виробник" />
+    <table id="11" code="img_11" name="Вінчестер" />
+    <table id="13" code="img_13" name="Монітор" />
+    <table id="15" code="img_15" name="Клавіатура" />
+    <table id="17" code="img_17" name="Материнська плата" />
+    <table id="21" code="img_21" name="Країна" />
+    <table id="22" code="img_22" name="Місто" />
+    <table id="26" code="img_26" name="Село" />
+    <table id="27" code="img_27" name="Область" />
+    <table id="28" code="img_28" name="Товар" />
+    <table id="30" code="img_30" name="Магазин" />
+    <table id="32" code="img_32" name="Веб камера" />
+    <table id="34" code="img_34" name="Телевізор" />
+    <table id="36" code="img_36" name="Телефон" />
+    <table id="38" code="img_38" name="GSM Модуль" />
+    <table id="40" code="img_40" name="Керівник" />
+    <table id="41" code="img_41" name="Планшет" />
+    <table id="44" code="img_44" name="Ресторан" />
+    <table id="45" code="img_45" name="Підрозділ" />
+    <table id="48" code="img_48" name="Президент" />
+    <table id="49" code="img_49" name="Парк" />
+    <table id="53" code="img_53" name="Мобільний телефон" />
+    <table id="60" code="img_60" name="Вулиця" />
+    <table id="62" code="img_62" name="Будинок" />
+    <table id="67" code="img_67" name="Квартира" />
+    <table id="68" code="img_68" name="Кімната" />
+    <table id="69" code="img_69" name="Кухня" />
+    <table id="70" code="img_70" name="Меблі" />
+    <table id="71" code="img_71" name="Ванна" />
+    <table id="72" code="img_72" name="Коридор" />
+    <table id="73" code="img_73" name="Особняк" />
+    <table id="74" code="img_74" name="Ліфт" />
+    <table id="75" code="img_75" name="Підїзд" />
+    <table id="77" code="img_77" name="Стіл" />
+    <table id="78" code="img_78" name="Шафа" />
+    <table id="79" code="img_79" name="Власник" />
+    <table id="81" code="img_81" name="Фірма" />
+    <table id="84" code="img_84" name="Завод" />
+    <table id="86" code="img_86" name="Продукція" />
+    <table id="93" code="img_93" name="Район" />
+    <table id="96" code="img_96" name="Школа" />
+    <table id="100" code="img_100" name="Директор" />
+    <table id="106" code="img_106" name="Смартфон" />
+    <table id="110" code="img_110" name="Холодильник" />
+    <table id="111" code="img_111" name="Чайник" />
+    <table id="112" code="img_112" name="Тарілка" />
+    <table id="113" code="img_113" name="Ящик" />
+    <table id="118" code="img_118" name="Комп'ютер" />
+    <table id="119" code="img_119" name="Сервер" />
+    <table id="120" code="img_120" name="Чіпсет" />
+    <table id="121" code="img_121" name="Порт" />
+    <table id="129" code="img_129" name="Ntcn" />
+    <table id="130" code="img_130" name="БлаБлаБла" />
+    <table id="132" code="img_132" name="Машина" />
+  </image>
+</shema>

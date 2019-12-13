@@ -1,0 +1,473 @@
+﻿  #region FIXATOR
+
+        private List<string> FixationShema_WorkerTables = new List<string>();
+        private XmlWriter FixationShema_XMLWriter;
+
+        /// <summary>
+        /// Функція перевіряє наявність таблиці
+        /// </summary>
+        /// <param name="tableName">Назва таблиці</param>
+        /// <returns></returns>
+        private bool FixationShema_IsExistTable(string tableName)
+        {
+            MySqlCommand myCommand = new MySqlCommand();
+            myCommand.Connection = this.m_Connect;
+
+            myCommand.CommandText = "SHOW TABLES LIKE @TableName";
+            myCommand.Parameters.AddWithValue("@TableName", tableName);
+
+            object isExist = myCommand.ExecuteScalar();
+
+            return (isExist != null);
+        }
+
+        /// <summary>
+        /// Функція перевіряє наявність поля в таблиці
+        /// </summary>
+        /// <param name="tableName">Назва таблиці</param>
+        /// <param name="columnName">Назва поля</param>
+        /// <returns></returns>
+        private bool FixationShema_IsExistColumn(string tableName, string columnName)
+        {
+            MySqlCommand myCommand = new MySqlCommand();
+            myCommand.Connection = this.m_Connect;
+
+            myCommand.CommandText = "SHOW COLUMNS FROM `" + tableName + "` LIKE @ColumnName";
+            myCommand.Parameters.AddWithValue("@ColumnName", columnName);
+
+            object isExist = myCommand.ExecuteScalar();
+
+            return (isExist != null);
+        }
+
+        /// <summary>
+        /// Функція повертає список полів таблиці
+        /// </summary>
+        /// <param name="tableName">Таблиця</param>
+        /// <returns></returns>
+        private List<string> FixationShema_GetColumnsList(string tableName)
+        {
+            List<string> columnList = new List<string>();
+
+            MySqlCommand myCommand = new MySqlCommand();
+            myCommand.Connection = this.m_Connect;
+
+            myCommand.CommandText = "SHOW COLUMNS FROM `" + tableName + "`";
+
+            MySqlDataReader reader = myCommand.ExecuteReader();
+            while (reader.Read())
+                columnList.Add(reader["Field"].ToString());
+            reader.Close();
+
+            return columnList;
+        }
+
+        /// <summary>
+        /// Функція шукає лишні поля і формує запит для їх видалення
+        /// </summary>
+        /// <param name="tableName">Назва таблиці</param>
+        /// <param name="columnAllList">Список потрібних полів</param>
+        /// <returns>Запит для видалення полів або пусто</returns>
+        private string FixationShema_QueryDropColumn(string tableName, List<string> columnAllList)
+        {
+            MySqlCommand myCommand = new MySqlCommand();
+            myCommand.Connection = this.m_Connect;
+
+            //Два обовязкові поля
+            columnAllList.Add("ID");
+            columnAllList.Add("NAME");
+
+            int counter = 0;
+
+            string query_where = " WHERE `Field` NOT IN (";
+            foreach (string column in columnAllList)
+            {
+                query_where += (counter > 0 ? ", " : "") + "'" + column + "'";
+                counter++;
+            }
+            query_where += ")";
+
+            counter = 0;
+            string query_dropColumn = "";
+
+            myCommand.CommandText = "SHOW COLUMNS FROM `" + tableName + "` " + query_where;
+
+            MySqlDataReader reader = myCommand.ExecuteReader();
+            while (reader.Read())
+            {
+                query_dropColumn += (counter > 0 ? ", " : "") + " DROP COLUMN `" + reader["Field"].ToString() + "` ";
+                counter++;
+            }
+            reader.Close();
+
+            return query_dropColumn;
+        }
+
+        /// <summary>
+        /// Функція проробляє таблицю
+        /// </summary>
+        /// <param name="ImageItem">Образ на основі якого формується таблиця</param>
+        private void FixationShema_WorkTable(Image ImageItem)
+        {
+            string tableName = "img_" + ImageItem.ID.ToString();
+
+            string result = FixationShema_WorkerTables.Find(x => x == tableName);
+            if (result == null)
+                FixationShema_WorkerTables.Add(tableName);
+            else
+                return;
+
+            //
+            // EXPORT XML
+            //
+
+            FixationShema_XMLWriter.WriteStartElement("table");
+            FixationShema_XMLWriter.WriteAttributeString("id", ImageItem.ID.ToString());
+            FixationShema_XMLWriter.WriteAttributeString("name", ImageItem.Name);
+            FixationShema_XMLWriter.WriteAttributeString("code", tableName);
+            FixationShema_XMLWriter.WriteAttributeString("context_id", ImageItem.Context.ID.ToString());
+            FixationShema_XMLWriter.WriteAttributeString("context_name", ImageItem.Context.Name);
+
+            //Ссилки
+            ImageContext linkContextForXML = ImageItem.LinkContext;
+            if (linkContextForXML != null)
+            {
+                FixationShema_XMLWriter.WriteAttributeString("link_context_id", linkContextForXML.ID.ToString());
+                FixationShema_XMLWriter.WriteAttributeString("link_context_name", linkContextForXML.Name);
+
+                List<Image> imageLinkList = LoadAllImageByContext(linkContextForXML.ID);
+                foreach (Image ImageLinkItem in imageLinkList)
+                {
+                    //Якщо це вказівник 
+                    if (ImageLinkItem.Pointer)
+                    {
+                        FixationShema_XMLWriter.WriteStartElement("field");
+                        FixationShema_XMLWriter.WriteAttributeString("id", ImageLinkItem.PointerImage.ID.ToString());
+                        FixationShema_XMLWriter.WriteAttributeString("name", ImageLinkItem.PointerImage.Name);
+                        FixationShema_XMLWriter.WriteAttributeString("code", "img_" + ImageLinkItem.PointerImage.ID.ToString());
+                        FixationShema_XMLWriter.WriteAttributeString("type", "link");
+                        FixationShema_XMLWriter.WriteAttributeString("table_link", "img_" + ImageLinkItem.PointerImage.ID.ToString());
+                        FixationShema_XMLWriter.WriteEndElement(); //field
+                    }
+                    else if (ImageLinkItem.Plural)
+                    {
+                        //
+                        FixationShema_XMLWriter.WriteStartElement("subtable");
+                        FixationShema_XMLWriter.WriteAttributeString("id", ImageLinkItem.PointerImage.ID.ToString());
+                        FixationShema_XMLWriter.WriteAttributeString("name", ImageLinkItem.PointerImage.Name);
+                        FixationShema_XMLWriter.WriteAttributeString("code", "img_" + ImageLinkItem.PointerImage.ID.ToString());
+                        FixationShema_XMLWriter.WriteAttributeString("type", "link");
+                        FixationShema_XMLWriter.WriteAttributeString("table_link", "img_" + ImageLinkItem.PointerImage.ID.ToString());
+                        FixationShema_XMLWriter.WriteEndElement(); //field
+                    }
+                    else
+                    {
+                        FixationShema_XMLWriter.WriteStartElement("field");
+                        FixationShema_XMLWriter.WriteAttributeString("id", ImageLinkItem.ID.ToString());
+                        FixationShema_XMLWriter.WriteAttributeString("name", ImageLinkItem.Name);
+                        FixationShema_XMLWriter.WriteAttributeString("code", "img_" + ImageLinkItem.ID.ToString());
+                        FixationShema_XMLWriter.WriteAttributeString("type", "link");
+                        FixationShema_XMLWriter.WriteAttributeString("table_link", "img_" + ImageLinkItem.ID.ToString());
+                        FixationShema_XMLWriter.WriteEndElement(); //field
+                    }
+                }
+            }
+
+            //Поле Name
+            FixationShema_XMLWriter.WriteStartElement("field");
+            FixationShema_XMLWriter.WriteAttributeString("id", "NAME");
+            FixationShema_XMLWriter.WriteAttributeString("name", "NAME");
+            FixationShema_XMLWriter.WriteAttributeString("code", "NAME");
+            FixationShema_XMLWriter.WriteAttributeString("type", "string");
+            FixationShema_XMLWriter.WriteAttributeString("table_link", "");
+            FixationShema_XMLWriter.WriteEndElement(); //field
+
+            //Ящо множина
+            if (ImageItem.Plural)
+            {
+                FixationShema_XMLWriter.WriteStartElement("field");
+                FixationShema_XMLWriter.WriteAttributeString("id", "PARENTID");
+                FixationShema_XMLWriter.WriteAttributeString("name", "PARENTID");
+                FixationShema_XMLWriter.WriteAttributeString("code", "PARENTID");
+                FixationShema_XMLWriter.WriteAttributeString("type", "integer");
+                FixationShema_XMLWriter.WriteAttributeString("table_link", "");
+                FixationShema_XMLWriter.WriteEndElement(); //field
+
+                FixationShema_XMLWriter.WriteStartElement("field");
+                FixationShema_XMLWriter.WriteAttributeString("id", "OBJECTID");
+                FixationShema_XMLWriter.WriteAttributeString("name", "OBJECTID");
+                FixationShema_XMLWriter.WriteAttributeString("code", "OBJECTID");
+                FixationShema_XMLWriter.WriteAttributeString("type", "link");
+                FixationShema_XMLWriter.WriteAttributeString("table_link", "img_" + ImageItem.PointerImage.ID.ToString());
+                FixationShema_XMLWriter.WriteEndElement(); //field
+            }
+
+            //Характеритики
+            foreach (CharacterystykaItem characterystykaItem in ImageItem.Characterystyka)
+            {
+                FixationShema_XMLWriter.WriteStartElement("field");
+                FixationShema_XMLWriter.WriteAttributeString("id", "0");
+                FixationShema_XMLWriter.WriteAttributeString("name", characterystykaItem.ItemValue);
+                FixationShema_XMLWriter.WriteAttributeString("code", "ch_" + characterystykaItem.ItemName);
+                FixationShema_XMLWriter.WriteAttributeString("type", "string");
+                FixationShema_XMLWriter.WriteAttributeString("table_link", "");
+                FixationShema_XMLWriter.WriteEndElement(); //field
+            }
+
+            //Інградієнти
+            foreach (ImageBase ingradientItem in ImageItem.Ingradienty)
+            {
+                FixationShema_XMLWriter.WriteStartElement("field");
+                FixationShema_XMLWriter.WriteAttributeString("id", ingradientItem.ID.ToString());
+                FixationShema_XMLWriter.WriteAttributeString("name", ingradientItem.Name);
+                FixationShema_XMLWriter.WriteAttributeString("code", "ing_img_" + ingradientItem.ID.ToString());
+                FixationShema_XMLWriter.WriteAttributeString("type", "link");
+                FixationShema_XMLWriter.WriteAttributeString("table_link", "img_" + ingradientItem.ID.ToString());
+                FixationShema_XMLWriter.WriteEndElement(); //field
+            }
+
+            FixationShema_XMLWriter.WriteEndElement(); //table
+
+            //
+            // SQL
+            //
+
+            MySqlCommand myCommand = new MySqlCommand();
+            myCommand.Connection = this.m_Connect;
+
+            if (!FixationShema_IsExistTable(tableName))
+            {
+                string query_fields = "";
+
+                //Якщо це образ множина
+                if (ImageItem.Plural)
+                    query_fields += "`PARENTID` INTEGER UNSIGNED NOT NULL DEFAULT 0, " +
+                                    "`OBJECTID` INTEGER UNSIGNED NOT NULL DEFAULT 0, ";
+
+                //Характеритики
+                foreach (CharacterystykaItem characterystykaItem in ImageItem.Characterystyka)
+                    query_fields += "`ch_" + characterystykaItem.ItemName + "`  VARCHAR(50) NOT NULL DEFAULT '', ";
+
+                //Інградієнти
+                foreach (ImageBase ingradientItem in ImageItem.Ingradienty)
+                    query_fields += "`ing_img_" + ingradientItem.ID.ToString() + "` INTEGER UNSIGNED NOT NULL DEFAULT 0, ";
+
+                //Ссилки
+                ImageContext linkContext = ImageItem.LinkContext;
+                if (linkContext != null)
+                {
+                    List<Image> imageLinkList = LoadAllImageByContext(linkContext.ID);
+                    foreach (Image ImageLinkItem in imageLinkList)
+                    {
+                        //Якщо це вказівник 
+                        if (ImageLinkItem.Pointer)
+                        {
+                            query_fields += "`img_" + ImageLinkItem.PointerImage.ID.ToString() + "` INTEGER UNSIGNED NOT NULL DEFAULT 0, ";
+                        }
+                        //Якщо множина
+                        else if (ImageLinkItem.Plural)
+                        {
+                            FixationShema_WorkTable(ImageLinkItem);
+                        }
+                        else
+                        {
+                            query_fields += "`img_" + ImageLinkItem.ID.ToString() + "` INTEGER UNSIGNED NOT NULL DEFAULT 0, ";
+                            FixationShema_WorkTable(ImageLinkItem);
+                        }
+                    }
+                }
+
+                myCommand.CommandText =
+                            "CREATE TABLE `" + tableName + "` (" +
+                            "`ID` INTEGER UNSIGNED NOT NULL AUTO_INCREMENT," +
+                            "`NAME` VARCHAR(255) NOT NULL DEFAULT ''," +
+                            query_fields +
+                            "PRIMARY KEY(`ID`)" +
+                            ") ENGINE = InnoDB CHARACTER SET utf8 COLLATE utf8_general_ci";
+
+                myCommand.ExecuteNonQuery();
+            }
+            else
+            {
+                string query_add_fields = "";
+                int column_added_count = 0;
+
+                //Список наявних полів
+                List<string> ExistColumnList = new List<string>();
+
+                //Список всіх полів
+                List<string> AllColumnList = FixationShema_GetColumnsList(tableName);
+
+                //Поле Name
+                if (AllColumnList.Find(x => x == "NAME") == null)
+                {
+                    if (column_added_count > 0) query_add_fields += ",";
+                    query_add_fields += " ADD COLUMN `NAME` VARCHAR(255) NOT NULL DEFAULT '' ";
+                    column_added_count++;
+                }
+
+                //Якщо це множина
+                if (ImageItem.Plural)
+                {
+                    if (AllColumnList.Find(x => x == "PARENTID") == null)
+                    {
+                        if (column_added_count > 0) query_add_fields += ",";
+                        query_add_fields += " ADD COLUMN `PARENTID` INTEGER UNSIGNED NOT NULL DEFAULT 0 ";
+                        column_added_count++;
+                    }
+                    else
+                        ExistColumnList.Add("PARENTID");
+
+                    if (AllColumnList.Find(x => x == "OBJECTID") == null)
+                    {
+                        if (column_added_count > 0) query_add_fields += ",";
+                        query_add_fields += " ADD COLUMN `OBJECTID` INTEGER UNSIGNED NOT NULL DEFAULT 0 ";
+                        column_added_count++;
+                    }
+                    else
+                        ExistColumnList.Add("OBJECTID");
+                }
+
+                //Характеристики
+                foreach (CharacterystykaItem characterystykaItem in ImageItem.Characterystyka)
+                {
+                    string columnName = "ch_" + characterystykaItem.ItemName;
+
+                    if (AllColumnList.Find(x => x == columnName) == null)
+                    {
+                        if (column_added_count > 0) query_add_fields += ",";
+                        query_add_fields += " ADD COLUMN `" + columnName + "` VARCHAR(100) NOT NULL DEFAULT '' ";
+                        column_added_count++;
+                    }
+                    else
+                        ExistColumnList.Add(columnName);
+                }
+
+                //Інградієнти
+                foreach (ImageBase ingradientItem in ImageItem.Ingradienty)
+                {
+                    string columnName = "ing_img_" + ingradientItem.ID.ToString();
+
+                    if (AllColumnList.Find(x => x == columnName) == null)
+                    {
+                        if (column_added_count > 0) query_add_fields += ",";
+                        query_add_fields += " ADD COLUMN `" + columnName + "` INTEGER UNSIGNED NOT NULL DEFAULT 0 ";
+                        column_added_count++;
+                    }
+                    else
+                        ExistColumnList.Add(columnName);
+                }
+
+                //Ссилка
+                ImageContext linkContext = ImageItem.LinkContext;
+                if (linkContext != null)
+                {
+                    List<Image> imageLinkList = LoadAllImageByContext(linkContext.ID);
+                    foreach (Image ImageLinkItem in imageLinkList)
+                    {
+                        string columnName = "";
+
+                        //Якщо це вказівник 
+                        if (ImageLinkItem.Pointer)
+                        {
+                            columnName = "img_" + ImageLinkItem.PointerImage.ID.ToString();
+                        }
+                        //Якщо множина
+                        else if (ImageLinkItem.Plural)
+                        {
+                            //
+                        }
+                        else
+                        {
+                            columnName = "img_" + ImageLinkItem.ID.ToString();
+                        }
+
+                        if (!ImageLinkItem.Plural)
+                            if (AllColumnList.Find(x => x == columnName) == null)
+                            {
+                                if (column_added_count > 0) query_add_fields += ",";
+                                query_add_fields += " ADD COLUMN `" + columnName + "` INTEGER UNSIGNED NOT NULL DEFAULT 0 ";
+                                column_added_count++;
+                            }
+                            else
+                                ExistColumnList.Add(columnName);
+
+                        if (!ImageLinkItem.Pointer)
+                            FixationShema_WorkTable(ImageLinkItem);
+                    }
+                }
+
+                //Пошук лишніх полів
+                string query_drop_fields = FixationShema_QueryDropColumn(tableName, ExistColumnList);
+
+                if (column_added_count > 0 || query_drop_fields != "")
+                {
+                    myCommand.CommandText = "ALTER TABLE `" + tableName + "` " + query_add_fields +
+                        (column_added_count > 0 && query_drop_fields != "" ? ", " : "") + query_drop_fields;
+
+                    myCommand.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public void FixationShema()
+        {
+            string XslFolderPath = "..\\..\\XSL\\";
+            string ResultPhpFolder = "C:\\Server\\data\\htdocs\\IMAGE\\i\\";
+            string ResultStylesheetFolder = "C:\\Server\\data\\htdocs\\IMAGE\\include\\template\\i\\";
+
+            XmlWriterSettings XMLSettings = new XmlWriterSettings();
+            XMLSettings.Encoding = System.Text.Encoding.UTF8;
+            XMLSettings.Indent = true;
+
+            FixationShema_XMLWriter = XmlWriter.Create(XslFolderPath + "model.xml", XMLSettings);
+            FixationShema_XMLWriter.WriteStartElement("root");
+
+            //Очистка списку оброблених таблиць
+            FixationShema_WorkerTables.Clear();
+
+            //Всі Абстрактні образи
+            List<Image> imageList = LoadAllImageByContext(1);
+
+            foreach (Image ImageItem in imageList)
+            {
+                FixationShema_WorkTable(ImageItem);
+            }
+
+            FixationShema_XMLWriter.WriteEndElement(); //root
+            FixationShema_XMLWriter.Flush();
+            FixationShema_XMLWriter.Close();
+
+            //
+            System.IO.File.Copy(XslFolderPath + "model.xml", "C:\\Server\\data\\htdocs\\IMAGE\\include\\model.xml", true);
+
+            //Для php файлів
+            XslCompiledTransform xsltPhp = new XslCompiledTransform();
+            xsltPhp.Load(XslFolderPath + "php.xsl");
+
+            //Для шаблонів
+            XslCompiledTransform xsltStylesheet = new XslCompiledTransform();
+            xsltStylesheet.Load(XslFolderPath + "stylesheet.xsl");
+
+            foreach (Image ImageItem in imageList)
+            {
+                XsltArgumentList xsltArguments = new XsltArgumentList();
+                xsltArguments.AddParam("table", "", ImageItem.ID);
+
+                //Папки
+                System.IO.Directory.CreateDirectory(ResultPhpFolder + ImageItem.ID.ToString());
+                System.IO.Directory.CreateDirectory(ResultStylesheetFolder + ImageItem.ID.ToString());
+
+                //Генерація php
+                System.IO.FileStream phpFileStream = new System.IO.FileStream(ResultPhpFolder + ImageItem.ID.ToString() + "\\index.php", System.IO.FileMode.Create);
+                xsltPhp.Transform(XslFolderPath + "model.xml", xsltArguments, phpFileStream);
+                phpFileStream.Close();
+
+                //Генерація шаблону
+                System.IO.FileStream styleSheetFileStream = new System.IO.FileStream(ResultStylesheetFolder + ImageItem.ID.ToString() + "\\index.xsl", System.IO.FileMode.Create);
+                xsltStylesheet.Transform(XslFolderPath + "model.xml", xsltArguments, styleSheetFileStream);
+                styleSheetFileStream.Close();
+            }
+        }
+
+        #endregion

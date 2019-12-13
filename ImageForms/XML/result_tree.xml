@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--28.05.2017 14:47:03-->
+<root>
+  <result_all>
+    <word name="ноутбук">
+      <row ShemaID="1" DataID="" Name="Ноутбук" IsShema="True" IsDirect="False" IsEntry="False" />
+    </word>
+  </result_all>
+  <result_shema>
+    <row ShemaID="1" DataID="" Name="Ноутбук" IsShema="True" IsDirect="False" IsEntry="False" />
+  </result_shema>
+  <tracks />
+  <tree>
+    <node id="1" shema="true" />
+  </tree>
+</root>

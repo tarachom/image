@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--30.01.2017 23:51:20-->
+<root>
+  <query>Ноутбук asus celeron магазин львів</query>
+  <words>
+    <word>Ноутбук</word>
+    <word>asus</word>
+    <word>celeron</word>
+    <word>магазин</word>
+    <word>львів</word>
+  </words>
+  <list>
+    <listallrowdata>
+      <rowdata ShemaID="1" DataID="" Name="Ноутбук" IsShema="True" IsDirect="True" IsEntry="False" />
+      <rowdata ShemaID="7" DataID="1" Name="Asus" IsShema="False" IsDirect="True" IsEntry="False" />
+      <rowdata ShemaID="5" DataID="2" Name="Celeron" IsShema="False" IsDirect="True" IsEntry="False" />
+      <rowdata ShemaID="7" DataID="9" Name="Celeron" IsShema="False" IsDirect="True" IsEntry="False" />
+      <rowdata ShemaID="30" DataID="" Name="Магазин" IsShema="True" IsDirect="True" IsEntry="False" />
+      <rowdata ShemaID="22" DataID="1" Name="Львів" IsShema="False" IsDirect="True" IsEntry="False" />
+    </listallrowdata>
+    <listshema>
+      <rowdata ShemaID="1" DataID="" Name="Ноутбук" IsShema="True" IsDirect="True" IsEntry="False" />
+      <rowdata ShemaID="30" DataID="" Name="Магазин" IsShema="True" IsDirect="True" IsEntry="False" />
+    </listshema>
+    <listdirect>
+      <rowdata ShemaID="7" DataID="1" Name="Asus" IsShema="False" IsDirect="True" IsEntry="False" />
+      <rowdata ShemaID="5" DataID="2" Name="Celeron" IsShema="False" IsDirect="True" IsEntry="False" />
+      <rowdata ShemaID="7" DataID="9" Name="Celeron" IsShema="False" IsDirect="True" IsEntry="False" />
+      <rowdata ShemaID="22" DataID="1" Name="Львів" IsShema="False" IsDirect="True" IsEntry="False" />
+    </listdirect>
+  </list>
+  
+  <tree>
+
+    <e id="1">
+      <e id="5">
+        <name>Celeron</name>
+      </e>
+      <e id="2">
+        <e id="7">
+          <name>Asus, Celeron</name>
+          <e id="8">
+            <e id="6">
+              <e id="20">
+                <e id="22">
+                  <name>Львів</name>
+                </e>
+              </e>
+            </e>
+          </e>
+        </e>
+      </e>
+    </e>
+    <e id="30">
+      <e id="29">
+        <e id="6">
+          
+          <e id="20">
+            <e id="22">
+              <name>Львів</name>
+            </e>
+          </e>
+        </e>
+      </e>
+    </e>
+    <e id="6"></e>
+    <e id="7">
+      <name>Asus, Celeron</name>
+      <e id="8">
+        <e id="6">
+          Adress
+        </e>
+      </e>
+    </e>
+    <e id="5">
+      <name>Celeron</name>
+      <e id="4">
+        <e id="7">
+          <name>Asus, Celeron</name>
+          <e id="8">
+            <e id="6">
+              Adress
+            </e>
+          </e>
+        </e>
+      </e>
+    </e>
+    <e id="22">
+      <name>Львів</name>
+    </e>
+    
+    <track Bridge="5" ImageA="1" ImageB="5" LevelA="2" LevelB="1" />
+    <track Bridge="7" ImageA="1" ImageB="7" LevelA="3" LevelB="1" />
+    <track Bridge="7" ImageA="1" ImageB="5" LevelA="3" LevelB="3" />
+    <track Bridge="22" ImageA="1" ImageB="22" LevelA="7" LevelB="1" />
+    <track Bridge="6" ImageA="30" ImageB="7" LevelA="3" LevelB="3" />
+    <track Bridge="6" ImageA="30" ImageB="5" LevelA="3" LevelB="5" />
+    <track Bridge="22" ImageA="30" ImageB="22" LevelA="5" LevelB="1" />  
+    
+  </tree>
+  
+  <shemashema>
+    <track Bridge="6" ImageA="1" ImageB="30" LevelA="5" LevelB="3" />
+  </shemashema>
+  <shemadata>
+    <track Bridge="5" ImageA="1" ImageB="5" LevelA="2" LevelB="1" />
+    <track Bridge="7" ImageA="1" ImageB="7" LevelA="3" LevelB="1" />
+    <track Bridge="7" ImageA="1" ImageB="5" LevelA="3" LevelB="3" />
+    <track Bridge="22" ImageA="1" ImageB="22" LevelA="7" LevelB="1" />
+    
+    <track Bridge="6" ImageA="30" ImageB="7" LevelA="3" LevelB="3" />
+    <track Bridge="6" ImageA="30" ImageB="5" LevelA="3" LevelB="5" />
+    <track Bridge="22" ImageA="30" ImageB="22" LevelA="5" LevelB="1" />
+  </shemadata>
+  <bridges>
+    <bridge ID="5" Name="Процесор" />
+    <bridge ID="6" Name="Адреса" />
+    <bridge ID="7" Name="Виробник" />
+    <bridge ID="22" Name="Місто" />
+  </bridges>
+  <bridgesbridges>
+    <track Bridge="6" ImageA="5" ImageB="6" LevelA="5" LevelB="1" />
+    <track Bridge="7" ImageA="5" ImageB="7" LevelA="3" LevelB="1" />
+    <track Bridge="22" ImageA="5" ImageB="22" LevelA="7" LevelB="1" />
+    <track Bridge="6" ImageA="6" ImageB="7" LevelA="1" LevelB="3" />
+    <track Bridge="22" ImageA="6" ImageB="22" LevelA="3" LevelB="1" />
+    <track Bridge="22" ImageA="7" ImageB="22" LevelA="5" LevelB="1" />
+  </bridgesbridges>
+</root>
